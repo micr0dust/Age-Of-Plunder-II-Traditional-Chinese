@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 gamerule announceAdvancements false
 gamerule commandBlockOutput false
 gamerule doDaylightCycle false
@@ -26,7 +30,7 @@ scoreboard players set @e[tag=cmd] money 0
 #scoreboard players add @e[tag=cmd] money 1
 
 scoreboard objectives add terrain dummy
-scoreboard players set @e[tag=cmd] terrain 1
+scoreboard players set @e[tag=cmd] terrain 0
 #-----------------------------------------------------
 scoreboard teams add blue 西班牙人
 scoreboard teams option blue color blue
@@ -336,6 +340,20 @@ scoreboard players set @a follows 0
 scoreboard objectives add followv dummy
 scoreboard players set @a followv 0
 #村民跟隨偵測
+
+#更新介面變數-------------
+scoreboard objectives add setmenu dummy
+scoreboard players set @e[tag=cmd] setmenu 0
+
+scoreboard objectives add map_style dummy
+scoreboard players set @e[tag=cmd] map_style 0
+
+scoreboard objectives add map dummy
+scoreboard players set @e[tag=cmd] map 0
+#免權限變數
+scoreboard objectives add join_red trigger
+scoreboard objectives add join_blue trigger
+scoreboard objectives add join_spectator trigger
 
 
 

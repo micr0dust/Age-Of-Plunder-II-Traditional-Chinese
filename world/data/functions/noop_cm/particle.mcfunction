@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 #偵測道具
 scoreboard players tag @a add flats {SelectedItem:{id:"minecraft:banner"}}
 scoreboard players tag @a add follows {SelectedItem:{id:"minecraft:golden_horse_armor"}}

@@ -1,3 +1,11 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
+playsound minecraft:block.note.pling record @p ~ ~ ~ 1 0.749
+function noop_cm:chat_clearall
+function noop_cm:chat_clearall
+
 execute @e[tag=cmd,score_ramdon2=1,score_ramdon2_min=1] ~ ~ ~ scoreboard players set @e[tag=cmd] AI 1
 execute @e[tag=cmd,score_ramdon2=2,score_ramdon2_min=2] ~ ~ ~ scoreboard players set @e[tag=cmd] AI 2
 execute @e[tag=cmd,score_ramdon2=3,score_ramdon2_min=3] ~ ~ ~ scoreboard players set @e[tag=cmd] AI 3
@@ -94,6 +102,13 @@ execute @e[tag=cmd,score_AI=7,score_AI_min=7] ~ ~ ~ execute @e[tag=cmd,score_ram
 
 
 scoreboard players operation @e[tag=cmd] AInor = @e[tag=cmd] AI
+
+function noop_cm:new_setting/reguide
+scoreboard players set @e[tag=cmd] setmenu 0
+
+
+
+
 
 
 

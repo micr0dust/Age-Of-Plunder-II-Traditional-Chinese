@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 summon minecraft:shulker 105 30 -135 {Color:8,CustomName:"山脈",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:20}],Health:20.0f,Tags:["barr","building"],Team:b}
 summon minecraft:shulker 96 30 -135 {Color:8,CustomName:"山脈",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:20}],Health:20.0f,Tags:["barr","building"],Team:b}
 summon minecraft:shulker 87 30 -135 {Color:8,CustomName:"山脈",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:20}],Health:20.0f,Tags:["barr","building"],Team:b}

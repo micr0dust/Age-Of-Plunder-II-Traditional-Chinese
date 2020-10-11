@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 scoreboard players add @e[tag=cmd] bfood 15
 scoreboard players remove @e[tag=cmd] bgold 10
 playsound minecraft:entity.experience_orb.pickup record @p ~ ~ ~ 1 0.587

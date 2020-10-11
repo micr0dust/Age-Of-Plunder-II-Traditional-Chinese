@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 execute @e[tag=cmd,score_AIcheat2_min=1,score_gamemode_min=1] ~ ~ ~ scoreboard players add @e[tag=cmd] upgrades 1
 execute @e[tag=cmd,score_AIcheat2_min=2,score_gamemode_min=1] ~ ~ ~ scoreboard players add @e[tag=cmd] upgrades 1
 execute @e[tag=cmd,score_AIcheat2_min=3,score_gamemode_min=1] ~ ~ ~ scoreboard players add @e[tag=cmd] upgrades 1

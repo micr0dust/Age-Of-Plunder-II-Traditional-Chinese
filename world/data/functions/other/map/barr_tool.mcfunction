@@ -1,4 +1,10 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 kill @e[tag=barr]
+function noop_cm:chat_clearall
+function noop_cm:chat_clearall
 scoreboard players enable @p put
 give @p spawn_egg 64 1 {EntityTag:{id:"minecraft:shulker",Color:8,PersistenceRequired:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:1200}],Health:1200.0f,Tags:["barr","building","mon","horse"],Team:blue},CanPlaceOn:["minecraft:sea_lantern"],display:{Name:"山脈",Lore:["自然屏障"]},ench:[{id:35,lvl:3}]}
 give @p spawn_egg 64 1 {EntityTag:{id:"minecraft:shulker",Color:8,PersistenceRequired:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:1200}],Health:1200.0f,Tags:["barr","building","tree","horse"],Team:blue},CanPlaceOn:["minecraft:sea_lantern"],display:{Name:"樹林",Lore:["木材的來源"]},ench:[{id:35,lvl:3}]}

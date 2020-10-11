@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 execute @e[tag=cmd,score_aibuild=1,score_aibuild_min=1] ~ ~ ~ /function ai:ai/ai
 execute @e[tag=cmd,score_aibuild=2,score_aibuild_min=2] ~ ~ ~ /function ai:ai/ai_2
 execute @e[tag=cmd,score_aibuild=3,score_aibuild_min=3] ~ ~ ~ /function ai:ai/ai_3

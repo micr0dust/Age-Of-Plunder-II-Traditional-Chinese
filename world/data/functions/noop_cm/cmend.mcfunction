@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 scoreboard players set @a bluekeep 0
 scoreboard players set @a bluestop 0
 scoreboard players set @a bluesurrender 0
@@ -136,6 +140,11 @@ scoreboard players set @a bws 0
 scoreboard players set @a bfs 0
 scoreboard players set @a bwb 0
 scoreboard players set @a bfb 0
+#更新介面-------------------------
+scoreboard players set @a join_red 0
+scoreboard players set @a join_blue 0
+scoreboard players set @a join_spectator 0
+#scoreboard players set @a ready 0
 
 
 
