@@ -1,7 +1,7 @@
 function setting:gamerule
 function noop_cm:loop
 function noop_cm:chat_clearall
-execute @p ~ ~ ~ /function setting:var if @p[score_AIset=0,score_AIset_min=0]
+function setting:var unless @e[tag=cmd,score_AIset=1,score_AIset_min=1]
 scoreboard players set @e[tag=cmd] gamemode 1
 execute @p[team=blue] ~ ~ ~ /scoreboard players set @e[tag=cmd] gamemode 0
 function setting:self_terrain_barrier_clean
@@ -22,7 +22,7 @@ execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0] ~ ~ ~ /clone 8 34 -96 
 clear @a
 execute @a[team=!red] ~ ~ ~ /tellraw @a[team=!blue,r=1] ["",{"text":"\u4f60\u6c92\u6709\u9078\u64c7\u968a\u4f0d,\u6240\u4ee5\u88ab\u50b3\u9001\u5230\u9019\u88e1\u662f\u6b63\u5e38\u7684 !","bold":true,"color":"yellow"},{"text":"\n "}]
 execute @a[team=sp] ~ ~ ~ function noop_cm:chat_clear
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ scoreboard players set @e[tag=cmd] bwood 150
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ scoreboard players set @e[tag=cmd] bwood 180
 scoreboard players set @e[tag=cmd] count 1
 function ai:chat/join
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /gamerule gameLoopFunction ai:mony_test

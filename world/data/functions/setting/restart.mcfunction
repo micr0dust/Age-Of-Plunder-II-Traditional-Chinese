@@ -16,6 +16,8 @@ kill @e[type=shulker]
 tellraw @a {"text":"\u5730\u5716\u91cd\u88fd\u5b8c\u7562,\u8acb\u91cd\u65b0\u5206\u968a\u5f8c\u958b\u59cb !","color":"yellow"}
 xp -1000L @a
 effect @a clear
+fill 0 5 9 0 4 9 minecraft:air
+fill 14 5 20 14 4 20 minecraft:wooden_slab
 function setting:var
 
 
