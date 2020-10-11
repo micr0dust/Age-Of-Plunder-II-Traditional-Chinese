@@ -9,7 +9,7 @@ execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_stop=0,score_stop
 scoreboard players set @e[tag=vill] octrl 0
 scoreboard players set @e[tag=vill] ctrl 0
 
-execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_setmenu_min=1] ~ ~ ~ playsound custom.bird ambient @a[score_zenvirsound=1] ~ ~ ~ 5 1 1
+execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_canend_min=1] ~ ~ ~ playsound custom.bird ambient @a[score_zenvirsound=1] ~ ~ ~ 5 1 1
 
 #AI升級
 #1
@@ -36,7 +36,10 @@ execute @e[score_aibuild=3,score_aibuild_min=3,tag=cmd,score_gamemode=1,score_ga
 execute @e[score_aibuild=1,score_aibuild_min=1,tag=cmd,score_gamemode=1,score_gamemode_min=1,score_upgrades_min=130,score_brlvl=3] ~ ~ ~ scoreboard players remove @e[tag=cmd] upgrades 130
 execute @e[score_aibuild=3,score_aibuild_min=3,tag=cmd,score_gamemode=1,score_gamemode_min=1,score_upgrades_min=1,score_raslvl_min=4] ~ ~ ~ scoreboard players remove @e[tag=cmd] upgrades 1
 execute @e[score_aibuild=3,score_aibuild_min=3,tag=cmd,score_gamemode=1,score_gamemode_min=1,score_upgrades_min=1,score_raslvl_min=4] ~ ~ ~ scoreboard players add @e[tag=cmd] bwood 1
-
+#防守計時AI加資源
+execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2,score_canend_min=1] ~ ~ ~ scoreboard players add @e[tag=cmd] resc 1
+execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2,score_canend_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] bgold += @e[tag=cmd] resc
+execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2,score_canend_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] bf += @e[tag=cmd] resc
 
 
 

@@ -22,6 +22,7 @@ execute @p[score_blue5=1,score_blue5_min=1] ~ ~ ~ function noop_cm:buy/noresoure
 execute @p[score_blue6=1,score_blue6_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=10]
 execute @p[score_blue7=1,score_blue7_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=20]
 execute @p[score_blue8=1,score_blue8_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=20]
+execute @p[score_bluew=1,score_bluew_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=50,score_bfood_min=50,score_bgold_min=50]
 
 execute @p[score_red1=1,score_red1_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=30]
 execute @p[score_red2=1,score_red2_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=120]
@@ -31,6 +32,7 @@ execute @p[score_red5=1,score_red5_min=1] ~ ~ ~ function noop_cm:buy/noresoure u
 execute @p[score_red6=1,score_red6_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=10]
 execute @p[score_red7=1,score_red7_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=20]
 execute @p[score_red8=1,score_red8_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=20]
+execute @p[score_redw=1,score_redw_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=50,score_rfood_min=50,score_rgold_min=50]
 
 
 execute @p[score_blue1=1,score_blue1_min=1] ~ ~ ~ function noop_cm:shop/blue1 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=30]
@@ -41,6 +43,7 @@ execute @p[score_blue5=1,score_blue5_min=1] ~ ~ ~ function noop_cm:shop/blue5 if
 execute @p[score_blue6=1,score_blue6_min=1] ~ ~ ~ function noop_cm:shop/blue6 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=10]
 execute @p[score_blue7=1,score_blue7_min=1] ~ ~ ~ function noop_cm:shop/blue7 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=20]
 execute @p[score_blue8=1,score_blue8_min=1] ~ ~ ~ function noop_cm:shop/blue8 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=20]
+execute @p[score_bluew=1,score_bluew_min=1] ~ ~ ~ function noop_cm:shop/bluew if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=50,score_bfood_min=50,score_bgold_min=50]
 
 execute @p[score_red1=1,score_red1_min=1] ~ ~ ~ function noop_cm:shop/red1 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=30]
 execute @p[score_red2=1,score_red2_min=1] ~ ~ ~ function noop_cm:shop/red2 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=120]
@@ -50,6 +53,7 @@ execute @p[score_red5=1,score_red5_min=1] ~ ~ ~ function noop_cm:shop/red5 if @e
 execute @p[score_red6=1,score_red6_min=1] ~ ~ ~ function noop_cm:shop/red6 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=10]
 execute @p[score_red7=1,score_red7_min=1] ~ ~ ~ function noop_cm:shop/red7 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=20]
 execute @p[score_red8=1,score_red8_min=1] ~ ~ ~ function noop_cm:shop/red8 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=20]
+execute @p[score_redw=1,score_redw_min=1] ~ ~ ~ function noop_cm:shop/redw if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=50,score_rfood_min=50,score_rgold_min=50]
 
 #------------------------------------------
 
@@ -387,11 +391,13 @@ scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bf
 scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bt
 scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bs
 scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bv
-#分數
-scoreboard objectives add scores dummy 分數
+#遊戲資訊
+#scoreboard objectives remove scores
+scoreboard objectives add scores dummy 遊戲資訊
 scoreboard objectives setdisplay sidebar scores
 scoreboard players operation §9累計分數 scores = @e[tag=cmd] bp
 scoreboard players operation §c累計分數 scores = @e[tag=cmd] rp
+execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2,score_canend_min=1] ~ ~ ~ scoreboard players operation §6回合 scores = @e[tag=cmd] resc
 #垃圾清理
 scoreboard players set @e[type=Item] trash 1 {Item:{Count:1b,id:"minecraft:iron_horse_armor"}}
 scoreboard players set @e[type=Item] trash 1 {Item:{Count:1b,id:"minecraft:glass_bottle"}}
@@ -431,10 +437,13 @@ execute @e[tag=cmd,score_ramdon2_min=8] ~ ~ ~ scoreboard players set @e[tag=cmd]
 
 
 function noop_cm:cmend
-
-
-
-
+#勝負偵測
+function noop_cm:endgame
+#戰霧
+scoreboard players set @a blind 1
+execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=4,score_mode_min=4] ~ ~ ~ execute @e[team=red,type=!Player] ~ ~ ~ scoreboard players set @p[team=red,r=5] blind 0
+execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=4,score_mode_min=4] ~ ~ ~ execute @e[team=blue,type=!Player] ~ ~ ~ scoreboard players set @p[team=blue,r=5] blind 0
+execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=4,score_mode_min=4] ~ ~ ~ effect @a[score_blind_min=1] minecraft:blindness 2 0 true
 
 
 

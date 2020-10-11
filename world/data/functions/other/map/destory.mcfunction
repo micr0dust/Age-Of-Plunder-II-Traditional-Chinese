@@ -2,6 +2,6 @@
 #【掠奪時代II:黃金帝國 】
 # 作者: 灰塵
 #########################################################################################################
-clone 38 8 -131 46 21 -139 ~-3 ~2 ~-5 replace force
+fill ~-3 ~2 ~-5 ~5 ~27 ~3 minecraft:air 0 replace
 playsound minecraft:entity.enderdragon_fireball.explode block @a[r=15]
 kill @e[tag=rom,r=5]

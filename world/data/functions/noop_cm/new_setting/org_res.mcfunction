@@ -18,6 +18,11 @@ execute @e[tag=cmd,c=1,score_begin_res=3,score_begin_res_min=3] ~ ~ ~ scoreboard
 execute @e[tag=cmd,c=1,score_begin_res=3,score_begin_res_min=3] ~ ~ ~ scoreboard players set @e[tag=cmd] org_wood 41
 execute @e[tag=cmd,c=1,score_begin_res=3,score_begin_res_min=3] ~ ~ ~ scoreboard players set @e[tag=cmd] org_gold 20
 
+execute @e[tag=cmd,c=1,score_mode=1,score_mode_min=1] ~ ~ ~ scoreboard players set @e[tag=cmd] org_food 200
+execute @e[tag=cmd,c=1,score_mode=1,score_mode_min=1] ~ ~ ~ scoreboard players set @e[tag=cmd] org_wood 200
+execute @e[tag=cmd,c=1,score_mode=1,score_mode_min=1] ~ ~ ~ scoreboard players set @e[tag=cmd] org_gold 200
+
+
 
 
 

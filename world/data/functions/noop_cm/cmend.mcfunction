@@ -45,7 +45,8 @@ scoreboard players set @a blue4 0
 scoreboard players set @a blue5 0
 scoreboard players set @a blue6 0
 scoreboard players set @a blue7 0
-scoreboard players set @a blue8 0
+scoreboard players set @a bluew 0
+
 
 scoreboard players set @a red1 0
 scoreboard players set @a red2 0
@@ -55,6 +56,7 @@ scoreboard players set @a red5 0
 scoreboard players set @a red6 0
 scoreboard players set @a red7 0
 scoreboard players set @a red8 0
+scoreboard players set @a redw 0
 
 scoreboard players enable @p[team=blue] blue1
 scoreboard players enable @p[team=blue] blue2
@@ -64,6 +66,7 @@ scoreboard players enable @p[team=blue] blue5
 scoreboard players enable @p[team=blue] blue6
 scoreboard players enable @p[team=blue] blue7
 scoreboard players enable @p[team=blue] blue8
+scoreboard players enable @p[team=blue] bluew
 
 scoreboard players enable @p[team=red] red1
 scoreboard players enable @p[team=red] red2
@@ -73,6 +76,7 @@ scoreboard players enable @p[team=red] red5
 scoreboard players enable @p[team=red] red6
 scoreboard players enable @p[team=red] red7
 scoreboard players enable @p[team=red] red8
+scoreboard players enable @p[team=red] redw
 #----------------------------------------------
 scoreboard players set @a ra1 0
 scoreboard players set @a ba1 0

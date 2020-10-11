@@ -36,3 +36,6 @@ execute @e[tag=red7,r=5] ~ ~ ~ /clone -21 43 -100 -27 50 -106 ~-3 ~ ~-3 replace 
 execute @e[tag=blue8,r=5] ~ ~ ~ /clone -36 43 -115 -30 50 -109 ~-3 ~ ~-3 replace force
 execute @e[tag=red8,r=5] ~ ~ ~ /clone -22 43 -109 -28 50 -115 ~-3 ~ ~-3 replace force
 
+execute @e[tag=bluew,r=5] ~ ~ ~ /clone -18 43 -152 -10 68 -144 ~-4 ~ ~-4 replace force
+execute @e[tag=redw,r=5] ~ ~ ~ /clone -18 43 -152 -10 68 -144 ~-4 ~ ~-4 replace force
+

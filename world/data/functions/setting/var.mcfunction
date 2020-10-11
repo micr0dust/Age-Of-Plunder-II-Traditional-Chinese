@@ -31,6 +31,9 @@ scoreboard players set @e[tag=cmd] money 0
 scoreboard objectives add terrain dummy
 scoreboard players set @e[tag=cmd] terrain 0
 
+
+scoreboard objectives remove scores
+
 #起始資源
 scoreboard objectives add org_food dummy
 scoreboard objectives add org_wood dummy
@@ -89,7 +92,7 @@ scoreboard objectives add blue5 trigger
 scoreboard objectives add blue6 trigger
 scoreboard objectives add blue7 trigger
 scoreboard objectives add blue8 trigger
-scoreboard objectives add blue9 trigger
+scoreboard objectives add bluew trigger
 
 scoreboard objectives add red1 trigger
 scoreboard objectives add red2 trigger
@@ -99,7 +102,7 @@ scoreboard objectives add red5 trigger
 scoreboard objectives add red6 trigger
 scoreboard objectives add red7 trigger
 scoreboard objectives add red8 trigger
-scoreboard objectives add red9 trigger
+scoreboard objectives add redw trigger
 
 #指揮中心--------------------------------------
 scoreboard objectives add ra1 trigger
@@ -316,6 +319,10 @@ scoreboard objectives add bstoper dummy
 scoreboard players set @e[tag=cmd] bstoper 0
 #藍隊暫停
 
+scoreboard objectives add canend dummy
+scoreboard players set @e[tag=cmd] canend 0
+#開啟勝負判斷
+
 scoreboard objectives add ctrl dummy
 #村民控制
 
@@ -425,8 +432,29 @@ scoreboard players set @e[tag=cmd] begin_res 1
 scoreboard objectives add mode dummy
 scoreboard players set @e[tag=cmd] mode 0
 
+#--分數競賽判斷
+scoreboard objectives add score_contect dummy
+scoreboard players set @e[tag=cmd] score_contect 1000
 
-
+#--弒君判斷
+scoreboard objectives add die deathCount
+scoreboard players set @a die 0
+#--世界奇觀倒數
+#-紅
+scoreboard objectives add rwonder_count dummy
+scoreboard players set @e[tag=cmd] rwonder_count 300
+#-藍
+scoreboard objectives add bwonder_count dummy
+scoreboard players set @e[tag=cmd] bwonder_count 300
+#--AI檢測
+scoreboard objectives add bai dummy
+scoreboard players set @e[tag=cmd] bai 1
+#--戰霧
+scoreboard objectives add blind dummy
+scoreboard players set @a blind 0
+#--防守計時回合+資源
+scoreboard objectives add resc dummy
+scoreboard players set @e[tag=cmd] resc 0
 
 function noop_cm:stop_music
 

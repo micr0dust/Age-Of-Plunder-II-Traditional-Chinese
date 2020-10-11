@@ -148,6 +148,7 @@ execute @e[tag=cmd,score_btlvl=3,score_btlvl_min=3,score_stop=0,score_stop_min=0
 #-維京堡兵回血
 execute @e[tag=viking,team=blue] ~ ~ ~ effect @e[tag=s,r=2,team=blue] 10 6 0 true
 execute @e[tag=viking,team=red] ~ ~ ~ effect @e[tag=s,r=2,team=red] 10 6 0 true
+
 #軍隊跟隨定時仇恨轉移
 execute @e[tag=bfollow] ~ ~ ~ execute @e[tag=s,team=blue,r=5] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-04bc-0000-0000000004bc,Motion:[0.0,-1.0,0.0]}
 execute @e[tag=bfollow] ~ ~ ~ execute @e[tag=s,team=blue,r=5] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-04bc-0000-0000000004bc,Motion:[0.0,-1.0,0.0]}
@@ -155,6 +156,7 @@ execute @e[tag=bfollow] ~ ~ ~ scoreboard players set @e[tag=horse,r=5,score_ctrl
 execute @e[tag=rfollow] ~ ~ ~ execute @e[tag=s,team=red,r=5] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0849-0000-000000000849,Motion:[0.0,-1.0,0.0]}
 execute @e[tag=rfollow] ~ ~ ~ execute @e[tag=s,team=red,r=5] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-0849-0000-000000000849,Motion:[0.0,-1.0,0.0]}
 execute @e[tag=rfollow] ~ ~ ~ scoreboard players set @e[tag=horse,r=5,score_ctrl_min=1,team=red] ctrl 0
+
 #AI進攻
 execute @e[tag=attack] ~ ~ ~ execute @e[tag=s,r=8,team=blue] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0055-0000-000000000055,Motion:[0.0,-1.0,0.0]}
 
@@ -178,6 +180,9 @@ function noop_cm:particle
 #資源點扣血
 function noop_cm:deresource if @e[tag=cmd,score_stop=0,score_stop_min=0]
 
+#奇觀倒數
+execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=6,score_mode_min=6] ~ ~ ~ execute @e[tag=bluew,c=1] ~ ~ ~ scoreboard players remove @e[tag=cmd] bwonder_count 1
+execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=6,score_mode_min=6] ~ ~ ~ execute @e[tag=redw,c=1] ~ ~ ~ scoreboard players remove @e[tag=cmd] rwonder_count 1
 
 
 

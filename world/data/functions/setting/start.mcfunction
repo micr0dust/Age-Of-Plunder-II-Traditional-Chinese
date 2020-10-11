@@ -9,6 +9,10 @@ function noop_cm:chat_clearall
 function noop_cm:chat_clearall
 scoreboard players set @e[tag=cmd] gamemode 1
 execute @p[team=blue] ~ ~ ~ /scoreboard players set @e[tag=cmd] gamemode 0
+execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ scoreboard players set @e[tag=cmd] aibuild 256
+execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ scoreboard players set @e[tag=cmd] AI_attack 0
+execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ scoreboard players set @e[tag=cmd] AI_surrender 1
+scoreboard players set @e[tag=cmd] resc 0
 function setting:self_terrain_barrier_clean
 function noop_cm:new_setting/org_res
 setblock 96 30 -135 minecraft:air
@@ -33,5 +37,10 @@ execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ scoreboard playe
 scoreboard players set @e[tag=cmd] count 1
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /gamerule gameLoopFunction ai:mony_test
 function ai:chat/join
+scoreboard players set @e[tag=cmd] canend 1
+execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ execute @e[tag=red1,c=1] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rom","v","horse"]}
+execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ execute @e[tag=red1,c=1] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rom","v","horse"]}
+execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ execute @e[tag=red1,c=1] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rom","v","horse"]}
+
 #ai
 
