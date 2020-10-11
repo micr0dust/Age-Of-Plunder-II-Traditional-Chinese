@@ -14,5 +14,7 @@ execute @e[tag=red6] ~ ~ ~ kill @e[tag=pick,c=1,r=1]
 execute @e[tag=blue4] ~ ~ ~ kill @e[tag=pick,c=1,r=1]
 execute @e[tag=red4] ~ ~ ~ kill @e[tag=pick,c=1,r=1]
 
-
-
+execute @e[tag=blue6] ~ ~ ~ execute @e[tag=destory,c=1,r=1] ~ ~ ~ /effect @e[tag=blue6,r=1] 7 1 5 true
+execute @e[tag=red6] ~ ~ ~ execute @e[tag=destory,c=1,r=1] ~ ~ ~ /effect @e[tag=red6,r=1] 7 1 5 true
+execute @e[tag=blue6] ~ ~ ~ kill @e[tag=destory,c=1,r=1]
+execute @e[tag=red6] ~ ~ ~ kill @e[tag=destory,c=1,r=1]

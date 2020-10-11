@@ -34,4 +34,6 @@ execute @e[tag=cmd,score_stop=0,score_stop_min=0] ~ ~ ~ execute @e[tag=vill] ~ ~
 execute @e[tag=cmd,score_stop=0,score_stop_min=0] ~ ~ ~ execute @e[tag=vill] ~ ~ ~ execute @e[tag=red4,r=5] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rom","pick"]}
 execute @e[tag=cmd,score_stop=0,score_stop_min=0] ~ ~ ~ execute @e[tag=vill] ~ ~ ~ execute @e[tag=blue4,r=5] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rom","pick"]}
 
+execute @e[tag=cmd,score_stop=0,score_stop_min=0] ~ ~ ~ execute @e[tag=s,team=blue] ~ ~ ~ execute @e[tag=red6,r=3] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rom","destory"]}
+execute @e[tag=cmd,score_stop=0,score_stop_min=0] ~ ~ ~ execute @e[tag=s,team=red] ~ ~ ~ execute @e[tag=blue6,r=3] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rom","destory"]}
 

@@ -356,7 +356,7 @@ execute @e[tag=attack] ~ ~ ~ execute @e[tag=barr,c=1,r=12,score_path_min=600] ~ 
 execute @e[tag=attack] ~ ~ ~ execute @e[tag=barr,c=1,score_path_min=600] ~ ~ ~ function ai:stop_attack
 
 
-execute @e[tag=attack] ~ ~ ~ execute @e[tag=target,r=2] ~ ~ ~ function ai:stop_attack
+execute @e[tag=attack] ~ ~ ~ execute @e[tag=target,r=3] ~ ~ ~ function ai:stop_attack
 #攻擊路徑微調
 scoreboard players set @e[tag=s,team=blue] noai 0
 execute @e[tag=attack] ~ ~ ~ scoreboard players set @e[tag=s,r=3,team=blue] noai 1

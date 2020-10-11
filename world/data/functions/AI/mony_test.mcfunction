@@ -27,6 +27,8 @@ execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AInor=4,score_AIn
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AInor=5,score_AInor_min=5,score_setmenu_min=1] ~ ~ ~ /execute @e[tag=red1,c=1] ~ ~ ~ /execute @e[tag=s,team=blue,r=50] ~ ~ ~ /scoreboard players set @e[tag=cmd] AI 5
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AInor=6,score_AInor_min=6,score_setmenu_min=1] ~ ~ ~ /execute @e[tag=red1,c=1] ~ ~ ~ /execute @e[tag=s,team=blue,r=50] ~ ~ ~ /scoreboard players set @e[tag=cmd] AI 6
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AInor=7,score_AInor_min=7,score_setmenu_min=1] ~ ~ ~ /execute @e[tag=red1,c=1] ~ ~ ~ /execute @e[tag=s,team=blue,r=50] ~ ~ ~ /scoreboard players set @e[tag=cmd] AI 7
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_setmenu_min=1] ~ ~ ~ execute @e[tag=red1,c=1] ~ ~ ~ execute @e[tag=blue6,c=1,r=50] ~ ~ ~ scoreboard players add @e[tag=cmd] bwood 10
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_setmenu_min=1] ~ ~ ~ execute @e[tag=red1,c=1] ~ ~ ~ execute @e[tag=blue6,c=1,r=50] ~ ~ ~ kill @e[tag=blue6,c=1]
 #主動進攻
 execute @e[tag=cmd,c=1,score_AI_attack=0,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ function ai:stop_attack unless @e[tag=target]
 execute @e[tag=cmd,c=1,score_AI_attack=0,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ function ai:stop_attack unless @e[tag=attack]

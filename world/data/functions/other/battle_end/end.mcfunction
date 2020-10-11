@@ -19,7 +19,5 @@ tellraw @a [{"text":"紅隊總分:","color":"red"},{"score":{"name":"@e[tag=cmd]
 tellraw @a [{"text":"藍隊總分:","color":"blue"},{"score":{"name":"@e[tag=cmd]","objective":"bp"}},{"text":"分"}]
 
 
-execute @a[score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @p [{"text":"AI難度:"},{"score":{"name":"@e[tag=cmd]","objective":"AIcheat"}},{"text":"等"}]
-execute @a[score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @p [{"text":"AI類型:"},{"score":{"name":"@e[tag=cmd]","objective":"AI"}},{"text":"型"}]
 scoreboard players enable @a restart
 tellraw @a {"text":"[\u9ede\u6b64\u91cd\u7f6e\u5730\u5716]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger restart set 1"}}

@@ -2,7 +2,8 @@
 #【掠奪時代II:黃金帝國 】
 # 作者: 灰塵
 #########################################################################################################
-execute @e[tag=cmd,score_buildt=34,score_buildt_min=34] ~ ~ ~ /scoreboard players set @e[tag=cmd] buildt 8
+execute @e[tag=cmd,score_buildt=35,score_buildt_min=35] ~ ~ ~ /scoreboard players set @e[tag=cmd] buildt 8
+execute @e[tag=cmd,score_buildt=34,score_buildt_min=34] ~ ~ ~ /function ai:build/stable
 execute @e[tag=cmd,score_buildt=33,score_buildt_min=33] ~ ~ ~ /function ai:skip if @e[tag=barr]
 execute @e[tag=cmd,score_buildt=33,score_buildt_min=33] ~ ~ ~ /function ai:build/grain_collector unless @e[tag=barr]
 execute @e[tag=cmd,score_buildt=32,score_buildt_min=32] ~ ~ ~ /function ai:soldier/vill
@@ -15,7 +16,7 @@ execute @e[tag=cmd,score_buildt=28,score_buildt_min=28] ~ ~ ~ /function ai:soldi
 execute @e[tag=cmd,score_buildt=27,score_buildt_min=27] ~ ~ ~ /function ai:skip if @e[tag=blue7]
 execute @e[tag=cmd,score_buildt=27,score_buildt_min=27] ~ ~ ~ /function ai:build/stable unless @e[tag=blue7]
 execute @e[tag=cmd,score_buildt=26,score_buildt_min=26] ~ ~ ~ /function ai:soldier/vill
-execute @e[tag=cmd,score_buildt=25,score_buildt_min=25] ~ ~ ~ /function ai:skip if @e[tag=blue5]
+execute @e[tag=cmd,score_buildt=25,score_buildt_min=25] ~ ~ ~ /function ai:skip if @e[tag=blue3]
 execute @e[tag=cmd,score_buildt=25,score_buildt_min=25] ~ ~ ~ /function ai:build/tower unless @e[tag=blue3]
 execute @e[tag=cmd,score_buildt=24,score_buildt_min=24] ~ ~ ~ /function ai:soldier/vill
 execute @e[tag=cmd,score_buildt=23,score_buildt_min=23] ~ ~ ~ /function ai:soldier/knight

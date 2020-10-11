@@ -2,7 +2,8 @@
 #【掠奪時代II:黃金帝國 】
 # 作者: 灰塵
 #######################################################################################################
-execute @e[tag=cmd,score_buildt=35,score_buildt_min=35] ~ ~ ~ /scoreboard players set @e[tag=cmd] buildt 8
+execute @e[tag=cmd,score_buildt=36,score_buildt_min=36] ~ ~ ~ /scoreboard players set @e[tag=cmd] buildt 8
+execute @e[tag=cmd,score_buildt=35,score_buildt_min=35] ~ ~ ~ /function ai:build/military_camp
 execute @e[tag=cmd,score_buildt=34,score_buildt_min=34] ~ ~ ~ /function ai:skip if @e[tag=blue5]
 execute @e[tag=cmd,score_buildt=34,score_buildt_min=34] ~ ~ ~ /function ai:build/tower unless @e[tag=blue3]
 execute @e[tag=cmd,score_buildt=33,score_buildt_min=33] ~ ~ ~ /function ai:soldier/heavy_solider
