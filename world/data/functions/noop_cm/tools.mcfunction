@@ -45,19 +45,23 @@ execute @e[tag=redf] ~ ~ ~ /summon minecraft:zombie ~ ~2 ~ {CustomName:"集合�
 execute @e[tag=redf] ~ ~ ~ execute @e[tag=s,team=red,r=20] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-014d-0000-0000000001bc,Motion:[0.0,-1.0,0.0]}
 execute @e[tag=redf] ~ ~ ~ execute @e[tag=s,team=red,r=20] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-014d-0000-0000000001bc,Motion:[0.0,-1.0,0.0]}
 kill @e[tag=redf]
-#村民領軍旗
+#藍隊村民領軍旗
 scoreboard players tag @e[type=item,tag=!bluevf] add bluevf {Item:{tag:{bluevf:1b}},OnGround:1b}
 execute @e[tag=bluevf] ~ ~ ~ /give @p[team=blue] minecraft:wheat 1 0 {display:{Name:"村民領軍旗",Lore:["(拿著按Q使用)離你最近的3隻村民會向這個旗幟集合"]},bluevf:1b,ench:[{id:71,lvl:3}]}
-execute @e[tag=bluevf] ~ ~ ~ /summon minecraft:zombie ~ ~2 ~ {CustomName:"集合點",UUIDMost:777L,UUIDLeast:888L,CustomNameVisible:1,NoAI:1b,Silent:1,CanPickUpLoot:0b,ArmorItems:[{},{},{},{id:"minecraft:concrete",Damage:11,Count:1}],ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:20,Amplifier:5,Duration:2147483647,ShowParticles:0b}],Tags:["flat","horse"],Team:red}
-execute @e[tag=bluevf] ~ ~ ~ execute @e[tag=vill,team=blue,c=3] ~ ~ ~ summon snowball ~ ~-1 ~ {ownerName:00000000-0000-0309-0000-000000000378,Motion:[0.0,1.0,0.0]}
-execute @e[tag=bluevf] ~ ~ ~ execute @e[tag=vill,team=blue,c=3] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0309-0000-000000000378,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=bluevf] ~ ~ ~ /summon minecraft:villager ~ ~2 ~ {Profession:5,CustomName:"集合點",UUIDMost:777L,UUIDLeast:888L,CustomNameVisible:1,NoAI:1b,Silent:1,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:20,Amplifier:5,Duration:2147483647,ShowParticles:0b}],Tags:["flat","horse"],Team:red}
+execute @e[tag=bluevf] ~ ~ ~ execute @e[tag=vill,team=blue,r=20] ~ ~ ~ summon snowball ~ ~-1 ~ {ownerName:00000000-0000-0309-0000-000000000378,Motion:[0.0,1.0,0.0]}
+execute @e[tag=bluevf] ~ ~ ~ execute @e[tag=vill,team=blue,r=20] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0309-0000-000000000378,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=bluevf] ~ ~ ~ scoreboard players set @e[tag=vill,team=blue,r=20] ctrl 1
+execute @e[tag=bluevf] ~ ~ ~ effect @e[tag=vill,r=20,score_ctrl_min=1] minecraft:slowness 0 0 true
 kill @e[tag=bluevf]
-#村民領軍旗
+#紅隊村民領軍旗
 scoreboard players tag @e[type=item,tag=!redvf] add redvf {Item:{tag:{redvf:1b}},OnGround:1b}
 execute @e[tag=redvf] ~ ~ ~ /give @p[team=red] minecraft:wheat 1 0 {display:{Name:"村民領軍旗",Lore:["(拿著按Q使用)離你最近的3隻村民會向這個旗幟集合"]},redvf:1b,ench:[{id:71,lvl:3}]}
-execute @e[tag=redvf] ~ ~ ~ /summon minecraft:zombie ~ ~2 ~ {CustomName:"集合點",UUIDMost:555L,UUIDLeast:666L,CustomNameVisible:1,NoAI:1b,Silent:1,CanPickUpLoot:0b,ArmorItems:[{},{},{},{id:"minecraft:concrete",Damage:14,Count:1}],ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:20,Amplifier:5,Duration:2147483647,ShowParticles:0b}],Tags:["flat","horse"],Team:blue}
-execute @e[tag=redvf] ~ ~ ~ execute @e[tag=vill,team=red,c=3] ~ ~ ~ summon snowball ~ ~-1 ~ {ownerName:00000000-0000-022b-0000-00000000029a,Motion:[0.0,1.0,0.0]}
-execute @e[tag=redvf] ~ ~ ~ execute @e[tag=vill,team=red,c=3] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-022b-0000-00000000029a,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=redvf] ~ ~ ~ /summon minecraft:villager ~ ~2 ~ {Profession:5,CustomName:"集合點",UUIDMost:555L,UUIDLeast:666L,CustomNameVisible:1,NoAI:1b,Silent:1,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:20,Amplifier:5,Duration:2147483647,ShowParticles:0b}],Tags:["flat","horse"],Team:blue}
+execute @e[tag=redvf] ~ ~ ~ execute @e[tag=vill,team=red,r=20] ~ ~ ~ summon snowball ~ ~-1 ~ {ownerName:00000000-0000-022b-0000-00000000029a,Motion:[0.0,1.0,0.0]}
+execute @e[tag=redvf] ~ ~ ~ execute @e[tag=vill,team=red,r=20] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-022b-0000-00000000029a,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=redvf] ~ ~ ~ scoreboard players set @e[tag=vill,team=red,r=20] ctrl 1
+execute @e[tag=redvf] ~ ~ ~ effect @e[tag=vill,r=20,score_ctrl_min=1] minecraft:slowness 0 0 true
 kill @e[tag=redvf]
 #領軍旗特效
 execute @e[type=zombie] ~ ~ ~ particle flame ~ ~ ~ 1 1 1 0.1 1

@@ -11,6 +11,7 @@ execute @p[score_redsurrender=1,score_redsurrender_min=1] ~ ~ ~ function other:m
 execute @p[score_redsurrenderc=1,score_redsurrenderc_min=1] ~ ~ ~ /kill @e[tag=red1]
 execute @p[score_info=1,score_info_min=1] ~ ~ ~ function other:menu/terrain_info
 execute @p[score_restart=1,score_restart_min=1] ~ ~ ~ function setting:restart
+execute @p[score_suicide=1,score_suicide_min=1] ~ ~ ~ kill @p
 
 #建築購買----------------------------------
 execute @p[score_blue1=1,score_blue1_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=30]
@@ -230,10 +231,15 @@ execute @e[tag=red1] ~ ~ ~ effect @a[team=red,r=4] minecraft:glowing 1 1 true
 execute @e[tag=blue1] ~ ~ ~ effect @a[team=blue,r=4] minecraft:regeneration 1 2 true
 execute @e[tag=red1] ~ ~ ~ effect @a[team=red,r=4] minecraft:regeneration 1 2 true
 
-execute @e[tag=tree] ~ ~ ~ effect @e[tag=vill,r=5] minecraft:slowness 2 255 true
-execute @e[tag=gold] ~ ~ ~ effect @e[tag=vill,r=5] minecraft:slowness 2 255 true
-execute @e[tag=food] ~ ~ ~ effect @e[tag=vill,r=5] minecraft:slowness 2 255 true
-execute @e[tag=blue6] ~ ~ ~ effect @e[tag=vill,r=5] minecraft:slowness 2 255 true
+scoreboard players set @e[tag=vill,score_ctrl_min=1] octrl 1
+scoreboard players set @e[tag=vill] ctrl 0
+scoreboard players set @e[tag=vill,score_octrl_min=1] ctrl 1
+
+execute @e[tag=tree] ~ ~ ~ effect @e[tag=vill,r=5,score_ctrl=0] minecraft:slowness 2 255 true
+execute @e[tag=gold] ~ ~ ~ effect @e[tag=vill,r=5,score_ctrl=0] minecraft:slowness 2 255 true
+execute @e[tag=food] ~ ~ ~ effect @e[tag=vill,r=5,score_ctrl=0] minecraft:slowness 2 255 true
+execute @e[tag=red6] ~ ~ ~ effect @e[tag=vill,r=5,score_ctrl=0] minecraft:slowness 2 255 true
+execute @e[tag=blue6] ~ ~ ~ effect @e[tag=vill,r=5,score_ctrl=0] minecraft:slowness 2 255 true
 
 
 

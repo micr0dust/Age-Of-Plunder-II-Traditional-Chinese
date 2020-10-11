@@ -1,4 +1,5 @@
 execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_rstop_min=1] ~ ~ ~ /entitydata @e[tag=s] {NoAI:1}
+execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_rstop_min=1] ~ ~ ~ /entitydata @e[tag=vill] {NoAI:1}
 execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_rstop_min=1] ~ ~ ~ /setblock 51 20 -170 minecraft:redstone_block
 execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_rstop_min=1] ~ ~ ~ /effect @a minecraft:slowness 99999 7 true
 execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_rstop_min=1] ~ ~ ~ /effect @a minecraft:weakness 99999 7 true

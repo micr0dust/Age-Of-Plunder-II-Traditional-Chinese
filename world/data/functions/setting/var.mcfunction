@@ -77,6 +77,7 @@ scoreboard objectives add redsurrender trigger
 scoreboard objectives add bluesurrenderc trigger
 scoreboard objectives add redsurrenderc trigger
 scoreboard objectives add info trigger
+scoreboard objectives add suicide trigger
 #建築購買--------------------------------------
 scoreboard objectives add blue1 trigger
 scoreboard objectives add blue2 trigger
@@ -304,6 +305,11 @@ scoreboard objectives add bstoper dummy
 scoreboard players set @e[tag=cmd] bstoper 0
 #藍隊暫停
 
+scoreboard objectives add ctrl dummy
+#村民控制
+
+scoreboard objectives add octrl dummy
+#村民控制型態
 
 scoreboard objectives add trash dummy
 #垃圾

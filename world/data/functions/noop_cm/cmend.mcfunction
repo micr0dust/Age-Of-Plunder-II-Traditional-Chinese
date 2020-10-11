@@ -9,6 +9,7 @@ scoreboard players set @a redsurrenderc 0
 scoreboard players set @a info 0
 scoreboard players set @a put 0
 scoreboard players set @a restart 0
+scoreboard players set @a suicide 0
 
 
 scoreboard players enable @p[team=red] redstop
@@ -22,6 +23,8 @@ scoreboard players enable @p[team=blue] bluesurrender
 scoreboard players enable @p[team=blue] bluesurrenderc
 
 scoreboard players enable @p info
+scoreboard players enable @p suicide
+
 function noop_cm:enable/produce
 function noop_cm:enable/market
 function noop_cm:enable/upgrade

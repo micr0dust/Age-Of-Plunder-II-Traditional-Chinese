@@ -1,4 +1,3 @@
-give @a[r=4] minecraft:potion 1 0 {Potion:"minecraft:water",CustomPotionEffects:[{Id:20,Amplifier:1,Duration:2147483647,ShowParticles:0b}],display:{Name:"自殺藥水",Lore:["(防止被關)"]}}
 give @p minecraft:banner 1 4 {display:{Name:"領軍旗",Lore:["(拿著按Q使用)你的士兵會向這個旗幟集合"]},bluef:1b,ench:[{id:71,lvl:3}]}
 give @p[team=blue] minecraft:paper 1 0 {display:{Name:"選單",Lore:["提供各種選項的遊戲菜單"]},bluem:1b,ench:[{id:71,lvl:3}]}
 give @p[team=blue] minecraft:blue_shulker_box 1 0 {display:{Name:"拆除核心",Lore:["(對著核心按Q使用)會拆除距離2格內的我方核心"]},bluedes:1b,ench:[{id:71,lvl:3}]}
