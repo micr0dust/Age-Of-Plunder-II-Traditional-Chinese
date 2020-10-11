@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 execute @e[tag=tree] ~ ~ ~ /execute @e[tag=vill,r=5,team=red] ~ ~ ~ /scoreboard players add @e[tag=cmd,score_stop=0,score_stop_min=0] rwood 1
 execute @e[tag=food] ~ ~ ~ /execute @e[tag=vill,r=5,team=red] ~ ~ ~ /scoreboard players add @e[tag=cmd,score_stop=0,score_stop_min=0] rfood 1
 execute @e[tag=gold] ~ ~ ~ /execute @e[tag=vill,r=5,team=red] ~ ~ ~ /scoreboard players add @e[tag=cmd,score_stop=0,score_stop_min=0] rgold 1

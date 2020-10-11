@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /execute @e[tag=cmd,score_bgold_min=1] ~ ~ ~ /scoreboard players add @e[tag=cmd] bwood 2
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /execute @e[tag=cmd,score_bfood_min=4] ~ ~ ~ /scoreboard players add @e[tag=cmd] bwood 5
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /execute @e[tag=cmd,score_bgold_min=1] ~ ~ ~ /scoreboard players remove @e[tag=cmd] bgold 1

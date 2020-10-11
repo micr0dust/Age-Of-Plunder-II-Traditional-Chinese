@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 execute @e[tag=cmd,score_build=64,score_build_min=64] ~ ~ ~ /scoreboard players set @e[tag=cmd,score_build=64,score_build_min=64] build 65
 execute @e[tag=cmd,score_build=56,score_build_min=56] ~ ~ ~ /scoreboard players set @e[tag=cmd,score_build=56,score_build_min=56] build 64
 execute @e[tag=cmd,score_build=63,score_build_min=63] ~ ~ ~ /scoreboard players set @e[tag=cmd,score_build=63,score_build_min=63] build 56

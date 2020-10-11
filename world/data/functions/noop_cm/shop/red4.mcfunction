@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 give @p[team=red] spawn_egg 1 1 {EntityTag:{id:"minecraft:shulker",Color:14,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:500}],Health:500.0f,Tags:["red4","building","horse"],Team:red},CanPlaceOn:["minecraft:sea_lantern"],display:{Name:"石牆--紅方",Lore:["傭有極高血量的建築，而且還很便宜，適合","用來拖延敵軍的快攻，非常的實用"]},ench:[{id:71,lvl:3}]}
 scoreboard players remove @e[tag=cmd] rwood 10
 function noop_cm:chat_clear

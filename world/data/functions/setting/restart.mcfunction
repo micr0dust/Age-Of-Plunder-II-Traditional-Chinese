@@ -1,4 +1,9 @@
-reload
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
+function noop_cm:chat_clearall
+function noop_cm:chat_clearall
 scoreboard teams leave @a[team=!sp]
 kill @e[tag=s]
 kill @e[tag=building]
@@ -7,17 +12,14 @@ fill 38 30 -167 73 40 -202 minecraft:air 0 replace
 fill 38 30 -131 73 40 -166 minecraft:air 0 replace
 fill 74 30 -167 109 40 -202 minecraft:air 0 replace
 fill 74 30 -131 109 40 -166 minecraft:air 0 replace
-clone 46 15 -184 53 16 -191 59 17 -169
-tp @a 7 4 23 180 0
-clone 23 2 -5 23 2 -5 2 5 7
+tp @a 54 19 -148 180 0
 clear @a
 kill @e[type=item]
 kill @e[type=shulker]
 tellraw @a {"text":"\u5730\u5716\u91cd\u88fd\u5b8c\u7562,\u8acb\u91cd\u65b0\u5206\u968a\u5f8c\u958b\u59cb !","color":"yellow"}
 xp -1000L @a
 effect @a clear
-fill 0 5 9 0 4 9 minecraft:air
-fill 14 5 20 14 4 20 minecraft:wooden_slab
+gamemode 2 @a
 function setting:var
 
 

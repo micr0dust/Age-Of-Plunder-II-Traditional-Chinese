@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 execute @e[tag=cmd,score_buildt=19,score_buildt_min=19] ~ ~ ~ /scoreboard players set @e[tag=cmd] buildt 4
 
 execute @e[tag=cmd,score_buildt=18,score_buildt_min=18] ~ ~ ~ /function ai:skip unless @e[tag=blue3]

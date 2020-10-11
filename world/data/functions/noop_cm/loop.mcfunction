@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 function noop_cm:tools
 
 execute @p[score_put=1,score_put_min=1] ~ ~ ~ function noop_cm:puted
@@ -243,9 +247,11 @@ execute @p[score_bwb=1,score_bwb_min=1] ~ ~ ~ function noop_cm:market/bwb if @e[
 execute @p[score_bfb=1,score_bfb_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_bgold_min=10]
 execute @p[score_bfb=1,score_bfb_min=1] ~ ~ ~ function noop_cm:market/bfb if @e[tag=cmd,score_bgold_min=10]
 
-
-
-
+#更新介面-----------------
+execute @p[score_join_red_min=1] ~ ~ ~ function setting:join_team/red
+execute @p[score_join_blue_min=1] ~ ~ ~ function setting:join_team/blue
+execute @p[score_join_spectator_min=1] ~ ~ ~ function setting:join_team/spectator
+#-------------------------
 
 
 execute @e[tag=blue1] ~ ~ ~ effect @a[team=blue,r=4] minecraft:glowing 1 1 true

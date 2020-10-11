@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 give @p[team=blue] minecraft:paper 1 0 {display:{Name:"選單",Lore:["提供各種選項的遊戲菜單"]},bluem:1b,ench:[{id:71,lvl:3}]}
 give @p[team=blue] minecraft:blue_shulker_box 1 0 {display:{Name:"拆除核心",Lore:["(對著核心按Q使用)會拆除距離2格內的我方核心"]},bluedes:1b,ench:[{id:71,lvl:3}]}
 give @p[team=blue] minecraft:iron_door 1 0 {display:{Name:"開啟建築",Lore:["(拿著在要開啟的建築旁按Q使用)可以開啟建築功能"]},bluebopt:1b,ench:[{id:71,lvl:3}]}

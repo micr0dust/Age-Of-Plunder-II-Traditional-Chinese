@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 execute @e[tag=cmd,score_build=1,score_build_min=1] ~ ~ ~ /summon minecraft:shulker 105 30 -135 {Color:8,CustomName:"山脈",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:20}],Health:20.0f,Tags:["barr","building"],Team:b}
 execute @e[tag=cmd,score_build=2,score_build_min=2] ~ ~ ~ /summon minecraft:shulker 96 30 -135 {Color:8,CustomName:"山脈",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:20}],Health:20.0f,Tags:["barr","building"],Team:b}
 execute @e[tag=cmd,score_build=3,score_build_min=3] ~ ~ ~ /summon minecraft:shulker 87 30 -135 {Color:8,CustomName:"山脈",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:20}],Health:20.0f,Tags:["barr","building"],Team:b}

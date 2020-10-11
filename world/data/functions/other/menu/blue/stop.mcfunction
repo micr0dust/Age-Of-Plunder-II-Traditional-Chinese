@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_bstop_min=1] ~ ~ ~ /entitydata @e[tag=s] {NoAI:1}
 execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_bstop_min=1] ~ ~ ~ /entitydata @e[tag=vill] {NoAI:1}
 execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_bstop_min=1] ~ ~ ~ /setblock 51 20 -170 minecraft:redstone_block

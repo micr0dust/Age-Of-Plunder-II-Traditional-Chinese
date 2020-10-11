@@ -1,7 +1,12 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
+scoreboard players operation @e[tag=cmd] AInor = @e[tag=cmd] AI
 function setting:gamerule
 function noop_cm:loop
 function noop_cm:chat_clearall
-function setting:var unless @e[tag=cmd,score_AIset=1,score_AIset_min=1]
+function noop_cm:chat_clearall
 scoreboard players set @e[tag=cmd] gamemode 1
 execute @p[team=blue] ~ ~ ~ /scoreboard players set @e[tag=cmd] gamemode 0
 function setting:self_terrain_barrier_clean
@@ -25,10 +30,6 @@ execute @a[team=sp] ~ ~ ~ function noop_cm:chat_clear
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ scoreboard players set @e[tag=cmd] bwood 180
 scoreboard players set @e[tag=cmd] count 1
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /gamerule gameLoopFunction ai:mony_test
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @a [{"text":"AI升級作弊:"},{"score":{"name":"@e[tag=cmd]","objective":"AIcheat2"}},{"text":"等"}]
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @a [{"text":"AI資源作弊:"},{"score":{"name":"@e[tag=cmd]","objective":"AIcheat"}},{"text":"等"}]
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @a [{"text":"AI類型:"},{"score":{"name":"@e[tag=cmd]","objective":"AI"}},{"text":"型"}]
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @a [{"text":"AI建築方式:"},{"score":{"name":"@e[tag=cmd]","objective":"aibuild"}},{"text":"型"}]
 function ai:chat/join
 #ai
 

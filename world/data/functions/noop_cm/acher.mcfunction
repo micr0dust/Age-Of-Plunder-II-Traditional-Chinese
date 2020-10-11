@@ -1,3 +1,7 @@
+#########################################################################################################
+#【掠奪時代II:黃金帝國 】
+# 作者: 灰塵
+#########################################################################################################
 #弓兵攻擊
 execute @e[tag=cmd,score_rrlvl=1,score_rrlvl_min=1,score_arrow_delay=0] ~ ~ ~ execute @e[tag=rarrow,c=1] ~ ~ ~ execute @e[team=!red,tag=!horse,r=10,c=1] ~ ~ ~ summon minecraft:arrow ~ ~4 ~ {life:5800s,pickup:0b,damage:8,crit:1}
 execute @e[tag=cmd,score_brlvl=1,score_brlvl_min=1,score_arrow_delay=0] ~ ~ ~ execute @e[tag=barrow,c=1] ~ ~ ~ execute @e[team=!blue,tag=!horse,r=10,c=1] ~ ~ ~ summon minecraft:arrow ~ ~4 ~ {life:5800s,pickup:0b,damage:8,crit:1}
