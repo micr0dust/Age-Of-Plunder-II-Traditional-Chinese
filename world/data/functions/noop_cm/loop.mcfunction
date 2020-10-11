@@ -15,18 +15,18 @@ execute @p[score_suicide=1,score_suicide_min=1] ~ ~ ~ kill @p
 
 #建築購買----------------------------------
 execute @p[score_blue1=1,score_blue1_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=30]
-execute @p[score_blue2=1,score_blue2_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=15]
+execute @p[score_blue2=1,score_blue2_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=50]
 execute @p[score_blue3=1,score_blue3_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=15,score_bgold_min=8]
-execute @p[score_blue4=1,score_blue4_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=15]
+execute @p[score_blue4=1,score_blue4_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=10]
 execute @p[score_blue5=1,score_blue5_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=20]
 execute @p[score_blue6=1,score_blue6_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=10]
 execute @p[score_blue7=1,score_blue7_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=20]
 execute @p[score_blue8=1,score_blue8_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=20]
 
 execute @p[score_red1=1,score_red1_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=30]
-execute @p[score_red2=1,score_red2_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=15]
+execute @p[score_red2=1,score_red2_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=50]
 execute @p[score_red3=1,score_red3_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=15,score_rgold_min=8]
-execute @p[score_red4=1,score_red4_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=15]
+execute @p[score_red4=1,score_red4_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=10]
 execute @p[score_red5=1,score_red5_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=20]
 execute @p[score_red6=1,score_red6_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=10]
 execute @p[score_red7=1,score_red7_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=20]
@@ -34,18 +34,18 @@ execute @p[score_red8=1,score_red8_min=1] ~ ~ ~ function noop_cm:buy/noresoure u
 
 
 execute @p[score_blue1=1,score_blue1_min=1] ~ ~ ~ function noop_cm:shop/blue1 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=30]
-execute @p[score_blue2=1,score_blue2_min=1] ~ ~ ~ function noop_cm:shop/blue2 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=15]
+execute @p[score_blue2=1,score_blue2_min=1] ~ ~ ~ function noop_cm:shop/blue2 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=50]
 execute @p[score_blue3=1,score_blue3_min=1] ~ ~ ~ function noop_cm:shop/blue3 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=15,score_bgold_min=8]
-execute @p[score_blue4=1,score_blue4_min=1] ~ ~ ~ function noop_cm:shop/blue4 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=15]
+execute @p[score_blue4=1,score_blue4_min=1] ~ ~ ~ function noop_cm:shop/blue4 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=10]
 execute @p[score_blue5=1,score_blue5_min=1] ~ ~ ~ function noop_cm:shop/blue5 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=20]
 execute @p[score_blue6=1,score_blue6_min=1] ~ ~ ~ function noop_cm:shop/blue6 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=10]
 execute @p[score_blue7=1,score_blue7_min=1] ~ ~ ~ function noop_cm:shop/blue7 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=20]
 execute @p[score_blue8=1,score_blue8_min=1] ~ ~ ~ function noop_cm:shop/blue8 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_bwood_min=20]
 
 execute @p[score_red1=1,score_red1_min=1] ~ ~ ~ function noop_cm:shop/red1 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=30]
-execute @p[score_red2=1,score_red2_min=1] ~ ~ ~ function noop_cm:shop/red2 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=15]
+execute @p[score_red2=1,score_red2_min=1] ~ ~ ~ function noop_cm:shop/red2 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=50]
 execute @p[score_red3=1,score_red3_min=1] ~ ~ ~ function noop_cm:shop/red3 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=15,score_rgold_min=8]
-execute @p[score_red4=1,score_red4_min=1] ~ ~ ~ function noop_cm:shop/red4 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=15]
+execute @p[score_red4=1,score_red4_min=1] ~ ~ ~ function noop_cm:shop/red4 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=10]
 execute @p[score_red5=1,score_red5_min=1] ~ ~ ~ function noop_cm:shop/red5 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=20]
 execute @p[score_red6=1,score_red6_min=1] ~ ~ ~ function noop_cm:shop/red6 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=10]
 execute @p[score_red7=1,score_red7_min=1] ~ ~ ~ function noop_cm:shop/red7 if @e[tag=cmd,score_stop=0,score_stop_min=0,score_rwood_min=20]
@@ -163,9 +163,9 @@ execute @p[score_bb7lvl1=1,score_bb7lvl1_min=1] ~ ~ ~ function noop_cm:upgrade/b
 #射箭場-----------------------------------
 #---弓兵
 execute @p[score_ra8=1,score_ra8_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_rfood_min=8,score_rwood_min=4]
-execute @p[score_ra8=1,score_ra8_min=1] ~ ~ ~ function noop_cm:buy/a8/red if @e[tag=cmd,score_rfood_min=8,score_rgold_min=4]
+execute @p[score_ra8=1,score_ra8_min=1] ~ ~ ~ function noop_cm:buy/a8/red if @e[tag=cmd,score_rfood_min=8,score_rwood_min=4]
 execute @p[score_ba8=1,score_ba8_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_bfood_min=8,score_bwood_min=4]
-execute @p[score_ba8=1,score_ba8_min=1] ~ ~ ~ function noop_cm:buy/a8/blue if @e[tag=cmd,score_bfood_min=8,score_bgold_min=4]
+execute @p[score_ba8=1,score_ba8_min=1] ~ ~ ~ function noop_cm:buy/a8/blue if @e[tag=cmd,score_bfood_min=8,score_bwood_min=4]
 #---馬弓騎兵
 execute @p[score_rb8=1,score_rb8_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_rwood_min=8,score_rgold_min=2]
 execute @p[score_rb8=1,score_rb8_min=1] ~ ~ ~ function noop_cm:buy/b8/red if @e[tag=cmd,score_rwood_min=8,score_rgold_min=2]
@@ -192,6 +192,28 @@ execute @p[score_b8lvl2=1,score_b8lvl2_min=1] ~ ~ ~ function noop_cm:upgrade/b8l
 
 execute @p[score_b8lvl3=1,score_b8lvl3_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_bwood_min=30,score_bgold_min=10]
 execute @p[score_b8lvl3=1,score_b8lvl3_min=1] ~ ~ ~ function noop_cm:upgrade/b8lvl3 if @e[tag=cmd,score_bwood_min=30,score_bgold_min=10]
+
+#-----------------------------------------
+
+
+#堡壘---------------------------------------
+#---步兵
+execute @p[score_ra25=1,score_ra25_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_rfood_min=8]
+execute @p[score_ra25=1,score_ra25_min=1] ~ ~ ~ function noop_cm:buy/fortess/a5/red if @e[tag=cmd,score_rfood_min=8]
+execute @p[score_ba25=1,score_ba25_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_bfood_min=8]
+execute @p[score_ba25=1,score_ba25_min=1] ~ ~ ~ function noop_cm:buy/fortess/a5/blue if @e[tag=cmd,score_bfood_min=8]
+#---羊駝騎士
+execute @p[score_ra27=1,score_ra27_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_rfood_min=10,score_rgold_min=2]
+execute @p[score_ra27=1,score_ra27_min=1] ~ ~ ~ function noop_cm:buy/fortess/a7/red if @e[tag=cmd,score_rfood_min=10,score_rgold_min=2]
+execute @p[score_ba27=1,score_ba27_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_bfood_min=10,score_bgold_min=2]
+execute @p[score_ba27=1,score_ba27_min=1] ~ ~ ~ function noop_cm:buy/fortess/a7/blue if @e[tag=cmd,score_bfood_min=10,score_bgold_min=2]
+#---弓兵
+execute @p[score_ra28=1,score_ra28_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_rfood_min=8,score_rwood_min=4]
+execute @p[score_ra28=1,score_ra28_min=1] ~ ~ ~ function noop_cm:buy/fortess/a8/red if @e[tag=cmd,score_rfood_min=8,score_rwood_min=4]
+execute @p[score_ba28=1,score_ba28_min=1] ~ ~ ~ function noop_cm:buy/noresoure unless @e[tag=cmd,score_bfood_min=8,score_bwood_min=4]
+execute @p[score_ba28=1,score_ba28_min=1] ~ ~ ~ function noop_cm:buy/fortess/a8/blue if @e[tag=cmd,score_bfood_min=8,score_bwood_min=4]
+
+
 
 #-----------------------------------------
 
@@ -257,8 +279,8 @@ execute @e[tag=bvfollow] ~ ~ ~ tp @e[tag=bvfollow] @p
 execute @e[tag=rvfollow] ~ ~ ~  tp @e[tag=rvfollow] @p
 
 
-#資源點扣血+弓兵攻擊
-function noop_cm:deresource if @e[tag=cmd,score_stop=0,score_stop_min=0]
+#弓兵攻擊
+function noop_cm:acher if @e[tag=cmd,score_stop=0,score_stop_min=0]
 
 
 

@@ -26,7 +26,7 @@ execute @e[tag=cmd,score_buildt=16,score_buildt_min=16] ~ ~ ~ /function ai:skip 
 execute @e[tag=cmd,score_buildt=16,score_buildt_min=16] ~ ~ ~ /function ai:build/command_center if @e[tag=blue3]
 execute @e[tag=cmd,score_buildt=15,score_buildt_min=15] ~ ~ ~ /function ai:soldier/archer
 execute @e[tag=cmd,score_buildt=14,score_buildt_min=14] ~ ~ ~ /function ai:soldier/solider
-execute @e[tag=cmd,score_buildt=13,score_buildt_min=13] ~ ~ ~ /function ai:build/fortress
+execute @e[tag=cmd,score_buildt=13,score_buildt_min=13] ~ ~ ~ /function ai:build/Wall
 execute @e[tag=cmd,score_buildt=12,score_buildt_min=12] ~ ~ ~ /function ai:soldier/vill
 execute @e[tag=cmd,score_buildt=11,score_buildt_min=11] ~ ~ ~ /function ai:soldier/vill
 execute @e[tag=cmd,score_buildt=10,score_buildt_min=10] ~ ~ ~ /function ai:soldier/solider

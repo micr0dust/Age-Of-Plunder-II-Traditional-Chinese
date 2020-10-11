@@ -102,6 +102,13 @@ scoreboard objectives add red9 trigger
 #指揮中心--------------------------------------
 scoreboard objectives add ra1 trigger
 scoreboard objectives add ba1 trigger
+#堡壘--------------------------------------
+scoreboard objectives add ra25 trigger
+scoreboard objectives add ba25 trigger
+scoreboard objectives add ra27 trigger
+scoreboard objectives add ba27 trigger
+scoreboard objectives add ra28 trigger
+scoreboard objectives add ba28 trigger
 #軍營--------------------------------------
 scoreboard objectives add ra5 trigger
 scoreboard objectives add ba5 trigger

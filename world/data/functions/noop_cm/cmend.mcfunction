@@ -82,6 +82,13 @@ scoreboard players set @a ba8 0
 scoreboard players set @a rb8 0
 scoreboard players set @a bb8 0
 
+scoreboard players set @a ra25 0
+scoreboard players set @a ba25 0
+scoreboard players set @a ra27 0
+scoreboard players set @a ba27 0
+scoreboard players set @a ra28 0
+scoreboard players set @a ba28 0
+
 scoreboard players set @a ra5lvl1 0
 scoreboard players set @a ra5lvl2 0
 scoreboard players set @a ra5lvl3 0
