@@ -19,12 +19,12 @@ kill @e[tag=des]
 #藍隊拆除核心
 scoreboard players tag @e[type=item,tag=!bluedes] add bluedes {Item:{tag:{bluedes:1b}},OnGround:1b}
 execute @e[tag=bluedes] ~ ~ ~ /give @p[team=blue] minecraft:blue_shulker_box 1 0 {display:{Name:"拆除核心",Lore:["(對著核心按Q使用)會拆除距離2格內的我方核心"]},bluedes:1b,ench:[{id:71,lvl:3}]}
-execute @e[tag=bluedes] ~ ~ ~ /kill @e[team=blue,r=2,tag=building,c=1]
+execute @e[tag=bluedes] ~ ~ ~ /kill @e[team=blue,r=2,tag=building,c=4]
 kill @e[tag=bluedes]
 #紅隊拆除核心
 scoreboard players tag @e[type=item,tag=!reddes] add reddes {Item:{tag:{reddes:1b}},OnGround:1b}
 execute @e[tag=reddes] ~ ~ ~ /give @p[team=red] minecraft:red_shulker_box 1 0 {display:{Name:"拆除核心",Lore:["(對著核心按Q使用)會拆除距離2格內的我方核心"]},reddes:1b,ench:[{id:71,lvl:3}]}
-execute @e[tag=reddes] ~ ~ ~ /kill @e[team=red,r=2,tag=building,c=1]
+execute @e[tag=reddes] ~ ~ ~ /kill @e[team=red,r=2,tag=building,c=4]
 kill @e[tag=reddes]
 #彩蛋
 scoreboard players tag @e[type=item,tag=!funf] add funf {Item:{tag:{funf:1b}},OnGround:1b}
@@ -33,21 +33,41 @@ execute @e[tag=funf] ~ ~ ~ /summon minecraft:zombie ~ ~2 ~ {CustomName:"集合�
 kill @e[tag=funf]
 #藍隊領軍旗
 scoreboard players tag @e[type=item,tag=!bluef] add bluef {Item:{tag:{bluef:1b}},OnGround:1b}
-execute @e[tag=bluef] ~ ~ ~ /give @p[team=blue] minecraft:banner 1 4 {display:{Name:"領軍旗",Lore:["(拿著按Q使用)離你20格的士兵會向這個旗幟集合"]},bluef:1b,ench:[{id:71,lvl:3}]}
+execute @e[tag=bluef] ~ ~ ~ /give @p[team=blue] minecraft:banner 1 4 {display:{Name:"領軍旗",Lore:["(拿著按Q使用)離你20格的士兵會向這個旗幟集合","(限1人使用)"]},bluef:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=bluef] ~ ~ ~ /summon minecraft:zombie ~ ~2 ~ {CustomName:"集合點",UUIDMost:111L,UUIDLeast:222L,CustomNameVisible:1,NoAI:1b,Silent:1,CanPickUpLoot:0b,ArmorItems:[{},{},{},{id:"minecraft:concrete",Damage:11,Count:1}],ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:20,Amplifier:5,Duration:2147483647,ShowParticles:0b}],Tags:["flat","horse"],Team:red}
 execute @e[tag=bluef] ~ ~ ~ execute @e[tag=s,team=blue,r=20] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-006f-0000-0000000000de,Motion:[0.0,-1.0,0.0]}
 execute @e[tag=bluef] ~ ~ ~ execute @e[tag=s,team=blue,r=20] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-006f-0000-0000000000de,Motion:[0.0,-1.0,0.0]}
 kill @e[tag=bluef]
 #紅隊領軍旗
 scoreboard players tag @e[type=item,tag=!redf] add redf {Item:{tag:{redf:1b}},OnGround:1b}
-execute @e[tag=redf] ~ ~ ~ /give @p[team=red] minecraft:banner 1 1 {display:{Name:"領軍旗",Lore:["(拿著按Q使用)離你20格的士兵會向這個旗幟集合"]},redf:1b,ench:[{id:71,lvl:3}]}
+execute @e[tag=redf] ~ ~ ~ /give @p[team=red] minecraft:banner 1 1 {display:{Name:"領軍旗",Lore:["(拿著按Q使用)離你20格的士兵會向這個旗幟集合","(限1人使用)"]},redf:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=redf] ~ ~ ~ /summon minecraft:zombie ~ ~2 ~ {CustomName:"集合點",UUIDMost:333L,UUIDLeast:444L,CustomNameVisible:1,NoAI:1b,Silent:1,CanPickUpLoot:0b,ArmorItems:[{},{},{},{id:"minecraft:concrete",Damage:14,Count:1}],ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:20,Amplifier:5,Duration:2147483647,ShowParticles:0b}],Tags:["flat","horse"],Team:blue}
 execute @e[tag=redf] ~ ~ ~ execute @e[tag=s,team=red,r=20] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-014d-0000-0000000001bc,Motion:[0.0,-1.0,0.0]}
 execute @e[tag=redf] ~ ~ ~ execute @e[tag=s,team=red,r=20] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-014d-0000-0000000001bc,Motion:[0.0,-1.0,0.0]}
 kill @e[tag=redf]
+#藍隊軍隊跟隨
+scoreboard players tag @e[type=item,tag=!bluefollow] add bluefollow {Item:{tag:{bluefollow:1b}},OnGround:1b}
+execute @e[tag=bluefollow] ~ ~ ~ /give @p[team=blue] minecraft:structure_void 1 0 {display:{Name:"軍隊停止跟隨",Lore:["(拿著按Q使用)你周圍的士兵將停止跟隨你"]},blueFollowStop:1b,ench:[{id:71,lvl:3}]}
+execute @e[tag=bluefollow] ~ ~ ~ /summon minecraft:husk ~ ~ ~ {PersistenceRequired:1b,CustomName:"軍隊跟隨",UUIDMost:1212L,UUIDLeast:1212L,CustomNameVisible:1,NoAI:1b,Silent:1,CanPickUpLoot:0b,Tags:["flat","horse","follow"],Invulnerable:1,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}],Team:red}
+kill @e[tag=bluefollow]
+#紅隊軍隊跟隨
+scoreboard players tag @e[type=item,tag=!redfollow] add redfollow {Item:{tag:{redfollow:1b}},OnGround:1b}
+execute @e[tag=redfollow] ~ ~ ~ /give @p[team=red] minecraft:structure_void 1 0 {display:{Name:"軍隊停止跟隨",Lore:["(拿著按Q使用)你周圍的士兵將停止跟隨你"]},redFollowStop:1b,ench:[{id:71,lvl:3}]}
+execute @e[tag=redfollow] ~ ~ ~ /summon minecraft:husk ~ ~ ~ {PersistenceRequired:1b,CustomName:"軍隊跟隨",UUIDMost:2121L,UUIDLeast:2121L,CustomNameVisible:1,NoAI:1b,Silent:1,CanPickUpLoot:0b,Tags:["flat","horse","follow"],Invulnerable:1,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b}],Team:blue}
+kill @e[tag=redfollow]
+#藍隊軍隊停止跟隨
+scoreboard players tag @e[type=item,tag=!blueFollowStop] add blueFollowStop {Item:{tag:{blueFollowStop:1b}},OnGround:1b}
+execute @e[tag=blueFollowStop] ~ ~ ~ /give @p[team=blue] minecraft:golden_horse_armor 1 0 {display:{Name:"軍隊跟隨",Lore:["(拿著按Q使用)你周圍的士兵將會跟隨你","(限1人使用)"]},bluefollow:1b,ench:[{id:71,lvl:3}]}
+execute @e[tag=blueFollowStop] ~ ~ ~ kill @e[tag=follow,team=red]
+kill @e[tag=blueFollowStop]
+#紅隊軍隊停止跟隨
+scoreboard players tag @e[type=item,tag=!redFollowStop] add redFollowStop {Item:{tag:{redFollowStop:1b}},OnGround:1b}
+execute @e[tag=redFollowStop] ~ ~ ~ /give @p[team=red] minecraft:golden_horse_armor 1 0 {display:{Name:"軍隊跟隨",Lore:["(拿著按Q使用)你周圍的士兵將會跟隨你","(限1人使用)"]},redfollow:1b,ench:[{id:71,lvl:3}]}
+execute @e[tag=redFollowStop] ~ ~ ~ kill @e[tag=follow,team=blue]
+kill @e[tag=redFollowStop]
 #藍隊村民領軍旗
 scoreboard players tag @e[type=item,tag=!bluevf] add bluevf {Item:{tag:{bluevf:1b}},OnGround:1b}
-execute @e[tag=bluevf] ~ ~ ~ /give @p[team=blue] minecraft:wheat 1 0 {display:{Name:"村民領軍旗",Lore:["(拿著按Q使用)離你最近的3隻村民會向這個旗幟集合"]},bluevf:1b,ench:[{id:71,lvl:3}]}
+execute @e[tag=bluevf] ~ ~ ~ /give @p[team=blue] minecraft:wheat 1 0 {display:{Name:"村民領軍旗",Lore:["(拿著按Q使用)離你20格內的村民會向這個旗幟集合","(限1人使用)"]},bluevf:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=bluevf] ~ ~ ~ /summon minecraft:villager ~ ~2 ~ {Profession:5,CustomName:"集合點",UUIDMost:777L,UUIDLeast:888L,CustomNameVisible:1,NoAI:1b,Silent:1,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:20,Amplifier:5,Duration:2147483647,ShowParticles:0b}],Tags:["flat","horse"],Team:red}
 execute @e[tag=bluevf] ~ ~ ~ execute @e[tag=vill,team=blue,r=20] ~ ~ ~ summon snowball ~ ~-1 ~ {ownerName:00000000-0000-0309-0000-000000000378,Motion:[0.0,1.0,0.0]}
 execute @e[tag=bluevf] ~ ~ ~ execute @e[tag=vill,team=blue,r=20] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0309-0000-000000000378,Motion:[0.0,-1.0,0.0]}
@@ -56,7 +76,7 @@ execute @e[tag=bluevf] ~ ~ ~ effect @e[tag=vill,r=20,score_ctrl_min=1] minecraft
 kill @e[tag=bluevf]
 #紅隊村民領軍旗
 scoreboard players tag @e[type=item,tag=!redvf] add redvf {Item:{tag:{redvf:1b}},OnGround:1b}
-execute @e[tag=redvf] ~ ~ ~ /give @p[team=red] minecraft:wheat 1 0 {display:{Name:"村民領軍旗",Lore:["(拿著按Q使用)離你最近的3隻村民會向這個旗幟集合"]},redvf:1b,ench:[{id:71,lvl:3}]}
+execute @e[tag=redvf] ~ ~ ~ /give @p[team=red] minecraft:wheat 1 0 {display:{Name:"村民領軍旗",Lore:["(拿著按Q使用)離你20格內的村民會向這個旗幟集合","(限1人使用)"]},redvf:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=redvf] ~ ~ ~ /summon minecraft:villager ~ ~2 ~ {Profession:5,CustomName:"集合點",UUIDMost:555L,UUIDLeast:666L,CustomNameVisible:1,NoAI:1b,Silent:1,ActiveEffects:[{Id:14,Amplifier:0,Duration:2147483647,ShowParticles:0b},{Id:20,Amplifier:5,Duration:2147483647,ShowParticles:0b}],Tags:["flat","horse"],Team:blue}
 execute @e[tag=redvf] ~ ~ ~ execute @e[tag=vill,team=red,r=20] ~ ~ ~ summon snowball ~ ~-1 ~ {ownerName:00000000-0000-022b-0000-00000000029a,Motion:[0.0,1.0,0.0]}
 execute @e[tag=redvf] ~ ~ ~ execute @e[tag=vill,team=red,r=20] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-022b-0000-00000000029a,Motion:[0.0,-1.0,0.0]}
@@ -64,7 +84,7 @@ execute @e[tag=redvf] ~ ~ ~ scoreboard players set @e[tag=vill,team=red,r=20] ct
 execute @e[tag=redvf] ~ ~ ~ effect @e[tag=vill,r=20,score_ctrl_min=1] minecraft:slowness 0 0 true
 kill @e[tag=redvf]
 #領軍旗特效
-execute @e[type=zombie] ~ ~ ~ particle flame ~ ~ ~ 1 1 1 0.1 1
+execute @e[tag=flat] ~ ~ ~ particle flame ~ ~ ~ 1 1 1 0.1 1
 #Action_Bar
 execute @a[team=blue] ~ ~ ~ /title @p actionbar ["",{"text":"食物:","color":"dark_red","bold":true},{"score":{"name":"@e[tag=cmd]","objective":"bfood"},"color":"dark_red","bold":true},{"text":" 木材:","color":"dark_green","bold":true},{"score":{"name":"@e[tag=cmd]","objective":"bwood"},"color":"dark_green","bold":true},{"text":" 黃金:","color":"gold","bold":true},{"score":{"name":"@e[tag=cmd]","objective":"bgold"},"color":"gold","bold":true}]
 execute @a[team=red] ~ ~ ~ /title @p actionbar ["",{"text":"食物:","color":"dark_red","bold":true},{"score":{"name":"@e[tag=cmd]","objective":"rfood"},"color":"dark_red","bold":true},{"text":" 木材:","color":"dark_green","bold":true},{"score":{"name":"@e[tag=cmd]","objective":"rwood"},"color":"dark_green","bold":true},{"text":" 黃金:","color":"gold","bold":true},{"score":{"name":"@e[tag=cmd]","objective":"rgold"},"color":"gold","bold":true}]

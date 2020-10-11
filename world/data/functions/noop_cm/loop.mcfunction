@@ -247,13 +247,15 @@ execute @e[tag=blue6] ~ ~ ~ effect @e[tag=vill,r=5,score_ctrl=0] minecraft:slown
 
 
 
+#軍隊跟隨
+execute @e[tag=follow,team=blue] ~ ~ ~ tp @e[tag=follow,team=blue,c=1] @p
+
+execute @e[tag=follow,team=red] ~ ~ ~  tp @e[tag=follow,team=red,c=1] @p
 
 
 
-
-
-
-
+#資源點扣血+弓兵攻擊
+function noop_cm:deresource if @e[tag=cmd,score_stop=0,score_stop_min=0]
 
 
 
@@ -280,6 +282,7 @@ scoreboard players set @e[tag=rbrrow] trash 0
 scoreboard players set @e[tag=barrow] trash 0
 scoreboard players set @e[tag=bbrrow] trash 0
 scoreboard players set @e[tag=rom] trash 0
+scoreboard players set @e[tag=building] trash 0
 execute @e[tag=rider,team=red] ~ ~ ~ scoreboard players set @e[tag=horse,r=2,team=red] trash 0
 execute @e[tag=rider,team=blue] ~ ~ ~ scoreboard players set @e[tag=horse,r=2,team=blue] trash 0
 kill @e[score_trash_min=1,tag=horse]

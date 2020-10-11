@@ -314,4 +314,8 @@ scoreboard objectives add octrl dummy
 scoreboard objectives add trash dummy
 #垃圾
 
+scoreboard objectives add arrow_delay dummy
+scoreboard players set @e[tag=cmd] arrow_delay 0
+#箭矢延遲
+
 

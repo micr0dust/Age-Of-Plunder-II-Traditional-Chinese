@@ -1,9 +1,12 @@
-execute @e[tag=cmd,score_buildt=35,score_buildt_min=35] ~ ~ ~ /scoreboard players set @e[tag=cmd] buildt 16
+execute @e[tag=cmd,score_buildt=36,score_buildt_min=36] ~ ~ ~ /scoreboard players set @e[tag=cmd] buildt 13
 
+execute @e[tag=cmd,score_buildt=35,score_buildt_min=35] ~ ~ ~ /function ai:skip unless @e[tag=blue1]
+execute @e[tag=cmd,score_buildt=35,score_buildt_min=35] ~ ~ ~ /function ai:build/tower if @e[tag=blue1]
 execute @e[tag=cmd,score_buildt=34,score_buildt_min=34] ~ ~ ~ /function ai:build/tower
 execute @e[tag=cmd,score_buildt=33,score_buildt_min=33] ~ ~ ~ /function ai:soldier/solider
 execute @e[tag=cmd,score_buildt=32,score_buildt_min=32] ~ ~ ~ /function ai:soldier/solider
-execute @e[tag=cmd,score_buildt=31,score_buildt_min=31] ~ ~ ~ /function ai:build/military_camp
+execute @e[tag=cmd,score_buildt=31,score_buildt_min=31] ~ ~ ~ /function ai:skip if @e[tag=blue5]
+execute @e[tag=cmd,score_buildt=31,score_buildt_min=31] ~ ~ ~ /function ai:build/military_camp unless @e[tag=blue5]
 execute @e[tag=cmd,score_buildt=30,score_buildt_min=30] ~ ~ ~ /function ai:soldier/vill
 execute @e[tag=cmd,score_buildt=29,score_buildt_min=29] ~ ~ ~ /function ai:soldier/solider
 execute @e[tag=cmd,score_buildt=28,score_buildt_min=28] ~ ~ ~ /function ai:soldier/solider
@@ -17,8 +20,10 @@ execute @e[tag=cmd,score_buildt=21,score_buildt_min=21] ~ ~ ~ /function ai:soldi
 execute @e[tag=cmd,score_buildt=20,score_buildt_min=20] ~ ~ ~ /function ai:soldier/solider
 execute @e[tag=cmd,score_buildt=19,score_buildt_min=19] ~ ~ ~ /function ai:soldier/solider
 execute @e[tag=cmd,score_buildt=18,score_buildt_min=18] ~ ~ ~ /function ai:soldier/archer
-execute @e[tag=cmd,score_buildt=17,score_buildt_min=17] ~ ~ ~ /function ai:build/archery%20field
-execute @e[tag=cmd,score_buildt=16,score_buildt_min=16] ~ ~ ~ /function ai:build/command_center
+execute @e[tag=cmd,score_buildt=17,score_buildt_min=17] ~ ~ ~ /function ai:skip if @e[tag=blue8]
+execute @e[tag=cmd,score_buildt=17,score_buildt_min=17] ~ ~ ~ /function ai:build/archery%20field unless @e[tag=blue8]
+execute @e[tag=cmd,score_buildt=16,score_buildt_min=16] ~ ~ ~ /function ai:skip unless @e[tag=blue3]
+execute @e[tag=cmd,score_buildt=16,score_buildt_min=16] ~ ~ ~ /function ai:build/command_center if @e[tag=blue3]
 execute @e[tag=cmd,score_buildt=15,score_buildt_min=15] ~ ~ ~ /function ai:soldier/archer
 execute @e[tag=cmd,score_buildt=14,score_buildt_min=14] ~ ~ ~ /function ai:soldier/solider
 execute @e[tag=cmd,score_buildt=13,score_buildt_min=13] ~ ~ ~ /function ai:build/fortress
