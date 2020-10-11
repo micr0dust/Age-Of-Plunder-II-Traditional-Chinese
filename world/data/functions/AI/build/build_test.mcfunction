@@ -1,3 +1,7 @@
+###############################################################################################
+#一般AI擺放:
+#由指揮中心向外慢慢擴張
+###############################################################################################
 execute @e[tag=cmd,score_build=1,score_build_min=1] ~ ~ ~ /function ai:build/build_change if @e[x=105,y=30,z=-135,r=1,type=shulker]
 execute @e[tag=cmd,score_build=2,score_build_min=2] ~ ~ ~ /function ai:build/build_change if @e[x=96,y=30,z=-135,r=1,type=shulker]
 execute @e[tag=cmd,score_build=9,score_build_min=9] ~ ~ ~ /function ai:build/build_change if @e[x=105,y=30,z=-144,r=1,type=shulker]

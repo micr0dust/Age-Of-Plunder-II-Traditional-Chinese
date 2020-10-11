@@ -292,6 +292,18 @@ execute @e[tag=red1] ~ ~ ~ kill @e[tag=horse,team=blue,r=2]
 execute @e[tag=blue1] ~ ~ ~ kill @e[tag=horse,team=red,r=2]
 
 
+#隨機1
+scoreboard players add @e[tag=cmd] ramdon 1
+execute @e[tag=cmd,score_ramdon_min=6] ~ ~ ~ scoreboard players set @e[tag=cmd] ramdon 1
+#隨機2
+scoreboard players add @e[tag=cmd] ramdon2 1
+execute @e[tag=cmd,score_ramdon2_min=8] ~ ~ ~ scoreboard players set @e[tag=cmd] ramdon2 1
+
+
+
+
+
+
 
 
 

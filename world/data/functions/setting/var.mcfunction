@@ -230,7 +230,6 @@ scoreboard players set @e[tag=cmd] AIset 0
 scoreboard players set @a AIset 0
 
 scoreboard objectives add AInor dummy
-scoreboard players set @e[tag=cmd] AInor 1
 
 scoreboard objectives add AIdef dummy
 scoreboard players set @e[tag=cmd] AIdef 0
@@ -313,6 +312,7 @@ scoreboard objectives add octrl dummy
 
 scoreboard objectives add trash dummy
 #垃圾
+
 
 scoreboard objectives add arrow_delay dummy
 scoreboard players set @e[tag=cmd] arrow_delay 0

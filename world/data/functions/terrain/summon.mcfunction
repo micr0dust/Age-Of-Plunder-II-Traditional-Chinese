@@ -14,3 +14,8 @@ execute @e[tag=cmd,score_terrain=5,score_terrain_min=5] ~ ~ ~ /tellraw @a ["",{"
 execute @e[tag=cmd,score_terrain=6,score_terrain_min=6] ~ ~ ~ /tellraw @a ["",{"text":"--- ","bold":true,"color":"yellow"},{"text":"掏金潮","color":"yellow"},{"text":" ---","bold":true,"color":"yellow"},{"text":"\n"},{"text":"中間有一堆黃金在等著人挖呢 !還不快拿起你的十字稿 !","color":"white"},{"text":"\n\n "}]
 execute @e[tag=cmd,score_terrain=7,score_terrain_min=7] ~ ~ ~ /tellraw @a ["",{"text":"--- ","bold":true,"color":"yellow"},{"text":"\u8ecd\u4e8b\u91cd\u5730","color":"yellow"},{"text":" ---","bold":true,"color":"yellow"},{"text":"\n"},{"text":"\u6b64\u5340\u5730\u5f62\u8907\u96dc,\u4f4d\u8655\u8981\u5730,\u4e00\u5b9a\u8981\u5b88\u4f4f !","color":"white"},{"text":"\n\n "}]
 execute @e[tag=cmd,score_terrain=8,score_terrain_min=8] ~ ~ ~ /tellraw @a ["",{"text":"--- ","bold":true,"color":"yellow"},{"text":"黑森林","color":"yellow"},{"text":" ---","bold":true,"color":"yellow"},{"text":"\n"},{"text":"傳說這片森林被巫師詛咒過，進去的人沒有出來過 !但誰又會相信傳說呢 ?\n "}]
+
+scoreboard objectives add ramdon dummy
+#時間隨機1
+scoreboard objectives add ramdon2 dummy
+#時間隨機2

@@ -25,10 +25,5 @@ execute @a[team=sp] ~ ~ ~ function noop_cm:chat_clear
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ scoreboard players set @e[tag=cmd] bwood 180
 scoreboard players set @e[tag=cmd] count 1
 function ai:chat/join
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /gamerule gameLoopFunction ai:mony_test
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @a [{"text":"AI升級作弊:"},{"score":{"name":"@e[tag=cmd]","objective":"AIcheat2"}},{"text":"等"}]
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @a [{"text":"AI資源作弊:"},{"score":{"name":"@e[tag=cmd]","objective":"AIcheat"}},{"text":"等"}]
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @a [{"text":"AI類型:"},{"score":{"name":"@e[tag=cmd]","objective":"AI"}},{"text":"型"}]
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @a [{"text":"AI建築方式:"},{"score":{"name":"@e[tag=cmd]","objective":"aibuild"}},{"text":"型"}]
 #ai
 

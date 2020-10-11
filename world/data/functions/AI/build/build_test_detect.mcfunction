@@ -1,3 +1,7 @@
+###############################################################################################
+#偵查:
+#build1的分支(攻擊狀態)
+###############################################################################################
 execute @e[tag=cmd,score_build=1,score_build_min=1] ~ ~ ~ /function ai:build/build_change_detect if @e[x=105,y=30,z=-135,r=1,type=shulker]
 execute @e[tag=cmd,score_build=61,score_build_min=61] ~ ~ ~ /function ai:build/build_change_detect if @e[x=69,y=30,z=-198,r=1,type=shulker]
 execute @e[tag=cmd,score_build=40,score_build_min=40] ~ ~ ~ /function ai:build/build_change_detect if @e[x=42,y=30,z=-171,r=1,type=shulker]
