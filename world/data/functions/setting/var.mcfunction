@@ -84,25 +84,8 @@ scoreboard objectives add redsurrenderc trigger
 scoreboard objectives add info trigger
 scoreboard objectives add suicide trigger
 #建築購買--------------------------------------
-scoreboard objectives add blue1 trigger
-scoreboard objectives add blue2 trigger
-scoreboard objectives add blue3 trigger
-scoreboard objectives add blue4 trigger
-scoreboard objectives add blue5 trigger
-scoreboard objectives add blue6 trigger
-scoreboard objectives add blue7 trigger
-scoreboard objectives add blue8 trigger
-scoreboard objectives add bluew trigger
-
-scoreboard objectives add red1 trigger
-scoreboard objectives add red2 trigger
-scoreboard objectives add red3 trigger
-scoreboard objectives add red4 trigger
-scoreboard objectives add red5 trigger
-scoreboard objectives add red6 trigger
-scoreboard objectives add red7 trigger
-scoreboard objectives add red8 trigger
-scoreboard objectives add redw trigger
+scoreboard objectives add blue_build trigger
+scoreboard objectives add red_build trigger
 
 #指揮中心--------------------------------------
 scoreboard objectives add ra1 trigger
@@ -130,32 +113,18 @@ scoreboard players set @e[tag=cmd] rbslvl 1
 scoreboard objectives add bbslvl dummy
 scoreboard players set @e[tag=cmd] bbslvl 1
 #---升級
-scoreboard objectives add ra5lvl1 trigger
-scoreboard objectives add ra5lvl2 trigger
-scoreboard objectives add ra5lvl3 trigger
-
-scoreboard objectives add ba5lvl1 trigger
-scoreboard objectives add ba5lvl2 trigger
-scoreboard objectives add ba5lvl3 trigger
-
-scoreboard objectives add rb5lvl1 trigger
-scoreboard objectives add rb5lvl2 trigger
-scoreboard objectives add rb5lvl3 trigger
-
-scoreboard objectives add bb5lvl1 trigger
-scoreboard objectives add bb5lvl2 trigger
-scoreboard objectives add bb5lvl3 trigger
+scoreboard objectives add ra5lvl trigger
+scoreboard objectives add ba5lvl trigger
+scoreboard objectives add rb5lvl trigger
+scoreboard objectives add bb5lvl trigger
 #箭塔--------------------------------------
 scoreboard objectives add rtlvl dummy
 scoreboard players set @e[tag=cmd] rtlvl 1
 scoreboard objectives add btlvl dummy
 scoreboard players set @e[tag=cmd] btlvl 1
 #---升級
-scoreboard objectives add r3lvl1 trigger
-scoreboard objectives add r3lvl2 trigger
-
-scoreboard objectives add b3lvl1 trigger
-scoreboard objectives add b3lvl2 trigger
+scoreboard objectives add r3lvl trigger
+scoreboard objectives add b3lvl trigger
 #馬廄--------------------------------------
 scoreboard objectives add ra7 trigger
 scoreboard objectives add ba7 trigger
@@ -172,11 +141,9 @@ scoreboard objectives add bbhlvl dummy
 scoreboard players set @e[tag=cmd] bbhlvl 1
 
 scoreboard objectives add ra7lvl1 trigger
-
 scoreboard objectives add ba7lvl1 trigger
 
 scoreboard objectives add rb7lvl1 trigger
-
 scoreboard objectives add bb7lvl1 trigger
 #射箭場------------------------------------
 scoreboard objectives add ra8 trigger
@@ -189,13 +156,8 @@ scoreboard objectives add brlvl dummy
 scoreboard players set @e[tag=cmd] brlvl 1
 
 
-scoreboard objectives add r8lvl1 trigger
-scoreboard objectives add r8lvl2 trigger
-scoreboard objectives add r8lvl3 trigger
-
-scoreboard objectives add b8lvl1 trigger
-scoreboard objectives add b8lvl2 trigger
-scoreboard objectives add b8lvl3 trigger
+scoreboard objectives add r8lvl trigger
+scoreboard objectives add b8lvl trigger
 
 #市集--------------------------------------
 scoreboard objectives add rws trigger
