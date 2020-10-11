@@ -159,7 +159,11 @@ scoreboard players set @a bspecial 0
 scoreboard players set @a rcivpick 0
 scoreboard players set @a bcivpick 0
 scoreboard players set @a civpick 0
-
+#刪除建築
+scoreboard players set @a rdel 0
+scoreboard players set @a bdel 0
+scoreboard players enable @a rdel
+scoreboard players enable @a bdel
 
 
 

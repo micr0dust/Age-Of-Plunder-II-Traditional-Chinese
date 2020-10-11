@@ -29,6 +29,9 @@ execute @e[tag=cmd,score_brlvl=4,score_brlvl_min=4,score_arrow_delay=5] ~ ~ ~ ex
 #長弓兵攻擊
 execute @e[tag=cmd,score_arrow_delay=10] ~ ~ ~ execute @e[tag=rlarrow,c=1] ~ ~ ~ execute @e[team=!red,tag=!horse,r=20,c=1] ~ ~ ~ summon minecraft:arrow ~ ~30 ~ {life:5800s,pickup:0b,damage:20,crit:1}
 execute @e[tag=cmd,score_arrow_delay=10] ~ ~ ~ execute @e[tag=blarrow,c=1] ~ ~ ~ execute @e[team=!blue,tag=!horse,r=20,c=1] ~ ~ ~ summon minecraft:arrow ~ ~30 ~ {life:5800s,pickup:0b,damage:20,crit:1}
+#奴隸兵攻擊
+execute @e[tag=cmd,score_arrow_delay=10] ~ ~ ~ execute @e[tag=rmarrow,c=1] ~ ~ ~ execute @e[team=!red,tag=!horse,r=7,c=1] ~ ~ ~ summon minecraft:arrow ~ ~3 ~ {life:5800s,pickup:0b,damage:60,crit:1}
+execute @e[tag=cmd,score_arrow_delay=10] ~ ~ ~ execute @e[tag=bmarrow,c=1] ~ ~ ~ execute @e[team=!blue,tag=!horse,r=7,c=1] ~ ~ ~ summon minecraft:arrow ~ ~3 ~ {life:5800s,pickup:0b,damage:60,crit:1}
 
 execute @e[tag=cmd,score_arrow_delay=0] ~ ~ ~ kill @e[tag=rarrow,c=1]
 execute @e[tag=cmd,score_arrow_delay=0] ~ ~ ~ kill @e[tag=barrow,c=1]
@@ -36,5 +39,7 @@ execute @e[tag=cmd,score_arrow_delay=5] ~ ~ ~ kill @e[tag=rbrrow,c=1]
 execute @e[tag=cmd,score_arrow_delay=5] ~ ~ ~ kill @e[tag=bbrrow,c=1]
 execute @e[tag=cmd,score_arrow_delay=5] ~ ~ ~ kill @e[tag=rlarrow,c=1]
 execute @e[tag=cmd,score_arrow_delay=5] ~ ~ ~ kill @e[tag=blarrow,c=1]
+execute @e[tag=cmd,score_arrow_delay=5] ~ ~ ~ kill @e[tag=rmarrow,c=1]
+execute @e[tag=cmd,score_arrow_delay=5] ~ ~ ~ kill @e[tag=bmarrow,c=1]
 
 

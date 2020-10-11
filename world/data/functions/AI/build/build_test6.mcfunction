@@ -70,4 +70,4 @@ execute @e[tag=cmd,score_build=24,score_build_min=24] ~ ~ ~ /function ai:build/b
 execute @e[tag=cmd,score_build=57,score_build_min=57] ~ ~ ~ /function ai:build/build_change6 if @e[x=105,y=30,z=-198,r=1,type=shulker]
 execute @e[tag=cmd,score_build=8,score_build_min=8] ~ ~ ~ /function ai:build/build_change6 if @e[x=42,y=30,z=-135,r=1,type=shulker]
 execute @e[tag=cmd,score_build=64,score_build_min=64] ~ ~ ~ /function ai:build/build_change6 if @e[x=42,y=30,z=-198,r=1,type=shulker]
-function ai:ai/ai_choose
+function ai:ai/ai_choose unless @e[tag=cmd,score_build_min=65]

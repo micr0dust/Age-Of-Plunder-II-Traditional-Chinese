@@ -22,8 +22,8 @@ execute @e[tag=cmd,c=1,score_begin_res=3,score_begin_res_min=3] ~ ~ ~ scoreboard
 
 
 scoreboard players operation @e[tag=cmd] bfood = @e[tag=cmd] org_food
-scoreboard players operation @e[tag=cmd] bfood = @e[tag=cmd] org_gold
-scoreboard players operation @e[tag=cmd] bfood = @e[tag=cmd] org_wood
+scoreboard players operation @e[tag=cmd] bgold = @e[tag=cmd] org_gold
+scoreboard players operation @e[tag=cmd] bwood = @e[tag=cmd] org_wood
 scoreboard players operation @e[tag=cmd] rfood = @e[tag=cmd] org_food
 scoreboard players operation @e[tag=cmd] rgold = @e[tag=cmd] org_gold
 scoreboard players operation @e[tag=cmd] rwood = @e[tag=cmd] org_wood

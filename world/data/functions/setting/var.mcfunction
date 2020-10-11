@@ -204,6 +204,9 @@ scoreboard objectives add bws trigger
 scoreboard objectives add bfs trigger
 scoreboard objectives add bwb trigger
 scoreboard objectives add bfb trigger
+#刪除建築----------------------------------
+scoreboard objectives add rdel trigger
+scoreboard objectives add bdel trigger
 #------------------------------------------
 function noop_cm:cmend
 

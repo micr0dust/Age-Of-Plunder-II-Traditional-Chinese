@@ -66,3 +66,4 @@ execute @e[tag=cmd,score_build=56,score_build_min=56] ~ ~ ~ /scoreboard players 
 execute @e[tag=cmd,score_build=63,score_build_min=63] ~ ~ ~ /scoreboard players set @e[tag=cmd,score_build=63,score_build_min=63] build 56
 execute @e[tag=cmd,score_build=10,score_build_min=10] ~ ~ ~ /scoreboard players set @e[tag=cmd,score_build=10,score_build_min=10] build 63
 execute @e[tag=cmd,score_build=1,score_build_min=1] ~ ~ ~ /scoreboard players set @e[tag=cmd,score_build=1,score_build_min=1] build 10
+function ai:build/buildtest6

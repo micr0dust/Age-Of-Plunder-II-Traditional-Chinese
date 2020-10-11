@@ -78,4 +78,4 @@ execute @e[tag=cmd,score_build=64,score_build_min=64] ~ ~ ~ /function ai:build/b
 
 
 
-function ai:ai/ai_choose
+function ai:ai/ai_choose unless @e[tag=cmd,score_build_min=65]

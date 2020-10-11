@@ -9,8 +9,8 @@ function noop_cm:chat_clearall
 function noop_cm:chat_clearall
 scoreboard players set @e[tag=cmd] gamemode 1
 execute @p[team=blue] ~ ~ ~ /scoreboard players set @e[tag=cmd] gamemode 0
-function noop_cm:new_setting/org_res
 function setting:self_terrain_barrier_clean
+function noop_cm:new_setting/org_res
 setblock 96 30 -135 minecraft:air
 setblock 105 30 -135 minecraft:air
 setblock 42 30 -198 minecraft:air
@@ -28,7 +28,7 @@ execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0] ~ ~ ~ /clone 8 34 -96 
 clear @a
 execute @a[team=!red] ~ ~ ~ /tellraw @a[team=!blue,r=1] ["",{"text":"\u4f60\u6c92\u6709\u9078\u64c7\u968a\u4f0d,\u6240\u4ee5\u88ab\u50b3\u9001\u5230\u9019\u88e1\u662f\u6b63\u5e38\u7684 !","bold":true,"color":"yellow"},{"text":"\n "}]
 execute @a[team=sp] ~ ~ ~ function noop_cm:chat_clear
-scoreboard players set @e[tag=cmd] AItest 130
+scoreboard players set @e[tag=cmd] AItest 140
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] bwood += @e[tag=cmd] AItest
 scoreboard players set @e[tag=cmd] count 1
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /gamerule gameLoopFunction ai:mony_test

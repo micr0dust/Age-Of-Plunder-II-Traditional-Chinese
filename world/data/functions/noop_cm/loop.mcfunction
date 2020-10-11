@@ -284,7 +284,9 @@ execute @p[score_bgm_min=1] ~ ~ ~ function noop_cm:new_setting/self_setting/bgm
 execute @p[score_tool_range_min=1] ~ ~ ~ function noop_cm:new_setting/self_setting/tool_range
 #文明---------------------
 execute @p[score_civpick_min=1] ~ ~ ~ function noop_cm:new_setting/civ
-
+#刪除建築-----------------
+execute @p[score_rdel_min=1] ~ ~ ~ kill @e[tag=building,c=1,team=red,r=10]
+execute @p[score_bdel_min=1] ~ ~ ~ kill @e[tag=building,c=1,team=blue,r=10]
 
 
 #玩家回血
@@ -323,8 +325,8 @@ execute @e[tag=rvfollow] ~ ~ ~  tp @e[tag=rvfollow] @p
 function noop_cm:acher if @e[tag=cmd,score_stop=0,score_stop_min=0]
 
 #聖騎兵踐踏
-execute @e[team=blue,tag=holly] ~ ~ ~  effect @e[team=red,tag=s,r=1] 20 2 0 true
-execute @e[team=red,tag=holly] ~ ~ ~  effect @e[team=blue,tag=s,r=1] 20 2 0 true
+execute @e[tag=cmd,score_stop=0,score_stop_min=0] ~ ~ ~ execute @e[team=blue,tag=holly] ~ ~ ~  effect @e[team=red,tag=s,r=1] 20 2 0 true
+execute @e[tag=cmd,score_stop=0,score_stop_min=0] ~ ~ ~ execute @e[team=red,tag=holly] ~ ~ ~  effect @e[team=blue,tag=s,r=1] 20 2 0 true
 
 #藍隊弓兵加速
 effect @e[tag=ar,team=blue] 1 20 1 true
@@ -332,7 +334,7 @@ effect @e[tag=bar,team=blue] 1 20 1 true
 effect @e[tag=lar,team=blue] 1 20 1 true
 
 
-
+effect @e[tag=horse,score_ctrl=0] minecraft:slowness 0 0 true
 
 #偵測敵軍(結束主動攻擊)
 execute @e[tag=attack] ~ ~ ~ execute @e[tag=s,c=1,r=8,team=red] ~ ~ ~ function ai:stop_attack
@@ -361,8 +363,17 @@ execute @e[tag=attack] ~ ~ ~ execute @e[tag=target,r=3] ~ ~ ~ function ai:stop_a
 scoreboard players set @e[tag=s,team=blue] noai 0
 execute @e[tag=attack] ~ ~ ~ scoreboard players set @e[tag=s,r=3,team=blue] noai 1
 execute @e[tag=attack] ~ ~ ~ execute @e[tag=s,r=2,team=blue] ~ ~ ~ tp @e[c=1] ~-0.1 ~ ~0.1
-entitydata @e[tag=s,team=blue,score_noai_min=1] {NoAI:1}
-entitydata @e[tag=s,team=blue,score_noai=0] {NoAI:0}
+execute @e[tag=cmd,score_stop=0,score_stop_min=0] ~ ~ ~ entitydata @e[tag=s,team=blue,score_noai_min=1] {NoAI:1}
+execute @e[tag=cmd,score_stop=0,score_stop_min=0] ~ ~ ~ entitydata @e[tag=s,team=blue,score_noai=0] {NoAI:0}
+
+execute @e[tag=mameluke,team=red] ~ ~ ~ function noop_cm:mstop if @e[tag=s,team=blue,r=7]
+execute @e[tag=mameluke,team=blue] ~ ~ ~ function noop_cm:mstop if @e[tag=s,team=red,r=7]
+execute @e[tag=mameluke,team=red] ~ ~ ~ function noop_cm:mstop if @e[tag=vill,team=blue,r=7]
+execute @e[tag=mameluke,team=blue] ~ ~ ~ function noop_cm:mstop if @e[tag=vill,team=red,r=7]
+execute @e[tag=mameluke,team=red] ~ ~ ~ function noop_cm:mkeep unless @e[team=blue,r=7]
+execute @e[tag=mameluke,team=blue] ~ ~ ~ function noop_cm:mkeep unless @e[team=red,r=7]
+execute @e[tag=mameluke,team=red] ~ ~ ~ function noop_cm:mkeep if @e[tag=building,team=blue,r=7]
+execute @e[tag=mameluke,team=blue] ~ ~ ~ function noop_cm:mkeep if @e[tag=building,team=red,r=7]
 
 #分數計算
 scoreboard players set @e[tag=cmd] rp 0
@@ -398,6 +409,8 @@ scoreboard players set @e[tag=barrow] trash 0
 scoreboard players set @e[tag=bbrrow] trash 0
 scoreboard players set @e[tag=rlarrow] trash 0
 scoreboard players set @e[tag=blarrow] trash 0
+scoreboard players set @e[tag=rmarrow] trash 0
+scoreboard players set @e[tag=bmarrow] trash 0
 scoreboard players set @e[tag=rom] trash 0
 scoreboard players set @e[tag=building] trash 0
 execute @e[tag=rider,team=red] ~ ~ ~ scoreboard players set @e[tag=horse,r=2,team=red] trash 0
