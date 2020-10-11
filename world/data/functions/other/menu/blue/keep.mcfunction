@@ -7,10 +7,10 @@ execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_bstoper_min=1] ~ ~ ~ /ent
 execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_bstoper_min=1] ~ ~ ~ /setblock 51 20 -170 minecraft:air
 execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_bstoper_min=1] ~ ~ ~ /effect @a clear
 function noop_cm:chat_clear
-execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_bstoper_min=1] ~ ~ ~ /tellraw @a {"text":"\u904a\u6232\u518d\u6b21\u958b\u59cb !","color":"yellow"}
-execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_rstoper_min=1] ~ ~ ~ /tellraw @a {"text":"\u5fc5\u9808\u7531\u66ab\u505c\u767c\u8d77\u8005\u89e3\u9664\u66ab\u505c !","color":"red"}
-execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_bstop_min=1,score_bstoper_min=1] ~ ~ ~ /tellraw @a [{"text":"藍方只剩"},{"score":{"name":"@e[tag=cmd]","objective":"bstop"}},{"text":"次暫停"}]
-execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_bstop_min=0,score_bstop=0,score_bstoper_min=1] ~ ~ ~ /tellraw @a {"text":"\u85cd\u65b9\u5df2\u7528\u5b8c\u66ab\u505c !","color":"yellow"}
+execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_bstoper_min=1] ~ ~ ~ /tellraw @a {"translate":"aop.other.contiune","color":"yellow"}
+execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_rstoper_min=1] ~ ~ ~ /tellraw @a {"translate":"aop.other.doncontiune","color":"red"}
+execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_bstop_min=1,score_bstoper_min=1] ~ ~ ~ /tellraw @a [{"translate":"aop.other.blue.left"},{"score":{"name":"@e[tag=cmd]","objective":"bstop"}},{"translate":"aop.other.blue.contiune.num"}]
+execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_bstop_min=0,score_bstop=0,score_bstoper_min=1] ~ ~ ~ /tellraw @a {"translate":"aop.other.blue.nocontiune","color":"yellow"}
 execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_bstoper_min=1] ~ ~ ~ /scoreboard players set @e[tag=cmd] stop 0
 execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_bstoper_min=1] ~ ~ ~ /scoreboard players set @e[tag=cmd] bstoper 0
 function other:menu/blue

@@ -56,7 +56,7 @@ summon minecraft:shulker 87 30 -198 {Color:8,CustomName:"樹林",CustomNameVisib
 summon minecraft:shulker 78 30 -198 {Color:8,CustomName:"樹林",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:1200}],Health:1200.0f,Tags:["barr","tree","horse","building"],Team:b}
 summon minecraft:shulker 69 30 -198 {Color:8,CustomName:"樹林",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:1200}],Health:1200.0f,Tags:["barr","tree","horse","building"],Team:b}
 summon minecraft:shulker 60 30 -198 {Color:8,CustomName:"樹林",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:1200}],Health:1200.0f,Tags:["barr","tree","horse","building"],Team:b}
-setblock 41 20 -166 minecraft:redstone_block
+function other:map/barr
 function setting:start_b
 scoreboard players set @e[tag=cmd] rfood 24
 scoreboard players set @e[tag=cmd] rwood 21

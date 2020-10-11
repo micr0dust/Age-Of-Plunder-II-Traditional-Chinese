@@ -6,5 +6,6 @@ execute @e[tag=red5,c=1] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceR
 execute @e[tag=red5,c=1] ~ ~ ~ /scoreboard players remove @e[tag=cmd] rfood 8
 playsound minecraft:block.note.pling record @p[team=red] ~ ~ ~ 1 0.749
 function noop_cm:chat_clear
-tellraw @p[team=red] ["",{"text":"---\u8ecd\u71df---------------","color":"gold"},{"text":"\n"},{"text":"\u751f\u7522:","color":"dark_green"},{"text":"\n"},{"text":"[\u6b65\u5175]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger ra5 set 1"}},{"text":" 8","color":"dark_red"},{"text":"\n"},{"text":"[\u91cd\u88dd\u6b65\u5175]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger rb5 set 1"}},{"text":" 8","color":"dark_red"},{"text":" 4","color":"gold"},{"text":"\n-----------------","color":"gold"},{"text":"\n\n\n"}]
+function noop_cm:build/r5
+tellraw @p[team=red] ["",{"text":"-------------------\n\n\n\n","color":"gold"}]
 function noop_cm:cmend
