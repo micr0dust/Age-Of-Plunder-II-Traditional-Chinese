@@ -3,11 +3,11 @@
 # 作者: 灰塵
 #########################################################################################################
 #偵測道具
-scoreboard players tag @a add flats {SelectedItem:{id:"minecraft:banner"}}
-scoreboard players tag @a add follows {SelectedItem:{id:"minecraft:golden_horse_armor"}}
-scoreboard players tag @a add follows {SelectedItem:{id:"minecraft:structure_void"}}
-scoreboard players tag @a add followv {SelectedItem:{id:"minecraft:wheat"}}
-scoreboard players tag @a add followv {SelectedItem:{id:"minecraft:barrier"}}
+scoreboard players tag @a[score_ztool_range=1] add flats {SelectedItem:{id:"minecraft:banner"}}
+scoreboard players tag @a[score_ztool_range=1] add follows {SelectedItem:{id:"minecraft:golden_horse_armor"}}
+scoreboard players tag @a[score_ztool_range=1] add follows {SelectedItem:{id:"minecraft:structure_void"}}
+scoreboard players tag @a[score_ztool_range=1] add followv {SelectedItem:{id:"minecraft:wheat"}}
+scoreboard players tag @a[score_ztool_range=1] add followv {SelectedItem:{id:"minecraft:barrier"}}
 
 execute @a[tag=followv] ~ ~ ~ particle happyVillager ~2 30 ~ 0 0 1 0 15 @p
 execute @a[tag=followv] ~ ~ ~ particle happyVillager ~-2 30 ~ 0 0 1 0 15 @p

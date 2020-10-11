@@ -33,7 +33,10 @@ function noop_cm:enable/produce
 function noop_cm:enable/market
 function noop_cm:enable/upgrade
 
-
+scoreboard players enable @a btn_self_list
+scoreboard players enable @a envirsound
+scoreboard players enable @a bgm
+scoreboard players enable @a tool_range
 #----------------------------------------------
 scoreboard players set @a blue1 0
 scoreboard players set @a blue2 0
@@ -144,6 +147,11 @@ scoreboard players set @a bfb 0
 scoreboard players set @a join_red 0
 scoreboard players set @a join_blue 0
 scoreboard players set @a join_spectator 0
+
+scoreboard players set @a btn_self_list 0
+scoreboard players set @a envirsound 0
+scoreboard players set @a bgm 0
+scoreboard players set @a tool_range 0
 #種族
 scoreboard players set @a rspecial 0
 scoreboard players set @a bspecial 0

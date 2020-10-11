@@ -278,6 +278,10 @@ execute @p[score_bfb=1,score_bfb_min=1] ~ ~ ~ function noop_cm:market/bfb if @e[
 execute @p[score_join_red_min=1] ~ ~ ~ function setting:join_team/red
 execute @p[score_join_blue_min=1] ~ ~ ~ function setting:join_team/blue
 execute @p[score_join_spectator_min=1] ~ ~ ~ function setting:join_team/spectator
+
+execute @p[score_envirsound_min=1] ~ ~ ~ function noop_cm:new_setting/self_setting/envirsound
+execute @p[score_bgm_min=1] ~ ~ ~ function noop_cm:new_setting/self_setting/bgm
+execute @p[score_tool_range_min=1] ~ ~ ~ function noop_cm:new_setting/self_setting/tool_range
 #文明---------------------
 execute @p[score_civpick_min=1] ~ ~ ~ function noop_cm:new_setting/civ
 
@@ -360,10 +364,23 @@ execute @e[tag=attack] ~ ~ ~ execute @e[tag=s,r=2,team=blue] ~ ~ ~ tp @e[c=1] ~-
 entitydata @e[tag=s,team=blue,score_noai_min=1] {NoAI:1}
 entitydata @e[tag=s,team=blue,score_noai=0] {NoAI:0}
 
+#分數計算
+scoreboard players set @e[tag=cmd] rp 0
+scoreboard players set @e[tag=cmd] bp 0
+scoreboard players operation @e[tag=cmd] rp += @e[tag=cmd] rf
+scoreboard players operation @e[tag=cmd] rp += @e[tag=cmd] rt
+scoreboard players operation @e[tag=cmd] rp += @e[tag=cmd] rs
+scoreboard players operation @e[tag=cmd] rp += @e[tag=cmd] rv
 
-
-
-
+scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bf
+scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bt
+scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bs
+scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bv
+#分數
+scoreboard objectives add scores dummy 分數
+scoreboard objectives setdisplay sidebar scores
+scoreboard players operation §9累計分數 scores = @e[tag=cmd] bp
+scoreboard players operation §c累計分數 scores = @e[tag=cmd] rp
 #垃圾清理
 scoreboard players set @e[type=Item] trash 1 {Item:{Count:1b,id:"minecraft:iron_horse_armor"}}
 scoreboard players set @e[type=Item] trash 1 {Item:{Count:1b,id:"minecraft:glass_bottle"}}

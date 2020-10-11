@@ -4,7 +4,7 @@
 #########################################################################################################
 tellraw @p[team=red] {"text":"[拜占庭]","color":"red","clickEvent":{"action":"run_command","value":"/trigger civpick set 1"}}
 tellraw @p[team=blue] {"text":"[拜占庭]","color":"red"}
-tellraw @p {"text":" v.s","color":"white"}
-
+tellraw @p[team=red] {"text":" v.s","color":"white"}
+tellraw @p[team=blue] {"text":" v.s","color":"white"}
 
 

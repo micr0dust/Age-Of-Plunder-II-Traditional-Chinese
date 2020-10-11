@@ -2,11 +2,14 @@
 #【掠奪時代II:黃金帝國 】
 # 作者: 灰塵
 #########################################################################################################
+execute @e[tag=cmd,score_setmenu_min=0] ~ ~ ~ playsound custom.bgm ambient @a[score_zbgm=1,score_bgmed=0] ~ ~ ~ 5 1 1
+scoreboard players set @a bgmed 1
 function noop_cm:chat_clearall
 function noop_cm:chat_clearall
 title @a times 1 500 1
-title @a title {"text":"\u9700\u958b\u6b0a\u9650\u4ee5\u8a2d\u5b9a\u904a\u6232","color":"gold"}
-title @a subtitle ["",{"text":"\u9078\u968a","color":"red"},{"text":"->","color":"blue"},{"text":"\u5730\u5f62","color":"yellow"},{"text":"->","color":"blue"},{"text":"\u958b\u59cb","color":"green"}]
+title @a title {"text":"掠奪時代II","color":"gold"}
+title @a subtitle ["",{"text":"\u9700\u958b\u6b0a\u9650\u4ee5\u8a2d\u5b9a\u904a\u6232","color":"red"}]
+#tellraw @a {"text":"\n"}
 #種族
 execute @e[tag=cmd,score_rciv=0,score_rciv_min=0,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ra0
 execute @e[tag=cmd,score_rciv=1,score_rciv_min=1,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ra1
@@ -23,7 +26,11 @@ execute @e[tag=cmd,score_bciv=3,score_bciv_min=3,score_map_min=1] ~ ~ ~ function
 execute @e[tag=cmd,score_bciv=4,score_bciv_min=4,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba4
 execute @e[tag=cmd,score_bciv=5,score_bciv_min=5,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba5
 execute @e[tag=cmd,score_bciv=6,score_bciv_min=6,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba6
-
+#個人設定
+function noop_cm:new_setting/self_setting/selfon if @e[tag=cmd,score_map=0]
+execute @e[tag=cmd,score_map=0] ~ ~ ~ execute @a ~ ~ ~ function noop_cm:new_setting/self_setting/new unless @p[c=1,r=0,score_click_self_list_min=1]
+#進階遊戲設定
+function noop_cm:new_setting/game_setting if @e[tag=cmd,score_map_min=1]
 function noop_cm:new_setting/choose_team if @e[tag=cmd,score_map=0]
 #地圖樣式
 function noop_cm:new_setting/map_style/b0 if @e[tag=cmd,score_map_style=0,score_map_style_min=0,score_map=0]
@@ -93,5 +100,5 @@ scoreboard players enable @a civpick
 
 
 
-
+function noop_cm:new_setting/org_res
 function noop_cm:cmend

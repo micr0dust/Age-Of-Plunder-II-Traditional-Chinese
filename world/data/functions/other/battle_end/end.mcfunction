@@ -14,13 +14,6 @@ tellraw @a [{"text":"紅隊科技:","color":"red"},{"score":{"name":"@e[tag=cmd]
 tellraw @a [{"text":"紅隊總軍隊:","color":"red"},{"score":{"name":"@e[tag=cmd]","objective":"rs"}},{"text":"單位"}]
 tellraw @a [{"text":"紅隊總村民:","color":"red"},{"score":{"name":"@e[tag=cmd]","objective":"rv"}},{"text":"單位"}]
 
-scoreboard players operation @e[tag=cmd] rp += @e[tag=cmd] rf
-scoreboard players operation @e[tag=cmd] rp += @e[tag=cmd] rt
-scoreboard players operation @e[tag=cmd] rp += @e[tag=cmd] rs
-
-scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bf
-scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bt
-scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bs
 
 tellraw @a [{"text":"紅隊總分:","color":"red"},{"score":{"name":"@e[tag=cmd]","objective":"rp"}},{"text":"分"}]
 tellraw @a [{"text":"藍隊總分:","color":"blue"},{"score":{"name":"@e[tag=cmd]","objective":"bp"}},{"text":"分"}]

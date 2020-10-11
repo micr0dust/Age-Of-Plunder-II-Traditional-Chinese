@@ -23,7 +23,6 @@ gamerule spectatorsGenerateChunks false
 setworldspawn 7 4 27
 kill @e[tag=cmd]
 summon armor_stand 44 20 -153 {PersistenceRequired:1,Tags:["cmd"],Invulnerable:1}
-
 scoreboard objectives add money dummy
 scoreboard players set @e[tag=cmd] money 0
 
@@ -31,32 +30,29 @@ scoreboard players set @e[tag=cmd] money 0
 
 scoreboard objectives add terrain dummy
 scoreboard players set @e[tag=cmd] terrain 0
+
+#起始資源
+scoreboard objectives add org_food dummy
+scoreboard objectives add org_wood dummy
+scoreboard objectives add org_gold dummy
 #-----------------------------------------------------
 scoreboard teams add blue 西班牙人
 scoreboard teams option blue color blue
 scoreboard teams option blue friendlyfire false
+scoreboard teams option blue collisionRule pushOtherTeams
 
 scoreboard objectives add bfood dummy
-scoreboard players set @e[tag=cmd] bfood 24
-
 scoreboard objectives add bgold dummy
-scoreboard players set @e[tag=cmd] bgold 0
-
 scoreboard objectives add bwood dummy
-scoreboard players set @e[tag=cmd] bwood 21
 #-----------------------------------------------------
 scoreboard teams add red 荷蘭人
 scoreboard teams option red color red
 scoreboard teams option red friendlyfire false
+scoreboard teams option red collisionRule pushOtherTeams
 
 scoreboard objectives add rfood dummy
-scoreboard players set @e[tag=cmd] rfood 24
-
 scoreboard objectives add rgold dummy
-scoreboard players set @e[tag=cmd] rgold 0
-
 scoreboard objectives add rwood dummy
-scoreboard players set @e[tag=cmd] rwood 21
 #----------------------------------------------------
 scoreboard teams add attget 目標
 #-----------------------------------------------------
@@ -326,6 +322,8 @@ scoreboard objectives add octrl dummy
 scoreboard objectives add trash dummy
 #垃圾
 
+scoreboard objectives add AItest dummy
+#AI測試值
 
 scoreboard objectives add arrow_delay dummy
 scoreboard players set @e[tag=cmd] arrow_delay 0
@@ -381,6 +379,67 @@ scoreboard objectives add noai dummy
 
 scoreboard objectives add path dummy
 scoreboard players set @e[tag=cmd] path 0
+#個人設定-------------------------------
+#(*表示須裝音效包)
+scoreboard objectives add self_list dummy
+scoreboard objectives add btn_self_list trigger
+scoreboard objectives add click_self_list dummy
+#--*環境音效
+scoreboard objectives add envirsound trigger
+scoreboard objectives add zenvirsound dummy
+
+#--*背景音樂
+scoreboard objectives add bgm trigger
+scoreboard objectives add zbgm dummy
+
+#--道具範圍提示
+scoreboard objectives add tool_range trigger
+scoreboard objectives add ztool_range dummy
+
+
+scoreboard objectives add bgmed dummy
+scoreboard players set @a bgmed 0
+#進階遊戲設定-------------------------
+
+#--AI主動進攻
+scoreboard objectives add AI_attack dummy
+scoreboard players set @e[tag=cmd] AI_attack 0
+
+#--AI自動投降
+scoreboard objectives add AI_surrender dummy
+scoreboard players set @e[tag=cmd] AI_surrender 1
+
+#--科技:0標準、1所有科技、2最高
+scoreboard objectives add tech dummy
+scoreboard players set @e[tag=cmd] tech 0
+
+#--起始資源:0低(18 10 0)、1標準(24 21 0)、2中(30 21 10)、3高(36 41 20)
+scoreboard objectives add begin_res dummy
+scoreboard players set @e[tag=cmd] begin_res 1
+
+#--模式:0一般、1死鬥、2防守計時、3分數競賽、4戰霧、5*弒君、6世界奇觀?
+#(*表示不能跟AI玩)
+scoreboard objectives add mode dummy
+scoreboard players set @e[tag=cmd] mode 0
+
+
+
+
+function noop_cm:stop_music
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
