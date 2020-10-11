@@ -111,8 +111,9 @@ function noop_cm:new_setting/aislect/a101 if @e[tag=cmd,score_AI_min=5,score_map
 #AI作弊設定
 function noop_cm:new_setting/aicheat if @e[tag=cmd,score_map_min=1,score_gamemode_min=1,score_mode=1,score_mode_min=0]
 function noop_cm:new_setting/aicheat if @e[tag=cmd,score_map_min=1,score_gamemode_min=1,score_mode=6,score_mode_min=3]
-#模式?
-#種族?
+#關於
+execute @e[tag=cmd,score_menu_min=4,score_menu=4] ~ ~ ~ tellraw @a ["",{"text":"--- 關於 ------------------","color":"gold"},{"text":"\n\n"},{"text":"此地圖由灰塵製作","color":"green"},{"text":"\n\n"},{"text":"Minecraft版本:","color":"gold"},{"text":" 1.12.2","color":"aqua"},{"text":"\n"},{"text":"語言:","color":"gold"},{"text":" 繁體中文","color":"aqua"},{"text":"\n"},{"text":"遊玩人數:","color":"gold"},{"text":" 建議1或2人","color":"aqua"},{"text":"\n"},{"text":"時間:","color":"gold"},{"text":" 約20分鐘","color":"aqua"},{"text":"\n"},{"text":"遊戲類型:","color":"gold"},{"text":" 策略","color":"aqua"},{"text":"\n"},{"text":"模式:","color":"gold"},{"text":" 冒險","color":"aqua"},{"text":"\n"},{"text":"難度:","color":"gold"},{"text":" 建議簡單或困難","color":"aqua"},{"text":"\n"},{"text":"(衛道士攻擊力會隨難度提高)","color":"dark_aqua"},{"text":"\n"},{"text":"音效包:","color":"gold"},{"text":" ","color":"aqua","clickEvent":{"action":"open_url","value":"http://www.mediafire.com/file/0pze2n465xd4pje/%E6%8E%A0%E5%A5%AA%E6%99%82%E4%BB%A3II%E9%BB%83%E9%87%91%E5%B8%9D%E5%9C%8B__%E4%B8%96%E7%B4%80%E9%9F%B3%E6%95%88%E5%8C%85.zip/file"},"hoverEvent":{"action":"show_text","value":"下載音效包"}},{"text":"此處下載","underlined":true,"color":"aqua","clickEvent":{"action":"open_url","value":"http://www.mediafire.com/file/0pze2n465xd4pje/%E6%8E%A0%E5%A5%AA%E6%99%82%E4%BB%A3II%E9%BB%83%E9%87%91%E5%B8%9D%E5%9C%8B__%E4%B8%96%E7%B4%80%E9%9F%B3%E6%95%88%E5%8C%85.zip/file"},"hoverEvent":{"action":"show_text","value":"下載音效包"}},{"text":"\n\n"},{"text":"如果發現任何bug請回報至 ","color":"green"},{"text":"巴哈文章","underlined":true,"color":"red","clickEvent":{"action":"open_url","value":"https://forum.gamer.com.tw/C.php?bsn=18673&snA=176512&tnum=1"}},{"text":"\n\n"},{"text":"------------------------","color":"gold"},{"text":"\n "}]
+
 #開始&重置
 function noop_cm:new_setting/restart if @e[tag=cmd,score_map=0,score_menu_min=1]
 function noop_cm:new_setting/start if @e[tag=cmd,score_map_min=1]
@@ -130,7 +131,7 @@ scoreboard players enable @a civpick
 execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a {"text":"---遊戲選單------------\n","color":"gold"}
 execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[教學戰役]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/new"},"hoverEvent":{"action":"show_text","value":"跟著指示操作，快速學會如何遊玩"}}]
 execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[自訂遊戲]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/custom"},"hoverEvent":{"action":"show_text","value":"能自己選擇地圖、地形和對手的自訂遊戲"}}]
-#execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[設定]","color":"white","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/setting"},"hoverEvent":{"action":"show_text","value":"聲音、圖示等設定"}}]
+execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[關於]","color":"dark_aqua","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/setting"},"hoverEvent":{"action":"show_text","value":"關於遊戲、作者"}}]
 
 
 execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":"\n------------------------","color":"gold"},{"text":" "}]
