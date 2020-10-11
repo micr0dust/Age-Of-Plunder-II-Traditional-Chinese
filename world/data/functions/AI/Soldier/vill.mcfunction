@@ -10,4 +10,3 @@ function ai:soldier/feedback_vill unless @e[tag=blue1]
 scoreboard players set @e[tag=cmd] build 1
 scoreboard players add @e[tag=cmd] buildt 1
 scoreboard players remove @e[tag=cmd] bwood 21
-scoreboard players add @e[tag=cmd] bv 3

@@ -17,3 +17,4 @@ execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_rstop_min=1] ~ ~ ~ /score
 
 function other:menu/red
 function noop_cm:cmend
+playsound minecraft:block.note.pling record @p ~ ~ ~ 1 0.749

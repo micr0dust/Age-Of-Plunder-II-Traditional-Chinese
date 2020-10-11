@@ -6,13 +6,15 @@
 
 #founder_AI  (AI=1 ; aibuild=1)
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=1,score_AI_min=1,score_aibuild=1,score_aibuild_min=1] ~ ~ ~ /tellraw @a {"text":"founder_AI \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=1,score_AI_min=1,score_aibuild=1,score_aibuild_min=1] ~ ~ ~ playsound custom.chat ambient @a ~ ~ ~ 5 1 1
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=1,score_AI_min=1,score_aibuild=1,score_aibuild_min=1] ~ ~ ~ /tellraw @a ["",{"text":"<"},{"text":"founder_AI","color":"blue"},{"text":"> \u96d6\u7136\u6211\u77e5\u9053\u6211\u6253\u4e0d\u8d0f\u4f60\n<"},{"text":"founder_AI","color":"blue"},{"text":"> \u4f46\u6211\u9084\u662f\u6703\u76e1\u5168\u529b\u7684"}]
-
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=1,score_AI_min=1,score_aibuild=1,score_aibuild_min=1] ~ ~ ~ playsound custom.chat ambient @a ~ ~ ~ 5 1 1
 
 #depend_North_engineer  (AI=1 ; aibuild=2)
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=1,score_AI_min=1,score_aibuild=2,score_aibuild_min=2] ~ ~ ~ /tellraw @a {"text":"depend_North_engineer \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=1,score_AI_min=1,score_aibuild=2,score_aibuild_min=2] ~ ~ ~ playsound custom.chat ambient @a ~ ~ ~ 5 1 1
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=1,score_AI_min=1,score_aibuild=2,score_aibuild_min=2] ~ ~ ~ /tellraw @a ["",{"text":"<"},{"text":"depend_North_engineer","color":"blue"},{"text":"> \u53c8\u6709\u4e00\u500b\u5c0d\u624b\u4e86\n<"},{"text":"depend_North_engineer","color":"blue"},{"text":"> \u8b93\u6211\u770b\u770b\u4f60\u7684\u80fd\u8010\u5427 !"}]
-
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=1,score_AI_min=1,score_aibuild=2,score_aibuild_min=2] ~ ~ ~ playsound custom.chat ambient @a ~ ~ ~ 5 1 1
 
 #jerry87  (AI=1 ; aibuild=3)
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=1,score_AI_min=1,score_aibuild=3,score_aibuild_min=3] ~ ~ ~ /tellraw @a {"text":"jerry87 \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}

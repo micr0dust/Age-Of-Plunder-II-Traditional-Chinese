@@ -1,13 +1,42 @@
-#########################################################################################################
-#【掠奪時代II:黃金帝國 】
-# 作者: 灰塵
-#########################################################################################################
+#音效
+execute @e[tag=red2] ~ ~ ~ execute @e[tag=special,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
+execute @e[tag=blue2] ~ ~ ~ execute @e[tag=special,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
+
+execute @e[tag=red2] ~ ~ ~ execute @e[tag=hs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
+execute @e[tag=blue2] ~ ~ ~ execute @e[tag=hs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
+
+execute @e[tag=red2] ~ ~ ~ execute @e[tag=ars,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
+execute @e[tag=blue2] ~ ~ ~ execute @e[tag=ars,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
+
+execute @e[tag=red2] ~ ~ ~ execute @e[tag=as,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
+execute @e[tag=blue2] ~ ~ ~ execute @e[tag=as,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
+
+execute @e[tag=red5] ~ ~ ~ execute @e[tag=as,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
+execute @e[tag=blue5] ~ ~ ~ execute @e[tag=as,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
+
+execute @e[tag=red5] ~ ~ ~ execute @e[tag=bs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
+execute @e[tag=blue5] ~ ~ ~ execute @e[tag=bs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
+
+execute @e[tag=red7] ~ ~ ~ execute @e[tag=hs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
+execute @e[tag=blue7] ~ ~ ~ execute @e[tag=hs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
+
+execute @e[tag=red7] ~ ~ ~ execute @e[tag=hbs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
+execute @e[tag=blue7] ~ ~ ~ execute @e[tag=hbs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
+
+execute @e[tag=red8] ~ ~ ~ execute @e[tag=ars,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
+execute @e[tag=blue8] ~ ~ ~ execute @e[tag=ars,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
+
+execute @e[tag=red8] ~ ~ ~ execute @e[tag=hbs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
+execute @e[tag=blue8] ~ ~ ~ execute @e[tag=hbs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
+
 #vills
-execute @e[tag=red1] ~ ~ ~ execute @e[tag=v,r=4,c=1] ~ ~ ~ /summon minecraft:husk ~ ~ ~1 {CustomName:"村民",CustomNameVisible:1,PersistenceRequired:1,LeftHanded:1,CanPickUpLoot:0b,Attributes:[{Name:"generic.movementSpeed",Base:0.2f}],Silent:1,HandItems:[{id:"minecraft:bucket",tag:{ench:[{id:16,lvl:40}]},Count:1},{id:"minecraft:iron_hoe",Count:1}],ArmorItems:[{},{id:"minecraft:leather_leggings",tag:{display:{color:15086110}},Count:1},{id:"minecraft:leather_chestplate",tag:{display:{color:15086110}},Count:1},{id:"minecraft:skull",Damage:3,tag:{SkullOwner:Paul_Lionheart},Count:1}],Tags:["vill"],Team:red}
+execute @e[tag=red1] ~ ~ ~ execute @e[tag=v,r=4,c=1] ~ ~ ~ /summon minecraft:husk ~ ~ ~1 {CustomName:"村民",CustomNameVisible:1,PersistenceRequired:1,LeftHanded:1,CanPickUpLoot:0b,Attributes:[{Name:"generic.movementSpeed",Base:0.2f},{Name:"generic.knockbackResistance",Base:1f}],Silent:1,HandItems:[{id:"minecraft:bucket",tag:{ench:[{id:16,lvl:10},{id:1,lvl:10}]},Count:1},{id:"minecraft:iron_hoe",Count:1}],ArmorItems:[{},{id:"minecraft:leather_leggings",tag:{display:{color:15086110}},Count:1},{id:"minecraft:leather_chestplate",tag:{display:{color:15086110}},Count:1},{id:"minecraft:skull",Damage:3,tag:{SkullOwner:Paul_Lionheart},Count:1}],Tags:["vill"],Team:red}
 execute @e[tag=red1] ~ ~ ~ execute @e[tag=v,r=4,c=1] ~ ~ ~ scoreboard players add @e[tag=cmd] rv 1
+execute @e[tag=red1] ~ ~ ~ execute @e[tag=v,r=4,c=1] ~ ~ ~ /playsound custom.villagercreation ambient @a[team=red,r=10]
 execute @e[tag=red1] ~ ~ ~ kill @e[tag=v,r=4,c=1]
-execute @e[tag=blue1] ~ ~ ~ execute @e[tag=v,r=4,c=1] ~ ~ ~ /summon minecraft:husk ~ ~ ~-1 {CustomName:"村民",CustomNameVisible:1,PersistenceRequired:1,LeftHanded:1,CanPickUpLoot:0b,Attributes:[{Name:"generic.movementSpeed",Base:0.2f}],Silent:1,HandItems:[{id:"minecraft:bucket",tag:{ench:[{id:16,lvl:40}]},Count:1},{id:"minecraft:iron_hoe",Count:1}],ArmorItems:[{},{id:"minecraft:leather_leggings",tag:{display:{color:2562534}},Count:1},{id:"minecraft:leather_chestplate",tag:{display:{color:2562534}},Count:1},{id:"minecraft:skull",Damage:3,tag:{SkullOwner:Paul_Lionheart},Count:1}],Tags:["vill"],Team:blue}
+execute @e[tag=blue1] ~ ~ ~ execute @e[tag=v,r=4,c=1] ~ ~ ~ /summon minecraft:husk ~ ~ ~-1 {CustomName:"村民",CustomNameVisible:1,PersistenceRequired:1,LeftHanded:1,CanPickUpLoot:0b,Attributes:[{Name:"generic.movementSpeed",Base:0.2f},{Name:"generic.knockbackResistance",Base:1f}],Silent:1,HandItems:[{id:"minecraft:bucket",tag:{ench:[{id:16,lvl:10},{id:1,lvl:10}]},Count:1},{id:"minecraft:iron_hoe",Count:1}],ArmorItems:[{},{id:"minecraft:leather_leggings",tag:{display:{color:2562534}},Count:1},{id:"minecraft:leather_chestplate",tag:{display:{color:2562534}},Count:1},{id:"minecraft:skull",Damage:3,tag:{SkullOwner:Paul_Lionheart},Count:1}],Tags:["vill"],Team:blue}
 execute @e[tag=blue1] ~ ~ ~ execute @e[tag=v,r=4,c=1] ~ ~ ~ scoreboard players add @e[tag=cmd] bv 1
+execute @e[tag=blue1] ~ ~ ~ execute @e[tag=v,r=4,c=1] ~ ~ ~ /playsound custom.villagercreation ambient @a[team=blue,r=10]
 execute @e[tag=blue1] ~ ~ ~ kill @e[tag=v,r=4,c=1]
 
 function noop_cm:produce/a1 if @e[tag=cmd,score_raslvl_min=1,score_raslvl=1]
@@ -49,6 +78,21 @@ function noop_cm:produce/bar
 function noop_cm:produce/bbr
 
 
+function noop_cm:produce/fortess/special/b1 if @e[tag=cmd,score_bciv=1,score_bciv_min=1]
+function noop_cm:produce/fortess/special/b2 if @e[tag=cmd,score_bciv=2,score_bciv_min=2]
+function noop_cm:produce/fortess/special/b3 if @e[tag=cmd,score_bciv=3,score_bciv_min=3]
+function noop_cm:produce/fortess/special/b4 if @e[tag=cmd,score_bciv=4,score_bciv_min=4]
+function noop_cm:produce/fortess/special/b5 if @e[tag=cmd,score_bciv=5,score_bciv_min=5]
+function noop_cm:produce/fortess/special/b6 if @e[tag=cmd,score_bciv=6,score_bciv_min=6]
+
+function noop_cm:produce/fortess/special/a1 if @e[tag=cmd,score_rciv=1,score_rciv_min=1]
+function noop_cm:produce/fortess/special/a2 if @e[tag=cmd,score_rciv=2,score_rciv_min=2]
+function noop_cm:produce/fortess/special/a3 if @e[tag=cmd,score_rciv=3,score_rciv_min=3]
+function noop_cm:produce/fortess/special/a4 if @e[tag=cmd,score_rciv=4,score_rciv_min=4]
+function noop_cm:produce/fortess/special/a5 if @e[tag=cmd,score_rciv=5,score_rciv_min=5]
+function noop_cm:produce/fortess/special/a6 if @e[tag=cmd,score_rciv=6,score_rciv_min=6]
+
+
 function noop_cm:produce/fortess/a1 if @e[tag=cmd,score_raslvl_min=1,score_raslvl=1]
 function noop_cm:produce/fortess/a2 if @e[tag=cmd,score_raslvl_min=2,score_raslvl=2]
 function noop_cm:produce/fortess/a3 if @e[tag=cmd,score_raslvl_min=3,score_raslvl=3]
@@ -67,6 +111,7 @@ function noop_cm:produce/fortess/bah2 if @e[tag=cmd,score_bahlvl_min=2,score_bah
 
 function noop_cm:produce/fortess/rar
 function noop_cm:produce/fortess/bar
+
 
 #弓兵攻擊
 execute @e[tag=ar,team=red] ~ ~ ~ summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rarrow","horse"]}
@@ -92,13 +137,21 @@ execute @e[tag=cmd,score_btlvl=2,score_btlvl_min=2,score_stop=0,score_stop_min=0
 execute @e[tag=cmd,score_btlvl=3,score_btlvl_min=3,score_stop=0,score_stop_min=0] ~ ~ ~ execute @e[tag=blue2] ~ ~ ~ execute @e[team=!blue,tag=!horse,r=12,c=1] ~ ~ ~ summon minecraft:arrow ~ ~3 ~ {life:5800s,pickup:0b,damage:55,crit:1}
 
 
-
+#-維京堡兵回血
+execute @e[tag=viking,team=blue] ~ ~ ~ effect @e[tag=s,r=2,team=blue] 10 6 0 true
+execute @e[tag=viking,team=red] ~ ~ ~ effect @e[tag=s,r=2,team=red] 10 6 0 true
 #軍隊跟隨定時仇恨轉移
-execute @e[tag=follow,team=red] ~ ~ ~ execute @e[tag=s,team=blue,r=5] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-04bc-0000-0000000004bc,Motion:[0.0,-1.0,0.0]}
-execute @e[tag=follow,team=red] ~ ~ ~ execute @e[tag=s,team=blue,r=5] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-04bc-0000-0000000004bc,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=bfollow] ~ ~ ~ execute @e[tag=s,team=blue,r=5] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-04bc-0000-0000000004bc,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=bfollow] ~ ~ ~ execute @e[tag=s,team=blue,r=5] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-04bc-0000-0000000004bc,Motion:[0.0,-1.0,0.0]}
 
-execute @e[tag=follow,team=blue] ~ ~ ~ execute @e[tag=s,team=red,r=5] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0849-0000-000000000849,Motion:[0.0,-1.0,0.0]}
-execute @e[tag=follow,team=blue] ~ ~ ~ execute @e[tag=s,team=red,r=5] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-0849-0000-000000000849,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=rfollow] ~ ~ ~ execute @e[tag=s,team=red,r=5] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0849-0000-000000000849,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=rfollow] ~ ~ ~ execute @e[tag=s,team=red,r=5] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-0849-0000-000000000849,Motion:[0.0,-1.0,0.0]}
+
+#AI進攻
+execute @e[tag=attack] ~ ~ ~ execute @e[tag=s,r=8,team=blue] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0055-0000-000000000055,Motion:[0.0,-1.0,0.0]}
+
+execute @e[tag=attack] ~ ~ ~ summon snowball ~ ~-1 ~ {ownerName:00000000-0000-26aa-0000-0000000026aa,Motion:[0.0,1.0,0.0]}
+execute @e[tag=attack] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-26aa-0000-0000000026aa,Motion:[0.0,-1.0,0.0]}
 
 
 #村民跟隨定時仇恨轉移

@@ -13,4 +13,3 @@ function ai:soldier/feedback_knight unless @e[tag=blue7]
 scoreboard players set @e[tag=cmd] build 1
 scoreboard players add @e[tag=cmd] buildt 1
 scoreboard players remove @e[tag=cmd] bwood 99
-scoreboard players add @e[tag=cmd] bs 6

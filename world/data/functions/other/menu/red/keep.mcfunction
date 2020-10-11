@@ -15,3 +15,4 @@ execute @e[tag=cmd,score_stop=1,score_stop_min=1,score_rstoper_min=1] ~ ~ ~ /sco
 execute @e[tag=cmd,score_stop=0,score_stop_min=0,score_rstoper_min=1] ~ ~ ~ /scoreboard players set @e[tag=cmd] rstoper 0
 function other:menu/red
 function noop_cm:cmend
+playsound minecraft:block.note.pling record @p ~ ~ ~ 1 0.749

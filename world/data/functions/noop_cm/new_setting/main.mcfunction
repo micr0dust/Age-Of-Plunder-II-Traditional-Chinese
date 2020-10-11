@@ -7,11 +7,24 @@ function noop_cm:chat_clearall
 title @a times 1 500 1
 title @a title {"text":"\u9700\u958b\u6b0a\u9650\u4ee5\u8a2d\u5b9a\u904a\u6232","color":"gold"}
 title @a subtitle ["",{"text":"\u9078\u968a","color":"red"},{"text":"->","color":"blue"},{"text":"\u5730\u5f62","color":"yellow"},{"text":"->","color":"blue"},{"text":"\u958b\u59cb","color":"green"}]
+#種族
+execute @e[tag=cmd,score_rciv=0,score_rciv_min=0,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ra0
+execute @e[tag=cmd,score_rciv=1,score_rciv_min=1,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ra1
+execute @e[tag=cmd,score_rciv=2,score_rciv_min=2,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ra2
+execute @e[tag=cmd,score_rciv=3,score_rciv_min=3,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ra3
+execute @e[tag=cmd,score_rciv=4,score_rciv_min=4,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ra4
+execute @e[tag=cmd,score_rciv=5,score_rciv_min=5,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ra5
+execute @e[tag=cmd,score_rciv=6,score_rciv_min=6,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ra6
 
-tellraw @p ["",{"text":"[加入紅方]\u25b6","color":"red","clickEvent":{"action":"run_command","value":"/trigger join_red set 1"}},{"text":" "},{"selector":"@a[team=red]","color":"white"}]
-execute @p ~ ~ ~ function noop_cm:new_setting/player/player if @p[team=blue]
-execute @p ~ ~ ~ function noop_cm:new_setting/player/ai unless @p[team=blue]
-tellraw @p ["",{"text":"[加入觀眾]\u25b6","color":"gray","clickEvent":{"action":"run_command","value":"/trigger join_spectator set 1"}},{"text":" "},{"selector":"@a[team=sp]","color":"white"}]
+execute @e[tag=cmd,score_bciv=0,score_bciv_min=0,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba0
+execute @e[tag=cmd,score_bciv=1,score_bciv_min=1,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba1
+execute @e[tag=cmd,score_bciv=2,score_bciv_min=2,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba2
+execute @e[tag=cmd,score_bciv=3,score_bciv_min=3,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba3
+execute @e[tag=cmd,score_bciv=4,score_bciv_min=4,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba4
+execute @e[tag=cmd,score_bciv=5,score_bciv_min=5,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba5
+execute @e[tag=cmd,score_bciv=6,score_bciv_min=6,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba6
+
+function noop_cm:new_setting/choose_team if @e[tag=cmd,score_map=0]
 #地圖樣式
 function noop_cm:new_setting/map_style/b0 if @e[tag=cmd,score_map_style=0,score_map_style_min=0,score_map=0]
 function noop_cm:new_setting/map_style/b1 if @e[tag=cmd,score_map_style=1,score_map_style_min=1,score_map=0]
@@ -72,6 +85,10 @@ function noop_cm:new_setting/start if @e[score_map_min=1]
 scoreboard players enable @a join_red
 scoreboard players enable @a join_blue
 scoreboard players enable @a join_spectator
+scoreboard players enable @a rcivpick
+scoreboard players enable @a bcivpick
+scoreboard players enable @a civpick
+
 
 
 

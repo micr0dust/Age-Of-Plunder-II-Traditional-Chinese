@@ -9,6 +9,14 @@ function noop_cm:chat_clearall
 function noop_cm:chat_clearall
 scoreboard players set @e[tag=cmd] gamemode 1
 execute @p[team=blue] ~ ~ ~ /scoreboard players set @e[tag=cmd] gamemode 0
+
+scoreboard objectives add bfood dummy
+scoreboard players set @e[tag=cmd] bfood 24
+scoreboard objectives add bgold dummy
+scoreboard players set @e[tag=cmd] bgold 0
+scoreboard objectives add bwood dummy
+scoreboard players set @e[tag=cmd] bwood 20
+
 function setting:self_terrain_barrier_clean
 setblock 96 30 -135 minecraft:air
 setblock 105 30 -135 minecraft:air
@@ -18,8 +26,8 @@ setblock 42 30 -189 minecraft:air
 setblock 105 30 -144 minecraft:air
 title @a times 20 40 20
 title @a title ["",{"text":"\u2691","color":"dark_blue"},{"text":" "},{"text":"\u958b\u59cb","bold":true,"color":"black"},{"text":" "},{"text":"\u2691","color":"dark_red"}]
-summon minecraft:shulker 42 30 -198 {Color:14,CustomName:"指揮中心--荷蘭",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["red1"],Team:red}
-execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0] ~ ~ ~ /summon minecraft:shulker 105 30 -135 {Color:11,CustomName:"指揮中心--西班牙",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["blue1"],Team:blue}
+summon minecraft:shulker 42 30 -198 {Color:14,CustomName:"指揮中心--荷蘭",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["red1","building"],Team:red}
+execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0] ~ ~ ~ /summon minecraft:shulker 105 30 -135 {Color:11,CustomName:"指揮中心--西班牙",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["blue1","building"],Team:blue}
 tp @a[team=blue] 110 26 -127
 tp @a[team=red] 41 25 -216
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /clone -2 34 -96 6 41 -88 -2 43 -96

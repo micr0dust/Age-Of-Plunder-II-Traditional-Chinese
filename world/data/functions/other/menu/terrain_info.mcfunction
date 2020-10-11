@@ -16,3 +16,4 @@ execute @e[tag=cmd,score_terrain=6,score_terrain_min=6] ~ ~ ~ /tellraw @p ["",{"
 execute @e[tag=cmd,score_terrain=7,score_terrain_min=7] ~ ~ ~ /tellraw @p ["",{"text":"--- ","bold":true,"color":"yellow"},{"text":"\u8ecd\u4e8b\u91cd\u5730","color":"yellow"},{"text":" ---","bold":true,"color":"yellow"},{"text":"\n"},{"text":"\u6b64\u5340\u5730\u5f62\u8907\u96dc,\u4f4d\u8655\u8981\u5730,\u4e00\u5b9a\u8981\u5b88\u4f4f !","color":"white"},{"text":"\n\n "}]
 execute @e[tag=cmd,score_terrain=8,score_terrain_min=8] ~ ~ ~ /tellraw @p ["",{"text":"--- ","bold":true,"color":"yellow"},{"text":"\u5cfd\u8c37","color":"yellow"},{"text":" ---","bold":true,"color":"yellow"},{"text":"\n\u5982\u679c\u4e0d\u60f3\u8d8a\u904e\u9ad8\u8073\u7684\u5c71\u8108,\u90a3\u5371\u96aa\u7684\u5cfd\u8c37\u53ef\u80fd\u662f\u4f60\u552f\u4e00\u7684\u9078\u64c7 !\n "}]
 function noop_cm:cmend
+playsound minecraft:block.note.pling record @p ~ ~ ~ 1 0.749

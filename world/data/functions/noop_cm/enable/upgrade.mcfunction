@@ -28,6 +28,8 @@ scoreboard players enable @a[team=blue] ba5lvl1
 scoreboard players enable @a[team=red] ra5lvl3
 scoreboard players enable @a[team=red] ra5lvl2
 scoreboard players enable @a[team=red] ra5lvl1
+scoreboard players enable @a[team=red] rspecial
+scoreboard players enable @a[team=blue] bspecial
 
 
 

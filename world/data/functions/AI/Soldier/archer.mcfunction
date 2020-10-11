@@ -12,4 +12,3 @@ function ai:soldier/feedback_archer unless @e[tag=blue8]
 scoreboard players set @e[tag=cmd] build 1
 scoreboard players add @e[tag=cmd] buildt 1
 scoreboard players remove @e[tag=cmd] bwood 70
-scoreboard players add @e[tag=cmd] bs 5

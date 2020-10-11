@@ -144,7 +144,14 @@ scoreboard players set @a bfb 0
 scoreboard players set @a join_red 0
 scoreboard players set @a join_blue 0
 scoreboard players set @a join_spectator 0
-#scoreboard players set @a ready 0
+#種族
+scoreboard players set @a rspecial 0
+scoreboard players set @a bspecial 0
+
+scoreboard players set @a rcivpick 0
+scoreboard players set @a bcivpick 0
+scoreboard players set @a civpick 0
+
 
 
 

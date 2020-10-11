@@ -57,6 +57,8 @@ scoreboard players set @e[tag=cmd] rgold 0
 
 scoreboard objectives add rwood dummy
 scoreboard players set @e[tag=cmd] rwood 20
+#----------------------------------------------------
+scoreboard teams add attget 目標
 #-----------------------------------------------------
 scoreboard teams add team
 scoreboard teams option team friendlyfire false
@@ -354,11 +356,31 @@ scoreboard players set @e[tag=cmd] map 0
 scoreboard objectives add join_red trigger
 scoreboard objectives add join_blue trigger
 scoreboard objectives add join_spectator trigger
+#文明
+scoreboard objectives add rciv dummy
+scoreboard players set @e[tag=cmd] rciv 0
 
+scoreboard objectives add bciv dummy
+scoreboard players set @e[tag=cmd] bciv 0
 
+scoreboard objectives add rspecial trigger
+scoreboard objectives add bspecial trigger
 
+scoreboard objectives add rcivpick trigger
+scoreboard objectives add bcivpick trigger
 
+scoreboard objectives add civpick trigger
+#AI進攻
+scoreboard objectives add attack dummy
+scoreboard players set @e[tag=cmd] attack 0
 
+scoreboard objectives add keepattack dummy
+scoreboard players set @e[tag=cmd] keepattack 0
+
+scoreboard objectives add noai dummy
+
+scoreboard objectives add path dummy
+scoreboard players set @e[tag=cmd] path 0
 
 
 
