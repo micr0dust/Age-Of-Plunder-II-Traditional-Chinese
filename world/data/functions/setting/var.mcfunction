@@ -315,7 +315,7 @@ scoreboard players set @a followv 0
 
 scoreboard objectives add menu dummy
 scoreboard players set @e[tag=cmd] menu 0
-#0選擇1教學2自訂遊戲3劇情4關於
+#0選擇1教學2自訂遊戲3戰役4關於5挑戰6排名
 
 scoreboard objectives add puuid dummy
 scoreboard players set @a puuid 1
@@ -426,6 +426,9 @@ scoreboard players set @a blind 0
 #--防守計時回合+資源
 scoreboard objectives add resc dummy
 scoreboard players set @e[tag=cmd] resc 0
+#--防守計時
+scoreboard objectives add count_1 dummy
+scoreboard players set @e[tag=cmd] count_1 0
 #--劇情說話分類
 scoreboard objectives add speak dummy
 scoreboard players set @e[tag=cmd] speak 0
@@ -438,9 +441,15 @@ scoreboard players set @e[tag=cmd] dom 0
 #--劇情節數(章數下的細分)
 scoreboard objectives add cls dummy
 scoreboard players set @e[tag=cmd] cls 0
-
-
-
+#--排名頁數
+scoreboard objectives add page dummy
+scoreboard players set @e[tag=cmd] page 1
+#--計時
+scoreboard objectives add count_ dummy
+scoreboard players set @e[tag=cmd] count_ 0
+#--開計
+scoreboard objectives add can_count dummy
+scoreboard players set @e[tag=cmd] can_count 0
 
 function noop_cm:stop_music
 
@@ -472,3 +481,64 @@ function noop_cm:stop_music
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#--winner
+scoreboard objectives add winner dummy
+scoreboard players set @e[tag=cmd] winner 0
+#--碼
+scoreboard objectives add count_code dummy
+scoreboard players set @e[tag=cmd] count_code 0
+#--碼
+scoreboard objectives add count_code2 dummy
+scoreboard players set @e[tag=cmd] count_code2 0
+#--審查
+#gamemode
+scoreboard objectives add gm dummy
+scoreboard players set @e[tag=cmd] gm 0
+#kill blue1
+scoreboard objectives add kdect dummy
+scoreboard players set @e[tag=cmd] kdect 0
+#rescource
+scoreboard objectives add resdect dummy
+scoreboard players set @e[tag=cmd] resdect 0
+#rescource
+scoreboard objectives add resdect_ dummy
+scoreboard players set @e[tag=cmd] resdect_ 0
+#challenging
+scoreboard objectives add challenging dummy
+scoreboard players set @e[tag=cmd] challenging 0
+#count_1 time

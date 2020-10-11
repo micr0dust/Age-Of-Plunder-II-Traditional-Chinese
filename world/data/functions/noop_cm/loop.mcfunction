@@ -155,6 +155,14 @@ scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bt
 scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bs
 scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bv
 
+execute @e[tag=cmd,c=1,score_challenging_min=1] ~ ~ ~ scoreboard players set @e[tag=cmd] AItest 0
+execute @e[tag=cmd,c=1,score_challenging_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] AItest += @e[tag=cmd] rgold
+execute @e[tag=cmd,c=1,score_challenging_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] AItest += @e[tag=cmd] rfood
+execute @e[tag=cmd,c=1,score_challenging_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] AItest += @e[tag=cmd] rwood
+execute @e[tag=cmd,c=1,score_challenging_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] resdect_ -= @e[tag=cmd] AItest
+execute @e[tag=cmd,c=1,score_canend_min=1,score_resdect_=-300,score_challenging_min=1] ~ ~ ~ scoreboard players set @e[tag=cmd] resdect 2
+execute @e[tag=cmd,c=1,score_challenging_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] resdect_ = @e[tag=cmd] AItest
+
 #玩家UUID分配
 #execute @p[score_puuid=0] ~ ~ ~ scoreboard players add @e[tag=cmd] puuid 1
 #execute @p[score_puuid=0] ~ ~ ~ scoreboard players operation @p[score_puuid=0] puuid = @e[tag=cmd] puuid
@@ -215,6 +223,15 @@ execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=4,score_mode_min=4] ~ ~ ~ e
 execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=4,score_mode_min=4] ~ ~ ~ effect @a[score_blind_min=1] minecraft:blindness 2 0 true
 #劇情畫面
 function battle:action_ctrl if @e[tag=cmd,score_speaking_min=1]
+
+execute @e[tag=cmd,score_gm=0,score_challenging_min=1,score_canend_min=1] ~ ~ ~ execute @p[m=!2] ~ ~ ~ scoreboard players set @e[tag=cmd] gm 1
+
+
+#計時
+function noop_cm:ladder/count if @e[tag=cmd,score_can_count_min=1]
+
+
+
 
 
 

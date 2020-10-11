@@ -2,6 +2,7 @@
 #【掠奪時代II:黃金帝國 】
 # 作者: 灰塵
 #########################################################################################################
+scoreboard players set @e[tag=cmd] can_count 0
 function noop_cm:chat_clearall
 scoreboard players set @e[tag=cmd] canend 0
 scoreboard players set @a death 0
@@ -24,4 +25,9 @@ execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ tellraw @a [{"text":
 execute @a[score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @p [{"text":"AI難度:"},{"score":{"name":"@e[tag=cmd]","objective":"AIcheat"}},{"text":"等"}]
 execute @a[score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /tellraw @p [{"text":"AI類型:"},{"score":{"name":"@e[tag=cmd]","objective":"AI"}},{"text":"型"}]
 scoreboard players enable @a restart
+function noop_cm:ladder/review
+execute @e[tag=cmd,c=1,score_challenging_min=1,score_count__min=20000,score_winner=1] ~ ~ ~ tellraw @a ["",{"text":"\u26a0 ","color":"green"},{"text":"\u4f60\u672a\u9054\u5230\u63d0\u4ea4\u7d00\u9304\u7684\u8cc7\u683c\uff0c\u518d\u63a5\u518d\u53b2\u5427 !","color":"gold"},{"text":" "}]
+execute @e[tag=cmd,c=1,score_challenging_min=1,score_count__min=20000,score_winner=0] ~ ~ ~ tellraw @a ["",{"text":"\u26a0 ","color":"green"},{"text":"\u4f60\u672a\u9054\u5230\u63d0\u4ea4\u7d00\u9304\u7684\u8cc7\u683c\uff0c\u518d\u63a5\u518d\u53b2\u5427 !","color":"gold"},{"text":" "}]
+execute @e[tag=cmd,c=1,score_challenging_min=1,score_count_=20000,score_winner=0] ~ ~ ~ tellraw @a ["",{"text":"\u26a0 ","color":"green"},{"text":"\u4f60\u672a\u9054\u5230\u63d0\u4ea4\u7d00\u9304\u7684\u8cc7\u683c\uff0c\u518d\u63a5\u518d\u53b2\u5427 !","color":"gold"},{"text":" "}]
+execute @e[tag=cmd,c=1,score_challenging_min=1,score_count_=20000,score_winner_min=1] ~ ~ ~ tellraw @a ["",{"text":"⚠ ","color":"green"},{"text":"恭喜你獲得提交紀錄的資格","color":"gold"},{"text":" "},{"text":"[點此按步驟提交]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:ladder/submit"}}]
 tellraw @a {"text":"[\u9ede\u6b64\u91cd\u7f6e\u5730\u5716]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger restart set 1"}}

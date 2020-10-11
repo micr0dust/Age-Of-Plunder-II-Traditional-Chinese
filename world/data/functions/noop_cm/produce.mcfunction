@@ -29,7 +29,6 @@ execute @e[tag=blue8] ~ ~ ~ execute @e[tag=ars,r=4,c=1] ~ ~ ~ /playsound custom.
 
 execute @e[tag=red8] ~ ~ ~ execute @e[tag=hbs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=red,r=10] ~ ~ ~ 1 1 1
 execute @e[tag=blue8] ~ ~ ~ execute @e[tag=hbs,r=4,c=1] ~ ~ ~ /playsound custom.militarycreation ambient @a[team=blue,r=10] ~ ~ ~ 1 1 1
-
 #vills
 execute @e[tag=red1] ~ ~ ~ execute @e[tag=v,r=4,c=1] ~ ~ ~ /summon minecraft:husk ~ ~ ~1 {CustomName:"村民",CustomNameVisible:1,PersistenceRequired:1,LeftHanded:1,CanPickUpLoot:0b,Attributes:[{Name:"generic.movementSpeed",Base:0.2f},{Name:"generic.knockbackResistance",Base:1f}],Silent:1,HandItems:[{id:"minecraft:bucket",tag:{ench:[{id:16,lvl:10},{id:1,lvl:10}]},Count:1},{id:"minecraft:iron_hoe",Count:1}],ArmorItems:[{},{id:"minecraft:leather_leggings",tag:{display:{color:15086110}},Count:1},{id:"minecraft:leather_chestplate",tag:{display:{color:15086110}},Count:1},{id:"minecraft:skull",Damage:3,tag:{SkullOwner:Paul_Lionheart},Count:1}],Tags:["vill"],Team:red}
 execute @e[tag=red1] ~ ~ ~ execute @e[tag=v,r=4,c=1] ~ ~ ~ scoreboard players add @e[tag=cmd] rv 1
@@ -186,6 +185,9 @@ execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=6,score_mode_min=6] ~ ~ ~ e
 
 function battle:contral if @e[tag=cmd,score_speaking_min=1]
 
+
+#審查
+execute @e[tag=cmd,score_gm=0,score_challenging_min=1] ~ ~ ~ execute @p[m=!2] ~ ~ ~ scoreboard players set @e[tag=cmd] gm 1
 
 
 
