@@ -251,7 +251,10 @@ execute @e[tag=blue6] ~ ~ ~ effect @e[tag=vill,r=5,score_ctrl=0] minecraft:slown
 execute @e[tag=follow,team=blue] ~ ~ ~ tp @e[tag=follow,team=blue,c=1] @p
 
 execute @e[tag=follow,team=red] ~ ~ ~  tp @e[tag=follow,team=red,c=1] @p
+#村民跟隨
+execute @e[tag=bvfollow] ~ ~ ~ tp @e[tag=bvfollow] @p
 
+execute @e[tag=rvfollow] ~ ~ ~  tp @e[tag=rvfollow] @p
 
 
 #資源點扣血+弓兵攻擊

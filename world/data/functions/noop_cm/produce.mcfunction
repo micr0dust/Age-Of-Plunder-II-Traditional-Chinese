@@ -61,15 +61,26 @@ execute @e[tag=cmd,score_btlvl=3,score_btlvl_min=3,score_stop=0,score_stop_min=0
 
 
 
+#軍隊跟隨定時仇恨轉移
+execute @e[tag=follow,team=red] ~ ~ ~ execute @e[tag=s,team=blue,r=3] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-04bc-0000-0000000004bc,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=follow,team=red] ~ ~ ~ execute @e[tag=s,team=blue,r=3] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-04bc-0000-0000000004bc,Motion:[0.0,-1.0,0.0]}
 
-execute @e[tag=follow,team=red] ~ ~ ~ execute @e[tag=s,team=blue,r=20] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-04bc-0000-0000000004bc,Motion:[0.0,-1.0,0.0]}
-execute @e[tag=follow,team=red] ~ ~ ~ execute @e[tag=s,team=blue,r=20] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-04bc-0000-0000000004bc,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=follow,team=blue] ~ ~ ~ execute @e[tag=s,team=red,r=3] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0849-0000-000000000849,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=follow,team=blue] ~ ~ ~ execute @e[tag=s,team=red,r=3] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-0849-0000-000000000849,Motion:[0.0,-1.0,0.0]}
 
 
-execute @e[tag=follow,team=blue] ~ ~ ~ execute @e[tag=s,team=red,r=20] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0849-0000-000000000849,Motion:[0.0,-1.0,0.0]}
-execute @e[tag=follow,team=blue] ~ ~ ~ execute @e[tag=s,team=red,r=20] ~ ~ ~ summon snowball ~ ~3 ~ {ownerName:00000000-0000-0849-0000-000000000849,Motion:[0.0,-1.0,0.0]}
+#村民跟隨定時仇恨轉移
+execute @e[tag=bvfollow] ~ ~ ~ execute @e[tag=vill,team=blue,r=2] ~ ~ ~ summon snowball ~ ~-1 ~ {ownerName:00000000-0000-0309-0000-000000000378,Motion:[0.0,1.0,0.0]}
+execute @e[tag=bvfollow] ~ ~ ~ execute @e[tag=vill,team=blue,r=2] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-0309-0000-000000000378,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=bvfollow] ~ ~ ~ scoreboard players set @e[tag=vill,team=blue,r=2] ctrl 1
+execute @e[tag=bvfollow] ~ ~ ~ effect @e[tag=vill,r=2,score_ctrl_min=1] minecraft:slowness 0 0 true
 
+execute @e[tag=rvfollow] ~ ~ ~ execute @e[tag=vill,team=red,r=2] ~ ~ ~ summon snowball ~ ~-1 ~ {ownerName:00000000-0000-022b-0000-00000000029a,Motion:[0.0,1.0,0.0]}
+execute @e[tag=rvfollow] ~ ~ ~ execute @e[tag=vill,team=red,r=2] ~ ~ ~ summon snowball ~ ~4 ~ {ownerName:00000000-0000-022b-0000-00000000029a,Motion:[0.0,-1.0,0.0]}
+execute @e[tag=rvfollow] ~ ~ ~ scoreboard players set @e[tag=vill,team=red,r=2] ctrl 1
+execute @e[tag=rvfollow] ~ ~ ~ effect @e[tag=vill,r=2,score_ctrl_min=1] minecraft:slowness 0 0 true
 
+function noop_cm:particle
 
 
 

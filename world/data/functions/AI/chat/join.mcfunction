@@ -76,6 +76,59 @@ execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=4,score_AI_min
 #inzane_johnny  (AI=4 ; aibuild=6)
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=4,score_AI_min=4,score_aibuild=6,score_aibuild_min=6] ~ ~ ~ /tellraw @a {"text":"inzane_johnny \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
 
+#Tilapia  (AI=4 ; aibuild=1)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=5,score_AI_min=5,score_aibuild=1,score_aibuild_min=1] ~ ~ ~ /tellraw @a {"text":"Tilapia \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Orange_Chen  (AI=4 ; aibuild=2)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=5,score_AI_min=5,score_aibuild=2,score_aibuild_min=2] ~ ~ ~ /tellraw @a {"text":"advancer1984 \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#oyster_P  (AI=4 ; aibuild=3)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=5,score_AI_min=5,score_aibuild=3,score_aibuild_min=3] ~ ~ ~ /tellraw @a {"text":"Orange_Chen \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#English_Cai  (AI=4 ; aibuild=4)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=5,score_AI_min=5,score_aibuild=4,score_aibuild_min=4] ~ ~ ~ /tellraw @a {"text":"English_Cai \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Jelly  (AI=4 ; aibuild=5)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=5,score_AI_min=5,score_aibuild=5,score_aibuild_min=5] ~ ~ ~ /tellraw @a {"text":"Jelly \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Korea_Fish  (AI=4 ; aibuild=6)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=5,score_AI_min=5,score_aibuild=6,score_aibuild_min=6] ~ ~ ~ /tellraw @a {"text":"Korea_Fish \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Author  (AI=4 ; aibuild=1)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=6,score_AI_min=6,score_aibuild=1,score_aibuild_min=1] ~ ~ ~ /tellraw @a {"text":"Author \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Doctrinam_Sandwico  (AI=4 ; aibuild=2)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=6,score_AI_min=6,score_aibuild=2,score_aibuild_min=2] ~ ~ ~ /tellraw @a {"text":"Doctrinam_Sandwico \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Eight_Ha  (AI=4 ; aibuild=3)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=6,score_AI_min=6,score_aibuild=3,score_aibuild_min=3] ~ ~ ~ /tellraw @a {"text":"Eight_Ha \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Yah_tiger  (AI=4 ; aibuild=4)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=6,score_AI_min=6,score_aibuild=4,score_aibuild_min=4] ~ ~ ~ /tellraw @a {"text":"Yah_tiger \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Bone_Dog  (AI=4 ; aibuild=5)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=6,score_AI_min=6,score_aibuild=5,score_aibuild_min=5] ~ ~ ~ /tellraw @a {"text":"Bone_Dog \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Oil_Tube  (AI=4 ; aibuild=6)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=6,score_AI_min=6,score_aibuild=6,score_aibuild_min=6] ~ ~ ~ /tellraw @a {"text":"Oil_Tube \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Json  (AI=4 ; aibuild=1)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=7,score_AI_min=7,score_aibuild=1,score_aibuild_min=1] ~ ~ ~ /tellraw @a {"text":"Json \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Mcfunction  (AI=4 ; aibuild=2)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=7,score_AI_min=7,score_aibuild=2,score_aibuild_min=2] ~ ~ ~ /tellraw @a {"text":"Mcfunction \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Python  (AI=4 ; aibuild=3)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=7,score_AI_min=7,score_aibuild=3,score_aibuild_min=3] ~ ~ ~ /tellraw @a {"text":"Python \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Jquery  (AI=4 ; aibuild=4)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=7,score_AI_min=7,score_aibuild=4,score_aibuild_min=4] ~ ~ ~ /tellraw @a {"text":"Jquery \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Cascading_Style_Sheets  (AI=4 ; aibuild=5)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=7,score_AI_min=7,score_aibuild=5,score_aibuild_min=5] ~ ~ ~ /tellraw @a {"text":"Cascading_Style_Sheets \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
+
+#Javascript  (AI=4 ; aibuild=6)
+execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1,score_AI=7,score_AI_min=7,score_aibuild=6,score_aibuild_min=6] ~ ~ ~ /tellraw @a {"text":"Javascript \u52a0\u5165\u4e86\u904a\u6232","color":"yellow"}
 
 
 

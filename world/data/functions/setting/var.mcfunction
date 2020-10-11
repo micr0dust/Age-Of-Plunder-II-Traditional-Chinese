@@ -248,11 +248,11 @@ scoreboard objectives add bs dummy
 scoreboard players set @e[tag=cmd] bs 0
 #藍隊總軍隊
 
-scoreboard objectives add rs dummy
+scoreboard objectives add rv dummy
 scoreboard players set @e[tag=cmd] rv 0
 #紅隊總村民
 
-scoreboard objectives add bs dummy
+scoreboard objectives add bv dummy
 scoreboard players set @e[tag=cmd] bv 0
 #藍隊總村民
 
@@ -317,5 +317,35 @@ scoreboard objectives add trash dummy
 scoreboard objectives add arrow_delay dummy
 scoreboard players set @e[tag=cmd] arrow_delay 0
 #箭矢延遲
+
+scoreboard objectives add flats dummy
+scoreboard players set @a flats 0
+#領軍旗偵測
+
+scoreboard objectives add follows dummy
+scoreboard players set @a follows 0
+#軍隊跟隨偵測
+
+scoreboard objectives add followv dummy
+scoreboard players set @a followv 0
+#村民跟隨偵測
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
