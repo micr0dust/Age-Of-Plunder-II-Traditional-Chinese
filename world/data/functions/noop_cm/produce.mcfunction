@@ -184,7 +184,7 @@ function noop_cm:deresource if @e[tag=cmd,score_stop=0,score_stop_min=0]
 execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=6,score_mode_min=6] ~ ~ ~ execute @e[tag=bluew,c=1] ~ ~ ~ scoreboard players remove @e[tag=cmd] bwonder_count 1
 execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=6,score_mode_min=6] ~ ~ ~ execute @e[tag=redw,c=1] ~ ~ ~ scoreboard players remove @e[tag=cmd] rwonder_count 1
 
-
+function battle:contral if @e[tag=cmd,score_speaking_min=1]
 
 
 

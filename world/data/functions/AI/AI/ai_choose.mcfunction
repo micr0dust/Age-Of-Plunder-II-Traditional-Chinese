@@ -10,3 +10,4 @@ execute @e[tag=cmd,score_aibuild=5,score_aibuild_min=5] ~ ~ ~ /function ai:ai/ai
 execute @e[tag=cmd,score_aibuild=6,score_aibuild_min=6] ~ ~ ~ /function ai:ai/ai_6
 execute @e[tag=cmd,score_aibuild=7,score_aibuild_min=7] ~ ~ ~ /function ai:ai/ai_7
 execute @e[tag=cmd,score_aibuild=256,score_aibuild_min=256] ~ ~ ~ /function ai:ai/ai_def1
+execute @e[tag=cmd,score_aibuild=1024,score_aibuild_min=1024] ~ ~ ~ /function ai:ai/ai_battle1

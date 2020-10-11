@@ -351,6 +351,10 @@ scoreboard objectives add followv dummy
 scoreboard players set @a followv 0
 #村民跟隨偵測
 
+scoreboard objectives add menu dummy
+scoreboard players set @e[tag=cmd] menu 0
+#0選擇1教學2自訂遊戲3劇情4設定
+
 #更新介面變數-------------
 scoreboard objectives add setmenu dummy
 scoreboard players set @e[tag=cmd] setmenu 0
@@ -427,7 +431,7 @@ scoreboard players set @e[tag=cmd] tech 0
 scoreboard objectives add begin_res dummy
 scoreboard players set @e[tag=cmd] begin_res 1
 
-#--模式:0一般、1死鬥、2防守計時、3分數競賽、4戰霧、5*弒君、6世界奇觀?
+#--模式:0一般、1死鬥、2防守計時、3分數競賽、4戰霧、5*弒君、6世界奇觀?、7劇情
 #(*表示不能跟AI玩)
 scoreboard objectives add mode dummy
 scoreboard players set @e[tag=cmd] mode 0
@@ -455,6 +459,21 @@ scoreboard players set @a blind 0
 #--防守計時回合+資源
 scoreboard objectives add resc dummy
 scoreboard players set @e[tag=cmd] resc 0
+#--劇情說話分類
+scoreboard objectives add speak dummy
+scoreboard players set @e[tag=cmd] speak 0
+#--劇情說話開始
+scoreboard objectives add speaking dummy
+scoreboard players set @e[tag=cmd] speaking 0
+#--劇情章數
+scoreboard objectives add dom dummy
+scoreboard players set @e[tag=cmd] dom 0
+#--劇情節數(章數下的細分)
+scoreboard objectives add cls dummy
+scoreboard players set @e[tag=cmd] cls 0
+
+
+
 
 function noop_cm:stop_music
 

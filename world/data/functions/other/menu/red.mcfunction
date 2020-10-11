@@ -14,4 +14,6 @@ execute @e[tag=cmd,score_stop=1,score_stop_min=1] ~ ~ ~ /tellraw @p[team=red] {"
 tellraw @p[team=red] {"text":"[\u68c4\u6b0a]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger redsurrender set 1"}}
 tellraw @p {"text":"[\u5730\u5f62\u8cc7\u8a0a]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger info set 1"},"hoverEvent":{"action":"show_text","value":"查看地圖整體"}}}
 tellraw @p {"text":"[自殺]","color":"yellow","clickEvent":{"action":"run_command","value":"/kill @p"},"hoverEvent":{"action":"show_text","value":"你將會因死亡而丟失所購買的建築，並且在指揮中心重生"}}}
+execute @e[tag=cmd,score_menu_min=1,score_menu=1] ~ ~ ~ tellraw @p {"text":"[任務]","color":"yellow","clickEvent":{"action":"run_command","value":"/function other:menu/mession"},"hoverEvent":{"action":"show_text","value":"需要完成任務才能獲勝"}}}
+execute @e[tag=cmd,score_menu_min=1,score_menu=1] ~ ~ ~ tellraw @p {"text":"[提示]","color":"yellow","clickEvent":{"action":"run_command","value":"/function other:menu/tip"},"hoverEvent":{"action":"show_text","value":"遊戲或劇情的提示"}}}
 tellraw @p[team=red] ["",{"text":"------------------------","color":"gold"},{"text":" "}]

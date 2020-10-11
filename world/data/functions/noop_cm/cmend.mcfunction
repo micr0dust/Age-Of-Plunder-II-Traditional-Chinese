@@ -45,6 +45,7 @@ scoreboard players set @a blue4 0
 scoreboard players set @a blue5 0
 scoreboard players set @a blue6 0
 scoreboard players set @a blue7 0
+scoreboard players set @a blue8 0
 scoreboard players set @a bluew 0
 
 

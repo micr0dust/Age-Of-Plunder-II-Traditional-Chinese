@@ -30,5 +30,35 @@ execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=6,score_mode_min=6] ~ ~ ~ f
 scoreboard players set @a death 0
 #防守勝利?
 execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=2,score_mode_min=2] ~ ~ ~ function other:battle_end/red_win unless @e[team=blue]
+#劇情勝利
+#1-2
+execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=7,score_mode_min=7,score_cls_min=2,score_cls=2,score_dom_min=1,score_dom=1] ~ ~ ~ function other:battle_end/red_win if @e[tag=cmd,c=1,score_rgold_min=50,score_rfood_min=50,score_rwood_min=50]
+#1-3
+execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=7,score_mode_min=7,score_cls_min=3,score_cls=3,score_dom_min=1,score_dom=1] ~ ~ ~ scoreboard players set @e[tag=cmd] AItest 0
+execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=7,score_mode_min=7,score_cls_min=3,score_cls=3,score_dom_min=1,score_dom=1] ~ ~ ~ execute @e[tag=red2] ~ ~ ~ scoreboard players add @e[tag=cmd] AItest 1
+execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=7,score_mode_min=7,score_cls_min=3,score_cls=3,score_dom_min=1,score_dom=1] ~ ~ ~ function other:battle_end/red_win if @e[tag=cmd,c=1,score_AItest_min=2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

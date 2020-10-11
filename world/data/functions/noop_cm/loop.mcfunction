@@ -444,7 +444,8 @@ scoreboard players set @a blind 1
 execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=4,score_mode_min=4] ~ ~ ~ execute @e[team=red,type=!Player] ~ ~ ~ scoreboard players set @p[team=red,r=5] blind 0
 execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=4,score_mode_min=4] ~ ~ ~ execute @e[team=blue,type=!Player] ~ ~ ~ scoreboard players set @p[team=blue,r=5] blind 0
 execute @e[tag=cmd,c=1,score_canend_min=1,score_mode=4,score_mode_min=4] ~ ~ ~ effect @a[score_blind_min=1] minecraft:blindness 2 0 true
-
+#劇情畫面
+function battle:action_ctrl if @e[tag=cmd,score_speaking_min=1]
 
 
 

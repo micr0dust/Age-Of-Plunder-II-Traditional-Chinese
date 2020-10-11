@@ -16,7 +16,7 @@ tp @a 54 19 -148 180 0
 clear @a
 kill @e[type=item]
 kill @e[type=shulker]
-tellraw @a {"text":"\u5730\u5716\u91cd\u88fd\u5b8c\u7562,\u8acb\u91cd\u65b0\u5206\u968a\u5f8c\u958b\u59cb !","color":"yellow"}
+tellraw @a {"text":"請稍等...","color":"yellow"}
 xp -1000L @a
 effect @a clear
 gamemode 2 @a

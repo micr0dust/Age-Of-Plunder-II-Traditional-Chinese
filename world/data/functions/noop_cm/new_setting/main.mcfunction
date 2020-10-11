@@ -6,9 +6,9 @@ execute @e[tag=cmd,score_setmenu_min=0] ~ ~ ~ playsound custom.bgm ambient @a[sc
 scoreboard players set @a bgmed 1
 function noop_cm:chat_clearall
 function noop_cm:chat_clearall
-title @a times 1 500 1
+title @a times 1 100 1
 title @a title {"text":"掠奪時代II","color":"gold"}
-title @a subtitle ["",{"text":"\u9700\u958b\u6b0a\u9650\u4ee5\u8a2d\u5b9a\u904a\u6232","color":"red"}]
+title @a subtitle ["",{"text":"需開權限以設定遊戲","color":"red"}]
 #tellraw @a {"text":"\n"}
 #種族
 execute @e[tag=cmd,score_rciv=0,score_rciv_min=0,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ra0
@@ -27,32 +27,33 @@ execute @e[tag=cmd,score_bciv=4,score_bciv_min=4,score_map_min=1] ~ ~ ~ function
 execute @e[tag=cmd,score_bciv=5,score_bciv_min=5,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba5
 execute @e[tag=cmd,score_bciv=6,score_bciv_min=6,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba6
 #個人設定
-function noop_cm:new_setting/self_setting/selfon if @e[tag=cmd,score_map=0]
+function noop_cm:new_setting/self_setting/selfon if @e[tag=cmd,score_map=0,score_menu=4,score_menu_min=4]
 execute @e[tag=cmd,score_map=0] ~ ~ ~ execute @a ~ ~ ~ function noop_cm:new_setting/self_setting/new unless @p[c=1,r=0,score_click_self_list_min=1]
 #進階遊戲設定
 function noop_cm:new_setting/game_setting if @e[tag=cmd,score_map_min=1]
 #選隊伍
-function noop_cm:new_setting/choose_team if @e[tag=cmd,score_map=0]
-
+function noop_cm:new_setting/choose_team if @e[tag=cmd,score_map=0,score_menu=2,score_menu_min=2]
+#教學戰役
+execute @e[tag=cmd,score_menu=1,score_menu_min=1] ~ ~ ~ function noop_cm:new_setting/menu/newmap
 #地圖樣式
-function noop_cm:new_setting/map_style/b0 if @e[tag=cmd,score_map_style=0,score_map_style_min=0,score_map=0]
-function noop_cm:new_setting/map_style/b1 if @e[tag=cmd,score_map_style=1,score_map_style_min=1,score_map=0]
-function noop_cm:new_setting/map_style/b2 if @e[tag=cmd,score_map_style=2,score_map_style_min=2,score_map=0]
-function noop_cm:new_setting/map_style/b3 if @e[tag=cmd,score_map_style=3,score_map_style_min=3,score_map=0]
-function noop_cm:new_setting/map_style/b4 if @e[tag=cmd,score_map_style=4,score_map_style_min=4,score_map=0]
-function noop_cm:new_setting/map_style/b5 if @e[tag=cmd,score_map_style=5,score_map_style_min=5,score_map=0]
-function noop_cm:new_setting/map_style/b6 if @e[tag=cmd,score_map_style=6,score_map_style_min=6,score_map=0]
+function noop_cm:new_setting/map_style/b0 if @e[tag=cmd,score_map_style=0,score_map_style_min=0,score_map=0,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map_style/b1 if @e[tag=cmd,score_map_style=1,score_map_style_min=1,score_map=0,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map_style/b2 if @e[tag=cmd,score_map_style=2,score_map_style_min=2,score_map=0,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map_style/b3 if @e[tag=cmd,score_map_style=3,score_map_style_min=3,score_map=0,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map_style/b4 if @e[tag=cmd,score_map_style=4,score_map_style_min=4,score_map=0,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map_style/b5 if @e[tag=cmd,score_map_style=5,score_map_style_min=5,score_map=0,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map_style/b6 if @e[tag=cmd,score_map_style=6,score_map_style_min=6,score_map=0,score_menu=2,score_menu_min=2]
 #地形
-function noop_cm:new_setting/map/b0 if @e[tag=cmd,score_map=0,score_map_min=0]
-function noop_cm:new_setting/map/b1 if @e[tag=cmd,score_map=1,score_map_min=1]
-function noop_cm:new_setting/map/b2 if @e[tag=cmd,score_map=2,score_map_min=2]
-function noop_cm:new_setting/map/b3 if @e[tag=cmd,score_map=3,score_map_min=3]
-function noop_cm:new_setting/map/b4 if @e[tag=cmd,score_map=4,score_map_min=4]
-function noop_cm:new_setting/map/b5 if @e[tag=cmd,score_map=5,score_map_min=5]
-function noop_cm:new_setting/map/b6 if @e[tag=cmd,score_map=6,score_map_min=6]
-function noop_cm:new_setting/map/b7 if @e[tag=cmd,score_map=7,score_map_min=7]
-function noop_cm:new_setting/map/b8 if @e[tag=cmd,score_map=8,score_map_min=8]
-function noop_cm:new_setting/map/b100 if @e[tag=cmd,score_map=100,score_map_min=100]
+function noop_cm:new_setting/map/b0 if @e[tag=cmd,score_map=0,score_map_min=0,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map/b1 if @e[tag=cmd,score_map=1,score_map_min=1,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map/b2 if @e[tag=cmd,score_map=2,score_map_min=2,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map/b3 if @e[tag=cmd,score_map=3,score_map_min=3,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map/b4 if @e[tag=cmd,score_map=4,score_map_min=4,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map/b5 if @e[tag=cmd,score_map=5,score_map_min=5,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map/b6 if @e[tag=cmd,score_map=6,score_map_min=6,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map/b7 if @e[tag=cmd,score_map=7,score_map_min=7,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map/b8 if @e[tag=cmd,score_map=8,score_map_min=8,score_menu=2,score_menu_min=2]
+function noop_cm:new_setting/map/b100 if @e[tag=cmd,score_map=100,score_map_min=100,score_menu=2,score_menu_min=2]
 #AI選擇
 function noop_cm:new_setting/aislect/a11 if @e[tag=cmd,score_AI_min=1,score_AI=1,score_aibuild_min=1,score_aibuild=1,score_map_min=1,score_gamemode_min=1,score_mode=1,score_mode_min=0]
 function noop_cm:new_setting/aislect/a12 if @e[tag=cmd,score_AI_min=1,score_AI=1,score_aibuild_min=2,score_aibuild=2,score_map_min=1,score_gamemode_min=1,score_mode=1,score_mode_min=0]
@@ -113,8 +114,8 @@ function noop_cm:new_setting/aicheat if @e[tag=cmd,score_map_min=1,score_gamemod
 #模式?
 #種族?
 #開始&重置
-function noop_cm:new_setting/restart if @e[score_map=0]
-function noop_cm:new_setting/start if @e[score_map_min=1]
+function noop_cm:new_setting/restart if @e[tag=cmd,score_map=0,score_menu_min=1]
+function noop_cm:new_setting/start if @e[tag=cmd,score_map_min=1]
 
 
 #權限變數開啟
@@ -125,8 +126,14 @@ scoreboard players enable @a rcivpick
 scoreboard players enable @a bcivpick
 scoreboard players enable @a civpick
 
+#遊戲選單
+execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a {"text":"---遊戲選單------------\n","color":"gold"}
+execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[教學戰役]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/new"},"hoverEvent":{"action":"show_text","value":"跟著指示操作，快速學會如何遊玩"}}]
+execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[自訂遊戲]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/custom"},"hoverEvent":{"action":"show_text","value":"能自己選擇地圖、地形和對手的自訂遊戲"}}]
+execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[設定]","color":"white","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/setting"},"hoverEvent":{"action":"show_text","value":"聲音、圖示等設定"}}]
 
 
+execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":"\n------------------------","color":"gold"},{"text":" "}]
 
 
 function noop_cm:new_setting/org_res

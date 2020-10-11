@@ -2,6 +2,7 @@
 #【掠奪時代II:黃金帝國 】
 # 作者: 灰塵
 #########################################################################################################
+gamemode 2 @a
 scoreboard players operation @e[tag=cmd] AInor = @e[tag=cmd] AI
 function setting:gamerule
 function noop_cm:loop
@@ -14,7 +15,7 @@ execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ scoreboard players s
 execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ scoreboard players set @e[tag=cmd] AI_surrender 1
 scoreboard players set @e[tag=cmd] resc 0
 function setting:self_terrain_barrier_clean
-function noop_cm:new_setting/org_res
+function noop_cm:new_setting/org_res if @e[tag=cmd,c=1,score_menu=2,score_menu_min=2]
 setblock 96 30 -135 minecraft:air
 setblock 105 30 -135 minecraft:air
 setblock 42 30 -198 minecraft:air
@@ -36,11 +37,11 @@ scoreboard players set @e[tag=cmd] AItest 140
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] bwood += @e[tag=cmd] AItest
 scoreboard players set @e[tag=cmd] count 1
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /gamerule gameLoopFunction ai:mony_test
-function ai:chat/join
+function ai:chat/join if @e[tag=cmd,c=1,score_menu=2,score_menu_min=2]
 scoreboard players set @e[tag=cmd] canend 1
 execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ execute @e[tag=red1,c=1] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rom","v","horse"]}
 execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ execute @e[tag=red1,c=1] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rom","v","horse"]}
 execute @e[tag=cmd,c=1,score_mode=2,score_mode_min=2] ~ ~ ~ execute @e[tag=red1,c=1] ~ ~ ~ /summon minecraft:armor_stand ~ ~ ~ {PersistenceRequired:1b,Invulnerable:1,Invisible:1,Tags:["rom","v","horse"]}
-
+kill @e[tag=npc]
 #ai
 
