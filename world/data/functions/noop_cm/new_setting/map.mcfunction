@@ -5,7 +5,8 @@
 scoreboard players set @e[tag=cmd] setmenu 1
 function noop_cm:chat_clearall
 function noop_cm:chat_clearall
-
+tellraw @a ["",{"text":"設定地形中...","color":"yellow"}]
+function noop_cm:chat_clear
 function noop_cm:new_setting/map_info/1flat
 function noop_cm:new_setting/map_info/2central_mountain_range
 function noop_cm:new_setting/map_info/3greenland

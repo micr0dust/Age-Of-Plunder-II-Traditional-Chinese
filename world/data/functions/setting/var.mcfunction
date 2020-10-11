@@ -355,6 +355,11 @@ scoreboard objectives add menu dummy
 scoreboard players set @e[tag=cmd] menu 0
 #0選擇1教學2自訂遊戲3劇情4設定
 
+scoreboard objectives add puuid dummy
+scoreboard players set @a puuid 1
+scoreboard players set @e[tag=cmd] puuid 0
+#玩家UUID控制
+
 #更新介面變數-------------
 scoreboard objectives add setmenu dummy
 scoreboard players set @e[tag=cmd] setmenu 0

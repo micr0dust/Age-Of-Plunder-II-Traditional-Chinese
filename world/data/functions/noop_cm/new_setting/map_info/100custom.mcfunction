@@ -2,5 +2,5 @@
 #【掠奪時代II:黃金帝國 】
 # 作者: 灰塵
 #########################################################################################################
-execute @e[score_setmenu_min=1] ~ ~ ~ tellraw @p {"text":"[自訂地形]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/map/a100"}}
+function noop_cm:new_setting/map_info/a100 if @e[score_setmenu_min=1]
 tellraw @p ["",{"text":"\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\u2588\u2588\u2588"},{"text":"\u2588\u2588","color":"black"},{"text":"\u2588\u2588\u2588\n\u2588\u2588"},{"text":"\u2588","color":"black"},{"text":"\u2588\u2588"},{"text":"\u2588","color":"black"},{"text":"\u2588\u2588\n\u2588\u2588\u2588\u2588\u2588"},{"text":"\u2588","color":"black"},{"text":"\u2588\u2588\n\u2588\u2588\u2588\u2588"},{"text":"\u2588","color":"black"},{"text":"\u2588\u2588\u2588\n\u2588\u2588\u2588"},{"text":"\u2588","color":"black"},{"text":"\u2588\u2588\u2588\u2588\n\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\n\u2588\u2588\u2588"},{"text":"\u2588","color":"black"},{"text":"\u2588\u2588\u2588\u2588"}]

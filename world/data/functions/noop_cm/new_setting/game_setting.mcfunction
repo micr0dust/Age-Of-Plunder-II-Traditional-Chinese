@@ -34,7 +34,7 @@ execute @e[tag=cmd,c=1,score_mode=0,score_mode_min=0,score_begin_res=2,score_beg
 execute @e[tag=cmd,c=1,score_mode=0,score_mode_min=0,score_begin_res=3,score_begin_res_min=3] ~ ~ ~ tellraw @a ["",{"text":"[起始資源: ","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/game_setting/begin_res3"}},{"text":"高","color":"white","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/game_setting/begin_res3"}},{"text":" ]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/game_setting/begin_res3"}}]
 
 #獲勝分數
-execute @e[tag=cmd,score_map_min=1,score_mode=3,score_mode_min=3] ~ ~ ~ tellraw @p ["",{"text":"[\u25c0]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:score/remove"}},{"text":" 獲勝分數: ","color":"white"},{"score":{"name":"@e[tag=cmd]","objective":"score_contect"},"color":"white"},{"text":" 分 ","color":"white"},{"text":"[\u25b6]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:score/add"}}]
+execute @e[tag=cmd,score_map_min=1,score_mode=3,score_mode_min=3] ~ ~ ~ tellraw @a ["",{"text":"[\u25c0]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:score/remove"}},{"text":" 獲勝分數: ","color":"white"},{"score":{"name":"@e[tag=cmd]","objective":"score_contect"},"color":"white"},{"text":" 分 ","color":"white"},{"text":"[\u25b6]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:score/add"}}]
 
 #--模式:0一般、1死鬥、2防守計時、3分數競賽、4戰霧、5*弒君、6世界奇觀?
 #(*表示不能跟AI玩)

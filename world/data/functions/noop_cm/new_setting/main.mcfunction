@@ -27,7 +27,7 @@ execute @e[tag=cmd,score_bciv=4,score_bciv_min=4,score_map_min=1] ~ ~ ~ function
 execute @e[tag=cmd,score_bciv=5,score_bciv_min=5,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba5
 execute @e[tag=cmd,score_bciv=6,score_bciv_min=6,score_map_min=1] ~ ~ ~ function noop_cm:new_setting/civ/ba6
 #個人設定
-function noop_cm:new_setting/self_setting/selfon if @e[tag=cmd,score_map=0,score_menu=4,score_menu_min=4]
+function noop_cm:new_setting/self_setting/selfon if @e[tag=cmd,score_map=0,score_menu=0]
 execute @e[tag=cmd,score_map=0] ~ ~ ~ execute @a ~ ~ ~ function noop_cm:new_setting/self_setting/new unless @p[c=1,r=0,score_click_self_list_min=1]
 #進階遊戲設定
 function noop_cm:new_setting/game_setting if @e[tag=cmd,score_map_min=1]
@@ -79,8 +79,8 @@ function noop_cm:new_setting/aislect/a43 if @e[tag=cmd,score_AI_min=4,score_AI=4
 function noop_cm:new_setting/aislect/a44 if @e[tag=cmd,score_AI_min=4,score_AI=4,score_aibuild_min=4,score_aibuild=4,score_map_min=1,score_gamemode_min=1,score_mode=1,score_mode_min=0]
 function noop_cm:new_setting/aislect/a45 if @e[tag=cmd,score_AI_min=4,score_AI=4,score_aibuild_min=5,score_aibuild=5,score_map_min=1,score_gamemode_min=1,score_mode=1,score_mode_min=0]
 function noop_cm:new_setting/aislect/a46 if @e[tag=cmd,score_AI_min=4,score_AI=4,score_aibuild_min=6,score_aibuild=6,score_map_min=1,score_gamemode_min=1,score_mode=1,score_mode_min=0]
-function noop_cm:new_setting/aislect/a100 if @e[tag=cmd,score_aibuild_min=7,score_map_min=1,score_gamemode_min=1]
-function noop_cm:new_setting/aislect/a101 if @e[tag=cmd,score_AI_min=5,score_map_min=1,score_gamemode_min=1]
+function noop_cm:new_setting/aislect/a100 if @e[tag=cmd,score_aibuild_min=7,score_map_min=1,score_gamemode_min=1,score_mode=1,score_mode_min=0]
+function noop_cm:new_setting/aislect/a101 if @e[tag=cmd,score_AI_min=5,score_map_min=1,score_gamemode_min=1,score_mode=1,score_mode_min=0]
 
 function noop_cm:new_setting/aislect/a11 if @e[tag=cmd,score_AI_min=1,score_AI=1,score_aibuild_min=1,score_aibuild=1,score_map_min=1,score_gamemode_min=1,score_mode=6,score_mode_min=3]
 function noop_cm:new_setting/aislect/a12 if @e[tag=cmd,score_AI_min=1,score_AI=1,score_aibuild_min=2,score_aibuild=2,score_map_min=1,score_gamemode_min=1,score_mode=6,score_mode_min=3]
@@ -105,8 +105,8 @@ function noop_cm:new_setting/aislect/a43 if @e[tag=cmd,score_AI_min=4,score_AI=4
 function noop_cm:new_setting/aislect/a44 if @e[tag=cmd,score_AI_min=4,score_AI=4,score_aibuild_min=4,score_aibuild=4,score_map_min=1,score_gamemode_min=1,score_mode=6,score_mode_min=3]
 function noop_cm:new_setting/aislect/a45 if @e[tag=cmd,score_AI_min=4,score_AI=4,score_aibuild_min=5,score_aibuild=5,score_map_min=1,score_gamemode_min=1,score_mode=6,score_mode_min=3]
 function noop_cm:new_setting/aislect/a46 if @e[tag=cmd,score_AI_min=4,score_AI=4,score_aibuild_min=6,score_aibuild=6,score_map_min=1,score_gamemode_min=1,score_mode=6,score_mode_min=3]
-function noop_cm:new_setting/aislect/a100 if @e[tag=cmd,score_aibuild_min=7,score_map_min=1,score_gamemode_min=1]
-function noop_cm:new_setting/aislect/a101 if @e[tag=cmd,score_AI_min=5,score_map_min=1,score_gamemode_min=1]
+function noop_cm:new_setting/aislect/a100 if @e[tag=cmd,score_aibuild_min=7,score_map_min=1,score_gamemode_min=1,score_mode=6,score_mode_min=3]
+function noop_cm:new_setting/aislect/a101 if @e[tag=cmd,score_AI_min=5,score_map_min=1,score_gamemode_min=1,score_mode=6,score_mode_min=3]
 
 #AI作弊設定
 function noop_cm:new_setting/aicheat if @e[tag=cmd,score_map_min=1,score_gamemode_min=1,score_mode=1,score_mode_min=0]
@@ -130,7 +130,7 @@ scoreboard players enable @a civpick
 execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a {"text":"---遊戲選單------------\n","color":"gold"}
 execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[教學戰役]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/new"},"hoverEvent":{"action":"show_text","value":"跟著指示操作，快速學會如何遊玩"}}]
 execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[自訂遊戲]","color":"dark_green","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/custom"},"hoverEvent":{"action":"show_text","value":"能自己選擇地圖、地形和對手的自訂遊戲"}}]
-execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[設定]","color":"white","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/setting"},"hoverEvent":{"action":"show_text","value":"聲音、圖示等設定"}}]
+#execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":" ","color":"gold"},{"text":"[設定]","color":"white","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/menu/setting"},"hoverEvent":{"action":"show_text","value":"聲音、圖示等設定"}}]
 
 
 execute @e[tag=cmd,score_menu=0] ~ ~ ~ tellraw @a ["",{"text":"\n------------------------","color":"gold"},{"text":" "}]

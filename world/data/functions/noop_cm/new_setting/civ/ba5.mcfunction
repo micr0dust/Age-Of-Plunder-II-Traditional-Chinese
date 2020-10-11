@@ -2,7 +2,7 @@
 #【掠奪時代II:黃金帝國 】
 # 作者: 灰塵
 #########################################################################################################
-tellraw @p[team=blue] {"text":"[維京]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger civpick set 1"}}
-tellraw @p[team=red] {"text":"[維京]","color":"blue"}
+tellraw @a[team=blue] {"text":"[維京]","color":"blue","clickEvent":{"action":"run_command","value":"/trigger civpick set 1"}}
+tellraw @a[team=red] {"text":"[維京]","color":"blue"}
 
 

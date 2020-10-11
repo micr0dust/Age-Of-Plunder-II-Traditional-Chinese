@@ -7,13 +7,13 @@
 
 #紅隊選單
 scoreboard players tag @e[type=item,tag=!redm] add redm {Item:{tag:{redm:1b}},OnGround:1b}
-execute @e[tag=redm] ~ ~ ~ function noop_cm:chat_clearall
+execute @e[tag=redm] ~ ~ ~ function noop_cm:chat_clear
 execute @e[tag=redm] ~ ~ ~ /give @p[team=red] minecraft:paper 1 0 {display:{Name:"選單",Lore:["提供各種選項的遊戲菜單"]},redm:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=redm] ~ ~ ~ /function other:menu/red
 kill @e[tag=redm]
 #藍隊選單
 scoreboard players tag @e[type=item,tag=!bluem] add bluem {Item:{tag:{bluem:1b}},OnGround:1b}
-execute @e[tag=bluem] ~ ~ ~ function noop_cm:chat_clearall
+execute @e[tag=bluem] ~ ~ ~ function noop_cm:chat_clear
 execute @e[tag=bluem] ~ ~ ~ /give @p[team=blue] minecraft:paper 1 0 {display:{Name:"選單",Lore:["提供各種選項的遊戲菜單"]},bluem:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=bluem] ~ ~ ~ /function other:menu/blue
 kill @e[tag=bluem]
@@ -116,7 +116,7 @@ execute @e[tag=cmd,score_setmenu_min=1] ~ ~ ~ execute @a[team=red] ~ ~ ~ /title 
 execute @e[tag=cmd,score_setmenu=0] ~ ~ ~ title @a actionbar ["",{"text":"\u9078\u968a","color":"red"},{"text":"->","color":"blue"},{"text":"\u5730\u5f62","color":"yellow"},{"text":"->","color":"blue"},{"text":"\u958b\u59cb","color":"green"}]
 #藍隊建築開啟道具
 scoreboard players tag @e[type=item,tag=!bluebopt] add bluebopt {Item:{tag:{bluebopt:1b}},OnGround:1b}
-execute @e[tag=bluebopt] ~ ~ ~ function noop_cm:chat_clearall
+execute @e[tag=bluebopt] ~ ~ ~ function noop_cm:chat_clear
 execute @e[tag=bluebopt] ~ ~ ~ execute @e[tag=building,c=1,r=4,team=blue] ~ ~ ~ tellraw @p ["",{"text":"[刪除建築]","color":"red","clickEvent":{"action":"run_command","value":"/trigger bdel set 1"}},{"text":" "}]
 execute @e[tag=bluebopt] ~ ~ ~ /give @p[team=blue] minecraft:iron_door 1 0 {display:{Name:"開啟建築",Lore:["(拿著在要開啟的建築旁按Q使用)可以開啟建築功能"]},bluebopt:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=bluebopt] ~ ~ ~ execute @e[tag=blue1,c=1,r=4] ~ ~ ~ tellraw @p[team=blue] ["",{"text":"---\u6307\u63ee\u4e2d\u5fc3-----------","color":"gold"},{"text":"\n"},{"text":"\u751f\u7522:","color":"dark_green"},{"text":"\n"},{"text":" ","color":"yellow"},{"text":"[ \u6751\u6c11 ]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger ba1 set 1"},"hoverEvent":{"action":"show_text","value":"村民能採集資源和拆除敵方牆壁"}},{"text":" 6","color":"dark_red"},{"text":"\n"},{"text":"-------------------","color":"gold"}]
@@ -182,7 +182,7 @@ kill @e[tag=bluebopt]
 
 #紅隊建築開啟道具
 scoreboard players tag @e[type=item,tag=!redbopt] add redbopt {Item:{tag:{redbopt:1b}},OnGround:1b}
-execute @e[tag=redbopt] ~ ~ ~ function noop_cm:chat_clearall
+execute @e[tag=redbopt] ~ ~ ~ function noop_cm:chat_clear
 execute @e[tag=redbopt] ~ ~ ~ execute @e[tag=building,c=1,r=4,team=red] ~ ~ ~ tellraw @p ["",{"text":"[刪除建築]","color":"red","clickEvent":{"action":"run_command","value":"/trigger rdel set 1"}},{"text":" "}]
 execute @e[tag=redbopt] ~ ~ ~ /give @p[team=red] minecraft:iron_door 1 0 {display:{Name:"開啟建築",Lore:["(拿著在要開啟的建築旁按Q使用)可以開啟建築功能"]},redbopt:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=redbopt] ~ ~ ~ execute @e[tag=red1,c=1,r=4] ~ ~ ~ tellraw @p[team=red] ["",{"text":"---\u6307\u63ee\u4e2d\u5fc3-----------","color":"gold"},{"text":"\n"},{"text":"\u751f\u7522:","color":"dark_green"},{"text":"\n"},{"text":" ","color":"yellow"},{"text":"[ \u6751\u6c11 ]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger ra1 set 1"},"hoverEvent":{"action":"show_text","value":"村民能採集資源和拆除敵方牆壁"}},{"text":" 6","color":"dark_red"},{"text":"\n"},{"text":"-------------------","color":"gold"}]
@@ -248,32 +248,31 @@ execute @e[tag=cmd,score_rrlvl_min=4,score_rrlvl=4] ~ ~ ~ execute @e[tag=redbopt
 kill @e[tag=redbopt]
 #藍隊商店開啟道具
 scoreboard players tag @e[type=item,tag=!blueshop] add blueshop {Item:{tag:{blueshop:1b}},OnGround:1b}
-execute @e[tag=blueshop] ~ ~ ~ function noop_cm:chat_clearall
+execute @e[tag=blueshop] ~ ~ ~ function noop_cm:chat_clear
 execute @e[tag=blueshop] ~ ~ ~ /give @p[team=blue] minecraft:nether_star 1 0 {display:{Name:"開啟商店",Lore:["(拿著按Q使用)可以開啟商店"]},blueshop:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=blueshop] ~ ~ ~ execute @p[team=blue] ~ ~ ~ function noop_cm:shop/blue_shop
 kill @e[tag=blueshop]
 #紅隊商店開啟道具
 scoreboard players tag @e[type=item,tag=!redshop] add redshop {Item:{tag:{redshop:1b}},OnGround:1b}
-execute @e[tag=redshop] ~ ~ ~ function noop_cm:chat_clearall
+execute @e[tag=redshop] ~ ~ ~ function noop_cm:chat_clear
 execute @e[tag=redshop] ~ ~ ~ /give @p[team=red] minecraft:nether_star 1 0 {display:{Name:"開啟商店",Lore:["(拿著按Q使用)可以開啟商店"]},redshop:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=redshop] ~ ~ ~ execute @p[team=red] ~ ~ ~ function noop_cm:shop/red_shop
 kill @e[tag=redshop]
 #藍隊市集開啟道具
 scoreboard players tag @e[type=item,tag=!bluemarket] add bluemarket {Item:{tag:{bluemarket:1b}},OnGround:1b}
-execute @e[tag=bluemarket] ~ ~ ~ function noop_cm:chat_clearall
+execute @e[tag=bluemarket] ~ ~ ~ function noop_cm:chat_clear
 execute @e[tag=bluemarket] ~ ~ ~ /give @p[team=blue] minecraft:gold_ingot 1 0 {display:{Name:"市集",Lore:["(拿著按Q使用)資源互換"]},bluemarket:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=bluemarket] ~ ~ ~ tellraw @p[team=blue] ["",{"text":"---\u5e02\u96c6----------------\n\u8ce3\u51fa: ","color":"gold"},{"text":"[\u6728\u675021]","color":"green","clickEvent":{"action":"run_command","value":"/trigger bws set 1"}},{"text":"  ","color":"gold"},{"text":"[\u98df\u726917]","color":"red","clickEvent":{"action":"run_command","value":"/trigger bfs set 1"}},{"text":"\n"},{"text":"\u8cb7\u5165: ","color":"gold"},{"text":"[\u6728\u675019]","color":"green","clickEvent":{"action":"run_command","value":"/trigger bwb set 1"}},{"text":"  ","color":"gold"},{"text":"[\u98df\u726915]","color":"red","clickEvent":{"action":"run_command","value":"/trigger bfb set 1"}},{"text":"\n"},{"text":"( \u8cb7/\u8ce3 \u55ae\u4f4d: 10\u9ec3\u91d1 )\n----------------------","color":"gold"}]
 kill @e[tag=bluemarket]
 #紅隊市集開啟道具
 scoreboard players tag @e[type=item,tag=!redmarket] add redmarket {Item:{tag:{redmarket:1b}},OnGround:1b}
-execute @e[tag=redmarket] ~ ~ ~ function noop_cm:chat_clearall
+execute @e[tag=redmarket] ~ ~ ~ function noop_cm:chat_clear
 execute @e[tag=redmarket] ~ ~ ~ /give @p[team=red] minecraft:gold_ingot 1 0 {display:{Name:"市集",Lore:["(拿著按Q使用)資源互換"]},redmarket:1b,ench:[{id:71,lvl:3}]}
 execute @e[tag=redmarket] ~ ~ ~ tellraw @p[team=red] ["",{"text":"---\u5e02\u96c6----------------\n\u8ce3\u51fa: ","color":"gold"},{"text":"[\u6728\u675021]","color":"green","clickEvent":{"action":"run_command","value":"/trigger rws set 1"}},{"text":"  ","color":"gold"},{"text":"[\u98df\u726917]","color":"red","clickEvent":{"action":"run_command","value":"/trigger rfs set 1"}},{"text":"\n"},{"text":"\u8cb7\u5165: ","color":"gold"},{"text":"[\u6728\u675019]","color":"green","clickEvent":{"action":"run_command","value":"/trigger rwb set 1"}},{"text":"  ","color":"gold"},{"text":"[\u98df\u726915]","color":"red","clickEvent":{"action":"run_command","value":"/trigger rfb set 1"}},{"text":"\n"},{"text":"( \u8cb7/\u8ce3 \u55ae\u4f4d: 10\u9ec3\u91d1 )\n----------------------","color":"gold"}]
 kill @e[tag=redmarket]
 
 #10:8:5
 #20:16:10
-
 
 
 

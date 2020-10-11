@@ -2,7 +2,7 @@
 #【掠奪時代II:黃金帝國 】
 # 作者: 灰塵
 #########################################################################################################
-gamemode 2 @a
+gamemode 2 @a[team=!sp]
 scoreboard players operation @e[tag=cmd] AInor = @e[tag=cmd] AI
 function setting:gamerule
 function noop_cm:loop
@@ -23,6 +23,7 @@ setblock 51 30 -198 minecraft:air
 setblock 42 30 -189 minecraft:air
 setblock 105 30 -144 minecraft:air
 title @a times 20 40 20
+scoreboard players set @a puuid 0
 title @a title ["",{"text":"\u2691","color":"dark_blue"},{"text":" "},{"text":"\u958b\u59cb","bold":true,"color":"black"},{"text":" "},{"text":"\u2691","color":"dark_red"}]
 summon minecraft:shulker 42 30 -198 {Color:14,CustomName:"指揮中心--荷蘭",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["red1","building"],Team:red}
 execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0] ~ ~ ~ /summon minecraft:shulker 105 30 -135 {Color:11,CustomName:"指揮中心--西班牙",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["blue1","building"],Team:blue}

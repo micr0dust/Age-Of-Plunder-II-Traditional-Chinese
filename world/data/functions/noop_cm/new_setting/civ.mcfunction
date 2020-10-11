@@ -5,7 +5,8 @@
 scoreboard players set @e[tag=cmd] setmenu 1
 function noop_cm:chat_clearall
 function noop_cm:chat_clearall
-
+tellraw @a ["",{"text":"選擇種族中...","color":"yellow"}]
+function noop_cm:chat_clear
 tellraw @p[team=red] {"text":"[無文明]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r0"}}
 tellraw @p[team=red] {"text":"[波斯]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r1"}}
 tellraw @p[team=red] {"text":"[歌德]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r2"}}

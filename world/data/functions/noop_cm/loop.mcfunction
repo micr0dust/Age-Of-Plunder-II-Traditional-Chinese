@@ -320,9 +320,9 @@ execute @e[tag=rfollow] ~ ~ ~ tp @e[tag=rfollow,c=1] @p
 
 execute @e[tag=bfollow] ~ ~ ~  tp @e[tag=bfollow,c=1] @p
 #村民跟隨
-execute @e[tag=bvfollow] ~ ~ ~ tp @e[tag=bvfollow] @p
+execute @e[tag=bvfollow] ~ ~ ~ tp @e[tag=bvfollow,c=1] @p
 
-execute @e[tag=rvfollow] ~ ~ ~  tp @e[tag=rvfollow] @p
+execute @e[tag=rvfollow] ~ ~ ~  tp @e[tag=rvfollow,c=1] @p
 
 
 #弓兵攻擊
@@ -361,7 +361,7 @@ execute @e[tag=attack] ~ ~ ~ execute @e[tag=barr,c=1,r=11,score_path_min=500] ~ 
 execute @e[tag=attack] ~ ~ ~ execute @e[tag=barr,c=1,r=12,score_path_min=600] ~ ~ ~ scoreboard players add @e[tag=barr,c=1,r=13] path 1
 execute @e[tag=attack] ~ ~ ~ execute @e[tag=barr,c=1,score_path_min=600] ~ ~ ~ function ai:stop_attack
 
-
+execute @e[tag=attack] ~ ~ ~ kill @e[tag=blue3,r=3]
 execute @e[tag=attack] ~ ~ ~ execute @e[tag=target,r=3] ~ ~ ~ function ai:stop_attack
 #攻擊路徑微調
 scoreboard players set @e[tag=s,team=blue] noai 0
@@ -391,6 +391,9 @@ scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bf
 scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bt
 scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bs
 scoreboard players operation @e[tag=cmd] bp += @e[tag=cmd] bv
+#玩家UUID分配
+execute @p[score_puuid=0] ~ ~ ~ scoreboard players add @e[tag=cmd] puuid 1
+execute @p[score_puuid=0] ~ ~ ~ scoreboard players operation @p[score_puuid=0] puuid = @e[tag=cmd] puuid
 #遊戲資訊
 #scoreboard objectives remove scores
 scoreboard objectives add scores dummy 遊戲資訊

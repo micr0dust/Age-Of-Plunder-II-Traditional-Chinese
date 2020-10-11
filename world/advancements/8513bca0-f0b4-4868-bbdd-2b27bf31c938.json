@@ -71,6 +71,12 @@
     },
     "done": true
   },
+  "minecraft:adventure/root": {
+    "criteria": {
+      "killed_by_something": "2020-02-22 22:25:46 +0800"
+    },
+    "done": true
+  },
   "minecraft:recipes/misc/beacon": {
     "criteria": {
       "has_nether_star": "2020-02-19 21:13:24 +0800"
