@@ -283,16 +283,16 @@ execute @p[score_civpick_min=1] ~ ~ ~ function noop_cm:new_setting/civ
 
 
 
-
+#玩家回血
 execute @e[tag=blue1] ~ ~ ~ effect @a[team=blue,r=4] minecraft:glowing 1 1 true
 execute @e[tag=red1] ~ ~ ~ effect @a[team=red,r=4] minecraft:glowing 1 1 true
 execute @e[tag=blue1] ~ ~ ~ effect @a[team=blue,r=4] minecraft:regeneration 1 2 true
 execute @e[tag=red1] ~ ~ ~ effect @a[team=red,r=4] minecraft:regeneration 1 2 true
-
+#村民鎖定資源點判斷
 scoreboard players set @e[tag=vill,score_ctrl_min=1] octrl 1
 scoreboard players set @e[tag=vill] ctrl 0
 scoreboard players set @e[tag=vill,score_octrl_min=1] ctrl 1
-
+#村民鎖定資源點
 execute @e[tag=tree] ~ ~ ~ effect @e[tag=vill,r=5,score_ctrl=0] minecraft:slowness 2 255 true
 execute @e[tag=gold] ~ ~ ~ effect @e[tag=vill,r=5,score_ctrl=0] minecraft:slowness 2 255 true
 execute @e[tag=food] ~ ~ ~ effect @e[tag=vill,r=5,score_ctrl=0] minecraft:slowness 2 255 true
@@ -318,9 +318,14 @@ execute @e[tag=rvfollow] ~ ~ ~  tp @e[tag=rvfollow] @p
 #弓兵攻擊
 function noop_cm:acher if @e[tag=cmd,score_stop=0,score_stop_min=0]
 
+#聖騎兵踐踏
+execute @e[team=blue,tag=holly] ~ ~ ~  effect @e[team=red,tag=s,r=1] 20 2 0 true
+execute @e[team=red,tag=holly] ~ ~ ~  effect @e[team=blue,tag=s,r=1] 20 2 0 true
 
-
-
+#藍隊弓兵加速
+effect @e[tag=ar,team=blue] 1 20 1 true
+effect @e[tag=bar,team=blue] 1 20 1 true
+effect @e[tag=lar,team=blue] 1 20 1 true
 
 
 
@@ -374,6 +379,8 @@ scoreboard players set @e[tag=rarrow] trash 0
 scoreboard players set @e[tag=rbrrow] trash 0
 scoreboard players set @e[tag=barrow] trash 0
 scoreboard players set @e[tag=bbrrow] trash 0
+scoreboard players set @e[tag=rlarrow] trash 0
+scoreboard players set @e[tag=blarrow] trash 0
 scoreboard players set @e[tag=rom] trash 0
 scoreboard players set @e[tag=building] trash 0
 execute @e[tag=rider,team=red] ~ ~ ~ scoreboard players set @e[tag=horse,r=2,team=red] trash 0

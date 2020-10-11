@@ -43,7 +43,7 @@ scoreboard objectives add bgold dummy
 scoreboard players set @e[tag=cmd] bgold 0
 
 scoreboard objectives add bwood dummy
-scoreboard players set @e[tag=cmd] bwood 20
+scoreboard players set @e[tag=cmd] bwood 21
 #-----------------------------------------------------
 scoreboard teams add red 荷蘭人
 scoreboard teams option red color red
@@ -56,7 +56,7 @@ scoreboard objectives add rgold dummy
 scoreboard players set @e[tag=cmd] rgold 0
 
 scoreboard objectives add rwood dummy
-scoreboard players set @e[tag=cmd] rwood 20
+scoreboard players set @e[tag=cmd] rwood 21
 #----------------------------------------------------
 scoreboard teams add attget 目標
 #-----------------------------------------------------

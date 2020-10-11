@@ -34,6 +34,6 @@ execute @p[team=blue] ~ ~ ~ function noop_cm:special/a3 if @e[tag=cmd,score_bciv
 execute @p[team=blue] ~ ~ ~ function noop_cm:special/a4 if @e[tag=cmd,score_bciv=4,score_bciv_min=4]
 execute @p[team=blue] ~ ~ ~ function noop_cm:special/a5 if @e[tag=cmd,score_bciv=5,score_bciv_min=5]
 execute @p[team=blue] ~ ~ ~ function noop_cm:special/a6 if @e[tag=cmd,score_bciv=6,score_bciv_min=6]
-tellraw @p[team=blue] ["",{"text":"[\u5974\u96b8\u5175]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger rspecial set 6"}},{"text":" 12","color":"dark_red"},{"text":" 6","color":"gold"}]
+tellraw @p[team=blue] ["",{"text":"\u5347\u7d1a:","color":"dark_green"},{"text":"\n"},{"text":"[\u9593\u8adc] ","color":"yellow"},{"text":"\u5c1a\u672a\u958b\u653e","color":"gold"}]
 
 function noop_cm:cmend

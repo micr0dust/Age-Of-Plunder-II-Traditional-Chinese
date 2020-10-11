@@ -9,16 +9,16 @@ function noop_cm:chat_clearall
 tellraw @p[team=red] {"text":"[無文明]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r0"}}
 tellraw @p[team=red] {"text":"[波斯]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r1"}}
 tellraw @p[team=red] {"text":"[歌德]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r2"}}
-#tellraw @p[team=red] {"text":"[拜占庭]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r3"}}
-#tellraw @p[team=red] {"text":"[不列顛]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r4"}}
+tellraw @p[team=red] {"text":"[拜占庭]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r3"}}
+tellraw @p[team=red] {"text":"[不列顛]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r4"}}
 tellraw @p[team=red] {"text":"[維京]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r5"}}
 #tellraw @p[team=red] {"text":"[阿拉伯]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/r6"}}
 
 tellraw @p[team=blue] {"text":"[無文明]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/b0"}}
 tellraw @p[team=blue] {"text":"[波斯]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/b1"}}
 tellraw @p[team=blue] {"text":"[歌德]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/b2"}}
-#tellraw @p[team=blue] {"text":"[拜占庭]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/b3"}}
-#tellraw @p[team=blue] {"text":"[不列顛]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/b4"}}
+tellraw @p[team=blue] {"text":"[拜占庭]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/b3"}}
+tellraw @p[team=blue] {"text":"[不列顛]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/b4"}}
 tellraw @p[team=blue] {"text":"[維京]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/b5"}}
 #tellraw @p[team=blue] {"text":"[阿拉伯]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civ/b6"}}
 
