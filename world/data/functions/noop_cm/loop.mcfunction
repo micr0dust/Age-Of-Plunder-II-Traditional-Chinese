@@ -225,14 +225,15 @@ execute @p[score_bfb=1,score_bfb_min=1] ~ ~ ~ function noop_cm:market/bfb if @e[
 
 
 
+execute @e[tag=blue1] ~ ~ ~ effect @a[team=blue,r=4] minecraft:glowing 1 1 true
+execute @e[tag=red1] ~ ~ ~ effect @a[team=red,r=4] minecraft:glowing 1 1 true
+execute @e[tag=blue1] ~ ~ ~ effect @a[team=blue,r=4] minecraft:regeneration 1 2 true
+execute @e[tag=red1] ~ ~ ~ effect @a[team=red,r=4] minecraft:regeneration 1 2 true
 
-
-
-
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ execute @e[tag=tree] ~ ~ ~ effect @e[tag=vill,team=blue,r=5] minecraft:slowness 2 255 true
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ execute @e[tag=gold] ~ ~ ~ effect @e[tag=vill,team=blue,r=5] minecraft:slowness 2 255 true
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ execute @e[tag=food] ~ ~ ~ effect @e[tag=vill,team=blue,r=5] minecraft:slowness 2 255 true
-execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ execute @e[tag=blue6] ~ ~ ~ effect @e[tag=vill,team=blue,r=5] minecraft:slowness 2 255 true
+execute @e[tag=tree] ~ ~ ~ effect @e[tag=vill,r=5] minecraft:slowness 2 255 true
+execute @e[tag=gold] ~ ~ ~ effect @e[tag=vill,r=5] minecraft:slowness 2 255 true
+execute @e[tag=food] ~ ~ ~ effect @e[tag=vill,r=5] minecraft:slowness 2 255 true
+execute @e[tag=blue6] ~ ~ ~ effect @e[tag=vill,r=5] minecraft:slowness 2 255 true
 
 
 
