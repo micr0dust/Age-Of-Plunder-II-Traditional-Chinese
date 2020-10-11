@@ -7,28 +7,28 @@ function noop_cm:chat_clearall
 #
 #   ⬤───❶
 #
-tellraw @a ["",{"text":" ⬤","color":"red","hoverEvent":{"action":"show_text","value":[{"translate":"aop.build1"}]}},{"text":"──","color":"red"},{"text":"⬤","color":"red","hoverEvent":{"action":"show_text","value":[{"translate":"aop.unit.vill"}]}}]
+tellraw @a ["",{"text":" ⬤","color":"red","hoverEvent":{"action":"show_text","value":"指揮中心"}},{"text":"──","color":"red"},{"text":"⬤","color":"red","hoverEvent":{"action":"show_text","value":"村民"}}]
 
 
 #城堡
 #	 
 #   ⬤───⬤
 #	 
-tellraw @a ["",{"text":" ⬤","hoverEvent":{"action":"show_text","value":[{"translate":"aop.build2_1"}]}},{"text":"──"},{"text":"⬤","hoverEvent":{"action":"show_text","value":[{"translate":"aop.unit.sp4"}]}}]
+tellraw @a ["",{"text":" ⬤","hoverEvent":{"action":"show_text","value":"堡壘  攻擊隨防禦塔升級(垛孔>箭狹槽)"}},{"text":"──"},{"text":"⬤","hoverEvent":{"action":"show_text","value":"長弓兵"}}]
 
 
 #防禦塔
 #
 #   ⬤───❶───❷
 #
-tellraw @a ["",{"text":" ⬤","color":"yellow","hoverEvent":{"action":"show_text","value":[{"translate":"aop.build3"}]}},{"text":"──","color":"yellow"},{"text":"❶","color":"yellow","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a3v2"}]}},{"text":"───","color":"yellow"},{"text":"❷","color":"yellow","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a3v3"}]}}]
+tellraw @a ["",{"text":" ⬤","color":"yellow","hoverEvent":{"action":"show_text","value":"防禦塔"}},{"text":"──","color":"yellow"},{"text":"❶","color":"yellow","hoverEvent":{"action":"show_text","value":"垛孔"}},{"text":"───","color":"yellow"},{"text":"❷","color":"yellow","hoverEvent":{"action":"show_text","value":"箭狹槽"}}]
 
 
 #石牆
 #
 #   ⬤
 #
-tellraw @a {"text":" ⬤","color":"dark_aqua","hoverEvent":{"action":"show_text","value":[{"translate":"aop.build4"}]}}
+tellraw @a {"text":" ⬤","color":"dark_aqua","hoverEvent":{"action":"show_text","value":"石牆"}}
 
 
 #軍營
@@ -37,9 +37,9 @@ tellraw @a {"text":" ⬤","color":"dark_aqua","hoverEvent":{"action":"show_text"
 #   ⬤───├
 #       └───⬤───❷───❸───❹
 #	
-tellraw @a ["",{"text":"      ┌───","color":"gold"},{"text":"⬤","color":"gold","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a5v1"}]}},{"text":"───","color":"gold"},{"text":"❶","color":"gold","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a5v2"}]}},{"text":"───","color":"gold"},{"text":"❷","color":"gold","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a5v3"}]}},{"text":"───","color":"gray"},{"text":"❸","color":"gray","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a5v4"}]}},{"text":" "}]
-tellraw @a ["",{"text":" ⬤","color":"gold","hoverEvent":{"action":"show_text","value":[{"translate":"aop.build5"}]}},{"text":"──┤","color":"gold"}]
-tellraw @a ["",{"text":"      └───","color":"gold"},{"text":"⬤","color":"gold","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a5v5_1"}]}},{"text":"───","color":"gray"},{"text":"❶","color":"gray","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a5v5"}]}},{"text":"───","color":"gray"},{"text":"❷","color":"gray","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a5v6"}]}},{"text":"───","color":"gray"},{"text":"❸","color":"gray","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a5v7"}]}}]
+tellraw @a ["",{"text":"      ┌───","color":"gold"},{"text":"⬤","color":"gold","hoverEvent":{"action":"show_text","value":"民兵"}},{"text":"───","color":"gold"},{"text":"❶","color":"gold","hoverEvent":{"action":"show_text","value":"劍兵"}},{"text":"───","color":"gold"},{"text":"❷","color":"gold","hoverEvent":{"action":"show_text","value":"長劍兵"}},{"text":"───","color":"gray"},{"text":"❸","color":"gray","hoverEvent":{"action":"show_text","value":"精銳士兵"}},{"text":" "}]
+tellraw @a ["",{"text":" ⬤","color":"gold","hoverEvent":{"action":"show_text","value":"軍營"}},{"text":"──┤","color":"gold"}]
+tellraw @a ["",{"text":"      └───","color":"gold"},{"text":"⬤","color":"gold","hoverEvent":{"action":"show_text","value":"重裝步兵"}},{"text":"───","color":"gray"},{"text":"❶","color":"gray","hoverEvent":{"action":"show_text","value":"精銳重裝步兵"}},{"text":"───","color":"gray"},{"text":"❷","color":"gray","hoverEvent":{"action":"show_text","value":"高級重裝步兵"}},{"text":"───","color":"gray"},{"text":"❸","color":"gray","hoverEvent":{"action":"show_text","value":"特級重裝步兵"}}]
 
 
 #馬廄
@@ -48,9 +48,9 @@ tellraw @a ["",{"text":"      └───","color":"gold"},{"text":"⬤","color
 #   ⬤───├
 #       └───⬤───❷
 #
-tellraw @a ["",{"text":"      ┌───","color":"gray"},{"text":"⬤","color":"gray","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a7v1"}]}},{"text":"───","color":"gray"},{"text":"❶","color":"gray","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a7v2"}]}}]
-tellraw @a ["",{"text":" ⬤","color":"blue","hoverEvent":{"action":"show_text","value":[{"translate":"aop.build7"}]}},{"text":"──┤","color":"blue"}]
-tellraw @a ["",{"text":"      └───","color":"blue"},{"text":"⬤","color":"blue","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a7v3"}]}},{"text":"───","color":"blue"},{"text":"❶","color":"blue","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a7v4"}]}}]
+tellraw @a ["",{"text":"      ┌───","color":"gray"},{"text":"⬤","color":"gray","hoverEvent":{"action":"show_text","value":"羊駝騎士"}},{"text":"───","color":"gray"},{"text":"❶","color":"gray","hoverEvent":{"action":"show_text","value":"重裝羊駝騎士"}}]
+tellraw @a ["",{"text":" ⬤","color":"blue","hoverEvent":{"action":"show_text","value":"馬廄"}},{"text":"──┤","color":"blue"}]
+tellraw @a ["",{"text":"      └───","color":"blue"},{"text":"⬤","color":"blue","hoverEvent":{"action":"show_text","value":"騎士"}},{"text":"───","color":"blue"},{"text":"❶","color":"blue","hoverEvent":{"action":"show_text","value":"重裝騎兵"}}]
 
 
 #射箭場
@@ -59,31 +59,31 @@ tellraw @a ["",{"text":"      └───","color":"blue"},{"text":"⬤","color
 #         ├───⬤
 #         └───⬤
 #	  
-tellraw @a ["",{"text":" ⬤","color":"green","hoverEvent":{"action":"show_text","value":[{"translate":"aop.build8"}]}},{"text":"──┬───","color":"green"},{"text":"❶","color":"green","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a8v2"}]}},{"text":"───","color":"green"},{"text":"❷","color":"green","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a8v3"}]}},{"text":"───","color":"green"},{"text":"❸","color":"green","hoverEvent":{"action":"show_text","value":[{"translate":"aop.tree.upgrade.a8v4"}]}}]
-tellraw @a ["",{"text":"      ├───","color":"green"},{"text":"⬤","color":"green","hoverEvent":{"action":"show_text","value":[{"translate":"aop.unit.a8a"}]}}]
-tellraw @a ["",{"text":"      └───","color":"green"},{"text":"⬤","color":"green","hoverEvent":{"action":"show_text","value":[{"translate":"aop.unit.a8b"}]}}]
+tellraw @a ["",{"text":" ⬤","color":"green","hoverEvent":{"action":"show_text","value":"射箭場"}},{"text":"──┬───","color":"green"},{"text":"❶","color":"green","hoverEvent":{"action":"show_text","value":"箭羽"}},{"text":"───","color":"green"},{"text":"❷","color":"green","hoverEvent":{"action":"show_text","value":"錐狀箭頭"}},{"text":"───","color":"green"},{"text":"❸","color":"green","hoverEvent":{"action":"show_text","value":"護腕"}}]
+tellraw @a ["",{"text":"      ├───","color":"green"},{"text":"⬤","color":"green","hoverEvent":{"action":"show_text","value":"弓兵"}}]
+tellraw @a ["",{"text":"      └───","color":"green"},{"text":"⬤","color":"green","hoverEvent":{"action":"show_text","value":"馬弓騎兵"}}]
 
 
 #農田
 #
 #   ⬤
 #
-tellraw @a {"text":" ⬤","color":"dark_green","hoverEvent":{"action":"show_text","value":[{"translate":"aop.build6"}]}}
+tellraw @a {"text":" ⬤","color":"dark_green","hoverEvent":{"action":"show_text","value":"農田"}}
 
 
 #世界奇觀
 #
 #   ۞
 #
-tellraw @a {"text":" ۞","color":"light_purple","hoverEvent":{"action":"show_text","value":[{"translate":"aop.build9"}]}}
+tellraw @a {"text":" ۞","color":"light_purple","hoverEvent":{"action":"show_text","value":"世界奇觀"}}
 tellraw @a {"text":"\n"}
 
-tellraw @a {"translate":"aop.tree.civ4.a1","color":"gray"}
-tellraw @a {"translate":"aop.tree.civ4.a2","color":"gray"}
-tellraw @a {"translate":"aop.tree.civ4.a3","color":"gray"}
+tellraw @a {"text":"弓兵免費升2級","color":"gray"}
+tellraw @a {"text":"箭塔免費升1級","color":"gray"}
+tellraw @a {"text":"城牆只需7木材","color":"gray"}
 
 tellraw @a {"text":"\n"}
-tellraw @a ["",{"translate":"aop.tree.choose","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civtech/choose/c1024"}},{"translate":"aop.main.civ4","color":"white","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civtech/choose/c1024"}},{"text":" ]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civtech/choose/c1024"}}]
+tellraw @a ["",{"text":"[目前選擇: ","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civtech/choose/c1024"}},{"text":"不列顛","color":"white","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civtech/choose/c1024"}},{"text":" ]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/civtech/choose/c1024"}}]
 
 
 

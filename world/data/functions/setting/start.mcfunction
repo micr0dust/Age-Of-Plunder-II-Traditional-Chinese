@@ -24,19 +24,19 @@ setblock 42 30 -189 minecraft:air
 setblock 105 30 -144 minecraft:air
 title @a times 20 40 20
 scoreboard players set @a puuid 0
-title @a title ["",{"text":"⚑","color":"dark_blue"},{"text":" "},{"translate":"aop.setting.start","bold":true,"color":"black"},{"text":" "},{"text":"⚑","color":"dark_red"}]
-execute @e[tag=cmd,score_rciv=0,score_map=99] ~ ~ ~ summon minecraft:shulker 42 30 -198 {Color:14,CustomNameVisible:0,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["red1","building"],Team:red}
-execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0,score_bciv=0,score_map=99] ~ ~ ~ /summon minecraft:shulker 105 30 -135 {Color:11,CustomNameVisible:0,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["blue1","building"],Team:blue}
-execute @e[tag=cmd,score_rciv_min=2,score_map=99] ~ ~ ~ summon minecraft:shulker 42 30 -198 {Color:14,CustomNameVisible:0,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["red1","building"],Team:red}
-execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0,score_bciv_min=2,score_map=99] ~ ~ ~ /summon minecraft:shulker 105 30 -135 {Color:11,CustomNameVisible:0,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["blue1","building"],Team:blue}
-execute @e[tag=cmd,score_rciv=1,score_rciv_min=1,score_map=99] ~ ~ ~ summon minecraft:shulker 42 30 -198 {Color:14,CustomNameVisible:0,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:500}],Health:500.0f,Tags:["red1","building"],Team:red}
-execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0,score_bciv=1,score_bciv_min=1,score_map=99] ~ ~ ~ /summon minecraft:shulker 105 30 -135 {Color:11,CustomNameVisible:0,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:500}],Health:500.0f,Tags:["blue1","building"],Team:blue}
+title @a title ["",{"text":"\u2691","color":"dark_blue"},{"text":" "},{"text":"\u958b\u59cb","bold":true,"color":"black"},{"text":" "},{"text":"\u2691","color":"dark_red"}]
+execute @e[tag=cmd,score_rciv=0] ~ ~ ~ summon minecraft:shulker 42 30 -198 {Color:14,CustomName:"指揮中心--紅方",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["red1","building"],Team:red}
+execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0,score_bciv=0] ~ ~ ~ /summon minecraft:shulker 105 30 -135 {Color:11,CustomName:"指揮中心--藍方",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["blue1","building"],Team:blue}
+execute @e[tag=cmd,score_rciv_min=2] ~ ~ ~ summon minecraft:shulker 42 30 -198 {Color:14,CustomName:"指揮中心--紅方",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["red1","building"],Team:red}
+execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0,score_bciv_min=2] ~ ~ ~ /summon minecraft:shulker 105 30 -135 {Color:11,CustomName:"指揮中心--藍方",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:200}],Health:200.0f,Tags:["blue1","building"],Team:blue}
+execute @e[tag=cmd,score_rciv=1,score_rciv_min=1] ~ ~ ~ summon minecraft:shulker 42 30 -198 {Color:14,CustomName:"帝國中心--紅方",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:500}],Health:500.0f,Tags:["red1","building"],Team:red}
+execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0,score_bciv=1,score_bciv_min=1] ~ ~ ~ /summon minecraft:shulker 105 30 -135 {Color:11,CustomName:"帝國中心--藍方",CustomNameVisible:1,NoAI:1b,Attributes:[{Name:generic.maxHealth,Base:500}],Health:500.0f,Tags:["blue1","building"],Team:blue}
 tp @a[team=blue] 110 26 -127
 tp @a[team=red] 41 25 -216
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /clone -2 34 -96 6 41 -88 -2 43 -96
 execute @e[tag=cmd,score_gamemode=0,score_gamemode_min=0] ~ ~ ~ /clone 8 34 -96 16 41 -88 -2 43 -96
 clear @a
-execute @a[team=!red] ~ ~ ~ /tellraw @a[team=!blue,r=1] ["",{"translate":"aop.setting.noteam","bold":true,"color":"yellow"},{"text":"\n "}]
+execute @a[team=!red] ~ ~ ~ /tellraw @a[team=!blue,r=1] ["",{"text":"\u4f60\u6c92\u6709\u9078\u64c7\u968a\u4f0d,\u6240\u4ee5\u88ab\u50b3\u9001\u5230\u9019\u88e1\u662f\u6b63\u5e38\u7684 !","bold":true,"color":"yellow"},{"text":"\n "}]
 execute @a[team=sp] ~ ~ ~ function noop_cm:chat_clear
 scoreboard players set @e[tag=cmd] AItest 140
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] bwood += @e[tag=cmd] AItest
