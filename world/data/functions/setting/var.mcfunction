@@ -539,6 +539,7 @@ scoreboard players set @e[tag=cmd] resc 0
 #--防守計時
 scoreboard objectives add count_1 dummy
 scoreboard players set @e[tag=cmd] count_1 0
+#---劇情------------------------------------------------
 #--劇情說話分類
 scoreboard objectives add speak dummy
 scoreboard players set @e[tag=cmd] speak 0
@@ -563,6 +564,31 @@ scoreboard players set @e[tag=cmd] can_count 0
 #--樹狀圖選擇
 scoreboard objectives add tree_civ dummy
 scoreboard players set @e[tag=cmd] tree_civ 1024
+
+#---箭矢---------------------------------------------------
+#--近戰中單位
+scoreboard objectives add fighting dummy
+#--箭矢目標單位
+scoreboard objectives add arrow dummy
+#--r弓兵目標單位
+scoreboard objectives add rarrow dummy
+#--b弓兵目標單位
+scoreboard objectives add barrow dummy
+#--r馬弓目標單位
+scoreboard objectives add rbrrow dummy
+#--b馬弓目標單位
+scoreboard objectives add bbrrow dummy
+#--r長弓兵目標單位
+scoreboard objectives add rlarrow dummy
+#--b長弓兵目標單位
+scoreboard objectives add blarrow dummy
+#--r奴隸兵目標單位
+scoreboard objectives add rmarrow dummy
+#--b奴隸兵目標單位
+scoreboard objectives add bmarrow dummy
+#--是否發過箭矢
+scoreboard objectives add shooted dummy
+#----------------------------------------------------
 
 function noop_cm:stop_music
 
