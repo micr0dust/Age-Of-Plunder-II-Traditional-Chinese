@@ -25,6 +25,10 @@
 
 地圖重置指令:`/function setting:restart`
 # 【地圖介紹&圖片】
+
+影片
+[![Age Of Plunder II](https://github.com/wuilliam104286/image_saves/blob/master/img/aop2/video/0.png?raw=true "Age Of Plunder II")](https://www.youtube.com/watch?v=UTANnTxJJ04 "Age Of Plunder II")
+
 新增的新手戰役
 ![](https://truth.bahamut.com.tw/s01/202002/b4c958e6dd17b277ff0fb35ec21c42b7.JPG?w=1000)
 
