@@ -6,6 +6,8 @@ function noop_cm:chat_clear
 tellraw @p {"text":"---提示--------------------------\n","color":"gold"}
 playsound minecraft:block.note.pling record @p ~ ~ ~ 1 0.749
 scoreboard players set @p AItest 1
+
+#-------新手教學-------------------------
 #1.登陸
 execute @e[tag=cmd,score_cls_min=1,score_cls=1,score_dom_min=1,score_dom=1] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" 將手上的","color":"green"},{"text":"領軍旗","color":"dark_aqua"},{"text":"丟出，附近的士兵將會往旗子處集合","color":"green"}]
 execute @e[tag=cmd,score_cls_min=1,score_cls=1,score_dom_min=1,score_dom=1] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" 若士兵視線被牆壁、建築或其他方塊擋住，將不會往旗子處集合\n","color":"green"}]
@@ -29,14 +31,20 @@ execute @e[tag=cmd,score_cls_min=3,score_cls=3,score_dom_min=1,score_dom=1] ~ ~ 
 execute @e[tag=cmd,score_cls_min=4,score_cls=4,score_dom_min=1,score_dom=1] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" 敵人不會馬上攻擊，在敵人攻擊前，先盡量把資源拿來生產村民以增加資源生產速度\n","color":"green"}]
 execute @e[tag=cmd,score_cls_min=4,score_cls=4,score_dom_min=1,score_dom=1] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" 如果無法應付敵人突如其來的攻勢，城牆可以擋住敵人一段時間","color":"green"}]
 #5.侵略
+execute @e[tag=cmd,score_cls_min=5,score_cls=5,score_dom_min=1,score_dom=1] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" AI不會自己刪除石牆，所以你可以安心地採集","color":"green"}]
 
-
-
-
-
-
-
-
+#-------荷蘭東印度公司-------------------
+#2-1.進攻索洛島
+execute @e[tag=cmd,score_cls_min=1,score_cls=1,score_dom_min=2,score_dom=2] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" 把敵方在城牆外的軍營摧毀，你就可以安心地蒐集資源","color":"green"}]
+#2-2.清空班達
+execute @e[tag=cmd,score_cls_min=2,score_cls=2,score_dom_min=2,score_dom=2] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" 左方似乎沒有守軍，可以先攻擊那裏\n","color":"green"}]
+execute @e[tag=cmd,score_cls_min=2,score_cls=2,score_dom_min=2,score_dom=2] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" 岸邊的資源很少，可以建造農田以採集食物","color":"green"}]
+#2-3.佔領馬拉巴爾海岸
+execute @e[tag=cmd,score_cls_min=3,score_cls=3,score_dom_min=2,score_dom=2] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" 先摧毀葡萄牙人的前置基地","color":"green"}]
+#2-4.熱蘭遮城的圍攻
+execute @e[tag=cmd,score_cls_min=4,score_cls=4,score_dom_min=2,score_dom=2] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" 把敵人引往堡壘拖延時間","color":"green"}]
+#2-5.爪哇戰爭
+execute @e[tag=cmd,score_cls_min=5,score_cls=5,score_dom_min=2,score_dom=2] ~ ~ ~ tellraw @p[score_AItest_min=1] ["",{"text":"\u26a0","color":"red"},{"text":" 摧毀敵軍的產兵建築以拖延時間","color":"green"}]
 
 
 

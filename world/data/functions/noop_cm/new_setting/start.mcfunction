@@ -2,7 +2,7 @@
 #【掠奪時代II:黃金帝國 】
 # 作者: 灰塵
 #########################################################################################################
-tellraw @a ["",{"text":"[回到遊戲選單]","color":"gray","clickEvent":{"action":"run_command","value":"/function setting:restart"}},{"text":" ","color":"gray"},{"text":"[\u958b\u59cb\u904a\u6232]","color":"green","clickEvent":{"action":"run_command","value":"/setblock 68 18 -150 minecraft:redstone_block"}}]
+tellraw @a ["",{"text":"[主選單] ","color":"yellow","clickEvent":{"action":"run_command","value":"/function setting:restart"}},{"text":"[開始遊戲]","color":"green","clickEvent":{"action":"run_command","value":"/setblock 68 18 -150 minecraft:redstone_block"}},{"text":" [跳過對話]","color":"gold","clickEvent":{"action":"run_command","value":"/setblock 62 18 -145 minecraft:redstone_block"}}]
 
 
 

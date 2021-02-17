@@ -21,6 +21,10 @@ gamerule showDeathMessages false
 gamerule naturalRegeneration false
 gamerule spectatorsGenerateChunks false
 setworldspawn 7 4 27
+
+scoreboard objectives add AItest dummy
+#測試值
+
 kill @e[tag=cmd]
 summon armor_stand 44 20 -153 {PersistenceRequired:1,Tags:["cmd"],Invulnerable:1}
 scoreboard objectives add money dummy
@@ -72,6 +76,7 @@ scoreboard players set @e[tag=cmd] build 1
 #----------------------------------------------
 scoreboard objectives add put trigger
 scoreboard objectives add restart trigger
+scoreboard objectives add pciv trigger
 #----------------------------------------------
 scoreboard objectives add bluestop trigger
 scoreboard objectives add redstop trigger
@@ -97,6 +102,12 @@ scoreboard objectives add ra27 trigger
 scoreboard objectives add ba27 trigger
 scoreboard objectives add ra28 trigger
 scoreboard objectives add ba28 trigger
+scoreboard objectives add rspy dummy
+scoreboard players set @e[tag=cmd] rspy 0
+scoreboard objectives add bspy dummy
+scoreboard players set @e[tag=cmd] bspy 0
+#---升級
+scoreboard objectives add spy trigger
 #軍營--------------------------------------
 scoreboard objectives add ra5 trigger
 scoreboard objectives add ba5 trigger
@@ -258,6 +269,10 @@ scoreboard players set @e[tag=cmd] lv3r 3
 scoreboard objectives add lv3b dummy
 scoreboard players set @e[tag=cmd] lv3b 3
 
+scoreboard objectives add r2spy dummy
+scoreboard players set @e[tag=cmd] r2spy 1
+scoreboard objectives add b2spy dummy
+scoreboard players set @e[tag=cmd] b2spy 1
 #市集--------------------------------------
 scoreboard objectives add rws trigger
 scoreboard objectives add rfs trigger
@@ -273,6 +288,10 @@ scoreboard objectives add rdel trigger
 scoreboard objectives add bdel trigger
 #------------------------------------------
 function noop_cm:cmend
+
+
+scoreboard objectives add difficulty dummy
+scoreboard players set @e[tag=cmd] difficulty 2
 
 scoreboard objectives add buildt dummy
 scoreboard players set @e[tag=cmd] buildt 1
@@ -403,9 +422,6 @@ scoreboard players set @e[tag=cmd] bkeepfarm 0
 
 scoreboard objectives add trash dummy
 #垃圾
-
-scoreboard objectives add AItest dummy
-#AI測試值
 
 scoreboard objectives add arrow_delay dummy
 scoreboard players set @e[tag=cmd] arrow_delay 0
@@ -615,46 +631,6 @@ function noop_cm:stop_music
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #--winner
 scoreboard objectives add winner dummy
 scoreboard players set @e[tag=cmd] winner 0
@@ -681,3 +657,8 @@ scoreboard players set @e[tag=cmd] resdect_ 0
 scoreboard objectives add challenging dummy
 scoreboard players set @e[tag=cmd] challenging 0
 #count_1 time
+
+#釋放load快取--------
+scoreboard players operation @e[tag=cmd] difficulty = @e[tag=load] difficulty
+scoreboard players operation @e[tag=cmd] map_style = @e[tag=load] map_style
+#-------------------

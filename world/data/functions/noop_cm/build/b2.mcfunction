@@ -19,7 +19,9 @@ execute @e[tag=cmd,score_bciv=5,score_bciv_min=5] ~ ~ ~ execute @e[tag=bluebopt]
 execute @e[tag=cmd,score_bciv=6,score_bciv_min=6] ~ ~ ~ execute @e[tag=bluebopt] ~ ~ ~ execute @e[tag=blue2,c=1,r=4] ~ ~ ~ tellraw @p[team=blue] ["",{"text":"[奴隸兵]","color":"yellow","clickEvent":{"action":"run_command","value":"/trigger bspecial set 6"},"hoverEvent":{"action":"show_text","value":"移動快速的半遠程騎兵，會主動攻擊眼前的敵人"}},{"text":" 12","color":"dark_red"},{"text":" 6","color":"gold"}]
 
 #
-execute @e[tag=blue2,c=1,r=4] ~ ~ ~ tellraw @p[team=blue] ["",{"text":"升級:","color":"dark_green"},{"text":"\n"},{"text":"[間諜] ","color":"yellow"},{"text":"尚未開放","color":"gold"}]
+execute @e[tag=blue2,c=1,r=4] ~ ~ ~ execute @p[team=blue] ~ ~ ~ function noop_cm:special/bspy if @e[tag=cmd,score_bspy=0,score_b2spy_min=1]
+execute @e[tag=blue2,c=1,r=4] ~ ~ ~ execute @p[team=blue] ~ ~ ~ function noop_cm:special/spy if @e[tag=cmd,score_bspy_min=1,score_b2spy_min=1]
+execute @e[tag=blue2,c=1,r=4] ~ ~ ~ execute @p[team=blue] ~ ~ ~ function noop_cm:special/nospy if @e[tag=cmd,score_b2spy=0]
 
 
 

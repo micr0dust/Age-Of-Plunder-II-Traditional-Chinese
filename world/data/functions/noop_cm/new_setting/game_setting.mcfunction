@@ -36,7 +36,7 @@ execute @e[tag=cmd,c=1,score_mode=0,score_mode_min=0,score_begin_res=3,score_beg
 #獲勝分數
 execute @e[tag=cmd,score_map_min=1,score_mode=3,score_mode_min=3] ~ ~ ~ tellraw @a ["",{"text":"[\u25c0]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:score/remove"}},{"text":" 獲勝分數: ","color":"white"},{"score":{"name":"@e[tag=cmd]","objective":"score_contect"},"color":"white"},{"text":" 分 ","color":"white"},{"text":"[\u25b6]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:score/add"}}]
 
-#--模式:0一般、1死鬥、2防守計時、3分數競賽、4戰霧、5*弒君、6世界奇觀?
+#--模式:0經典、1死鬥、2防守計時、3分數競賽、4戰霧、5*弒君、6世界奇觀?
 #(*表示不能跟AI玩)
 execute @e[tag=cmd,c=1,score_mode=0] ~ ~ ~ tellraw @a ["",{"text":"[模式: ","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/game_setting/mode0"}},{"text":"一般","color":"white","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/game_setting/mode0"},"hoverEvent":{"action":"show_text","value":"一般模式，摧毀敵方指揮中心"}},{"text":" ]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/game_setting/mode0"}}]
 execute @e[tag=cmd,c=1,score_mode=1,score_mode_min=1] ~ ~ ~ tellraw @a ["",{"text":"[模式: ","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/game_setting/mode1"}},{"text":"死鬥","color":"white","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/game_setting/mode1"},"hoverEvent":{"action":"show_text","value":"一開始有大量資源的模式"}},{"text":" ]","color":"yellow","clickEvent":{"action":"run_command","value":"/function noop_cm:new_setting/game_setting/mode1"}}]

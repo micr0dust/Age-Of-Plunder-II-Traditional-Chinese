@@ -27,13 +27,13 @@ function noop_cm:chat_clearall
 function noop_cm:chat_clearall
 
 tellraw @p[team=blue] ["",{"text":"---\u5821\u58d8-------------------","color":"gold"},{"text":"\n"},{"text":"\u751f\u7522:","color":"dark_green"}]
-execute @p[team=blue] ~ ~ ~ function noop_cm:buy/bbuy if @e[tag=cmd,score_bciv=0]
+#execute @p[team=blue] ~ ~ ~ function noop_cm:buy/bbuy if @e[tag=cmd,score_bciv=0]
 execute @p[team=blue] ~ ~ ~ function noop_cm:special/a1 if @e[tag=cmd,score_bciv=1,score_bciv_min=1]
 execute @p[team=blue] ~ ~ ~ function noop_cm:special/a2 if @e[tag=cmd,score_bciv=2,score_bciv_min=2]
 execute @p[team=blue] ~ ~ ~ function noop_cm:special/a3 if @e[tag=cmd,score_bciv=3,score_bciv_min=3]
 execute @p[team=blue] ~ ~ ~ function noop_cm:special/a4 if @e[tag=cmd,score_bciv=4,score_bciv_min=4]
 execute @p[team=blue] ~ ~ ~ function noop_cm:special/a5 if @e[tag=cmd,score_bciv=5,score_bciv_min=5]
 execute @p[team=blue] ~ ~ ~ function noop_cm:special/a6 if @e[tag=cmd,score_bciv=6,score_bciv_min=6]
-tellraw @p[team=blue] ["",{"text":"\u5347\u7d1a:","color":"dark_green"},{"text":"\n"},{"text":"[\u9593\u8adc] ","color":"yellow"},{"text":"\u5c1a\u672a\u958b\u653e","color":"gold"}]
+execute @p[team=blue] ~ ~ ~ function noop_cm:special/nospy
 
 function noop_cm:cmend

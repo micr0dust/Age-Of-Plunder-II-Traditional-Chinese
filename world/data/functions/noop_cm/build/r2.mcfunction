@@ -22,8 +22,8 @@ execute @e[tag=cmd,score_rciv=6,score_rciv_min=6] ~ ~ ~ execute @e[tag=redbopt] 
 
 #
 
-execute @e[tag=red2,c=1,r=4] ~ ~ ~ tellraw @p[team=red] ["",{"text":"升級:","color":"dark_green"},{"text":"\n"},{"text":"[間諜] ","color":"yellow"},{"text":"尚未開放","color":"gold"}]
-
-
+execute @e[tag=red2,c=1,r=4] ~ ~ ~ execute @p[team=red] ~ ~ ~ function noop_cm:special/rspy if @e[tag=cmd,score_rspy=0,score_r2spy_min=1]
+execute @e[tag=red2,c=1,r=4] ~ ~ ~ execute @p[team=red] ~ ~ ~ function noop_cm:special/spy if @e[tag=cmd,score_rspy_min=1,score_r2spy_min=1]
+execute @e[tag=red2,c=1,r=4] ~ ~ ~ execute @p[team=red] ~ ~ ~ function noop_cm:special/nospy if @e[tag=cmd,score_r2spy=0]
 
 

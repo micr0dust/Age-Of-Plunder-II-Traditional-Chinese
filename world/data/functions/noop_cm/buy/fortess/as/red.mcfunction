@@ -26,14 +26,13 @@ playsound minecraft:block.note.pling record @p[team=red] ~ ~ ~ 1 0.749
 function noop_cm:chat_clearall
 function noop_cm:chat_clearall
 tellraw @p[team=red] ["",{"text":"---\u5821\u58d8-------------------","color":"gold"},{"text":"\n"},{"text":"\u751f\u7522:","color":"dark_green"}]
-execute @p[team=red] ~ ~ ~ function noop_cm:buy/rbuy if @e[tag=cmd,score_rciv=0]
+#execute @p[team=red] ~ ~ ~ function noop_cm:buy/rbuy if @e[tag=cmd,score_rciv=0]
 execute @p[team=red] ~ ~ ~ function noop_cm:special/a1 if @e[tag=cmd,score_rciv=1,score_rciv_min=1]
 execute @p[team=red] ~ ~ ~ function noop_cm:special/a2 if @e[tag=cmd,score_rciv=2,score_rciv_min=2]
 execute @p[team=red] ~ ~ ~ function noop_cm:special/a3 if @e[tag=cmd,score_rciv=3,score_rciv_min=3]
 execute @p[team=red] ~ ~ ~ function noop_cm:special/a4 if @e[tag=cmd,score_rciv=4,score_rciv_min=4]
 execute @p[team=red] ~ ~ ~ function noop_cm:special/a5 if @e[tag=cmd,score_rciv=5,score_rciv_min=5]
 execute @p[team=red] ~ ~ ~ function noop_cm:special/a6 if @e[tag=cmd,score_rciv=6,score_rciv_min=6]
-tellraw @p[team=red] ["",{"text":"\u5347\u7d1a:","color":"dark_green"},{"text":"\n"},{"text":"[\u9593\u8adc] ","color":"yellow"},{"text":"\u5c1a\u672a\u958b\u653e","color":"gold"}]
-
+execute @p[team=red] ~ ~ ~ function noop_cm:special/nospy
 
 function noop_cm:cmend
