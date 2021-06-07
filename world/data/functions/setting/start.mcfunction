@@ -40,7 +40,6 @@ execute @a[team=!red] ~ ~ ~ /tellraw @a[team=!blue,r=1] ["",{"text":"\u4f60\u6c9
 execute @a[team=sp] ~ ~ ~ function noop_cm:chat_clear
 scoreboard players set @e[tag=cmd] AItest 140
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ scoreboard players operation @e[tag=cmd] bwood += @e[tag=cmd] AItest
-scoreboard players set @e[tag=cmd] count 1
 execute @e[tag=cmd,score_gamemode=1,score_gamemode_min=1] ~ ~ ~ /gamerule gameLoopFunction ai:mony_test
 function ai:chat/join if @e[tag=cmd,c=1,score_menu=2,score_menu_min=2]
 scoreboard players set @e[tag=cmd] canend 1
