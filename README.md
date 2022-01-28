@@ -42,9 +42,9 @@
 ![](https://truth.bahamut.com.tw/s01/201909/74bfbf98c53152466984c5b252939caa.JPG?w=1000)
 
 # 載點:
-- [【資源包】](https://www.mediafire.com/file/nvngrl2adzzu2jf/aop_resources.zip/file "【資源包】")(含語言和音效檔案)
-- [【掠奪時代II黃金帝國】](https://github.com/wuilliam104286/Age-Of-Plunder-II-Traditional-Chinese/archive/2.5c.zip "【掠奪時代II黃金帝國】") (v2.5c最新版)
-- [【全歷史版本下載】](https://github.com/wuilliam104286/Age-Of-Plunder-II-Traditional-Chinese/releases "【全歷史版本下載】")   (v1.0a ~ v2.5c)
+- [【資源包】](https://bit.ly/掠奪時代2資源包 "【資源包】")(含語言和音效檔案)
+- [【掠奪時代II黃金帝國】](https://bit.ly/掠奪時代2繁體 "【掠奪時代II黃金帝國】")
+- [【全歷史版本下載】](https://github.com/micr0dust/Age-Of-Plunder-II-Traditional-Chinese/releases "【全歷史版本下載】")
 ------------
 
 # AI無法使用?
