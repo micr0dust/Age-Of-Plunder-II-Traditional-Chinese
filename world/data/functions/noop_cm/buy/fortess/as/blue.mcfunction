@@ -23,8 +23,8 @@ execute @e[tag=blue2,c=1] ~ ~ ~ execute @e[tag=cmd,score_bciv=6,score_bciv_min=6
 execute @e[tag=blue2,c=1] ~ ~ ~ execute @e[tag=cmd,score_bciv=6,score_bciv_min=6] ~ ~ ~ /scoreboard players remove @e[tag=cmd] bgold 6
 
 playsound minecraft:block.note.pling record @p[team=blue] ~ ~ ~ 1 0.749
-function noop_cm:chat_clearall
-function noop_cm:chat_clearall
+execute @p[team=blue] ~ ~ ~ function noop_cm:chat_clear
+execute @p[team=blue] ~ ~ ~ function noop_cm:chat_clear
 
 tellraw @p[team=blue] ["",{"text":"---\u5821\u58d8-------------------","color":"gold"},{"text":"\n"},{"text":"\u751f\u7522:","color":"dark_green"}]
 #execute @p[team=blue] ~ ~ ~ function noop_cm:buy/bbuy if @e[tag=cmd,score_bciv=0]
